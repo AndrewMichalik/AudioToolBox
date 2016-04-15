@@ -1,0 +1,189 @@
+Option Explicit
+
+' ------------------------------------------------------------------------
+' Generic PCM Conversion Utility Defs: GenCvt.Txt
+' Copyright (c) 1987-1996 Andrew J. Michalik
+' ------------------------------------------------------------------------
+Global Const CVTVERNUM = &H300              ' Cvt support ver number
+                       
+' ------------------------------------------------------------------------
+' Define general purpose VISI data types for SDK users            
+' ------------------------------------------------------------------------
+Global Const FIOMAXNAM = 256                ' Max length of file name
+Global Const UNKFILFMT = 0                  ' File format = Unknown
+Global Const ALLHDRFMT = 4                  ' File format = Headered
+Global Const ALLPURFMT = 8                  ' File format = Pure
+Global Const AIFHDRFMT = 12                 ' File format = AIF
+Global Const BKTHDRFMT = 16                 ' File format = Brooktrout
+Global Const PL2HDRFMT = 20                 ' File format = PowerLine
+Global Const SU4HDRFMT = 24                 ' File format = Summa Four
+Global Const VBSIDXFMT = 28                 ' File format = Indexed VBase
+Global Const VISHDRFMT = 32                 ' File format = VIS Header
+Global Const WAVHDRFMT = 36                 ' File format = MM Wave
+Global Const FIOENCSWP = &H800              ' Encode type: b/n/b/w swap
+Global Const FIOSWPBIT = &H2                ' Swap bit    selection
+Global Const FIOSWPNIB = &H4                ' Swap nibble selection
+Global Const FIOSWPBYT = &H8                ' Swap byte selection
+Global Const FIOSWPWRD = &H10               ' Swap word selection
+
+Type VISMEMHDL
+    ulGloHdl As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const UNKPCM000 = 0                  ' Unknown conversion type
+Global Const AVAPCM004 = 4                  ' AVA 4 bit
+Global Const BKTPCM001 = 8                  ' Brooktrout CVSD
+Global Const CPXPCM064 = 12                 ' Complex rea/img, mag/phs x32
+Global Const DLGPCM004 = 16                 ' DLG 4 bit
+Global Const DLGPCM008 = 20                 ' DLG uLaw Folded 8 bit
+Global Const FLTPCM032 = 24                 ' Floating point 32 bit
+Global Const G11PCMF08 = 28                 ' CCITT G.711 U-law
+Global Const G11PCMI08 = 32                 ' CCITT G.711 A-law
+Global Const G21PCM004 = 36                 ' CCITT G.721
+Global Const G22PCM004 = 40                 ' CCITT G.722
+Global Const G23PCM003 = 44                 ' CCITT G.723 3 bit
+Global Const HARPCM001 = 48                 ' Harris CVSD 1 bit
+Global Const MPCPCM008 = 52                 ' MPC Unsigned 8 bit
+Global Const MPCPCM016 = 56                 ' MPC Linear  16 bit
+Global Const MSAPCM004 = 60                 ' MS Wave ADPCM 4 bit
+Global Const NWVPCM001 = 64                 ' New Voice CVSD 1 bit
+Global Const PTCPCM001 = 68                 ' Perception Tech CVSD 1 bit
+Global Const RTXPCM003 = 72                 ' Rhetorex 3 bit
+Global Const RTXPCM004 = 76                 ' Rhetorex 4 bit
+Global Const TTIPCM008 = 80                 ' TTI 8 bit
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const SRCFRQMIN = 100&               ' Minimum frequency       (Hz)
+Global Const SRCFRQMAX = 65000              ' Maximum frequency       (Hz)
+
+Global Const CRPFRMDEF = .5                 ' Crop frame length      (sec)
+Global Const CRPRESDEF = .01                ' Crop resolution        (sec)
+Global Const CRPSNDDEF = 2#                 ' Crop threshold        (%max)
+Global Const CRPATKDEF = 20                 ' Crop atk ratio        (%frm)
+Global Const CRPDCYDEF = 10                 ' Crop dcy ratio        (%frm)
+Global Const CRPGRDDEF = .05                ' Crop guard time        (sec)
+Global Const NRMLVLDEF = 80                 ' VolNrm target level      (%)
+Global Const NRMEXCDEF = .2                 ' VolNrm except thrsh      (%)
+Global Const NRMMAXDEF = 6                  ' VolNrm adjust max       (dB)
+Global Const DCELVLDEF = 6                  ' DCE   level             (dB)
+Global Const CMPTHRDEF = 80                 ' Comp  threshold          (%)
+Global Const CMPATKDEF = 50                 ' Comp  attack time       (Hz)
+Global Const EXPTHRDEF = 30                 ' Exp   threshold          (%)
+Global Const EXPATKDEF = 5                  ' Exp   attack time       (Hz)
+Global Const CE_DCYDEF = 5                  ' C/E   decay time        (Hz)
+Global Const NOITHRDEF = 2                  ' NGate threshold          (%)
+Global Const NOIATTDEF = 3                  ' NGate attenuation       (dB)
+Global Const AAF_Q2TYP = 2                  ' AAF IIR low-pass filter type
+Global Const AAF_Q6TYP = 6                  ' AAF IIR low-pass filter type
+                                             
+Global Const FFTORDDEF = 9                  ' FFT filter size
+Global Const FEQMAXCNT = 64                 ' Freq equalizer max pnt cnt
+Global Const FEQADJDEF = 0                  ' Freq equalizer gain adj (dB)
+Global Const FEQBOTDEF = 300                ' Freq equalizer bot freq (Hz)
+Global Const FEQTOPDEF = 3800               ' Freq equalizer top freq (Hz)
+Global Const FEQCNTDEF = 7                  ' Freq equalizer def pnt cnt
+Global Const FEQVOX001 = 3                  '  300- 800: +3dB (<300Hz:0dB)
+Global Const FEQVOX002 = 6                  '  800-1300: +6dB
+Global Const FEQVOX003 = 6                  ' 1300-1800: +6dB
+Global Const FEQVOX004 = 6                  ' 1800-2300: +6dB
+Global Const FEQVOX005 = 6                  ' 2300-2800: +6dB
+Global Const FEQVOX006 = 6                  ' 2800-3300: +6dB
+Global Const FEQVOX007 = 3                  ' 3300-3800: +3dB (>3.8Kz:0dB)
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type CVTPOLPRC
+    ulPrcAdr As Long
+End Type
+Type CVTERRPRC
+    ulPrcAdr As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type CVTBLK                                 ' PCM conversion structure
+    usSrcFmt As Integer                     ' Source file format
+    usSrcPCM As Integer                     ' Source PCM type
+    usSrcChn As Integer                     ' Source file chan count
+    usSrcBIO As Integer                     ' Source bit encoding
+    ulSrcFrq As Long                        ' Source sample frequency
+    ulSrcOff As Long                        ' Source byte offset
+    ulSrcLen As Long                        ' Source byte length
+    mhSrcCfg As VISMEMHDL                   ' Source cfg memory buff
+    usDstFmt As Integer                     ' Destination file format
+    usDstPCM As Integer                     ' Destination PCM type
+    usDstChn As Integer                     ' Destination file chan count
+    usDstBIO As Integer                     ' Destination bit encoding
+    ulDstFrq As Long                        ' Destination sample frequency
+    ulDstOff As Long                        ' Reserved
+    ulDstLen As Long                        ' Destination byte length
+    mhDstCfg As VISMEMHDL                   ' Destination cfg memory buff
+    flCrpFrm As Single                      ' FndSndEvt frame size   (sec)
+    flCrpRes As Single                      ' FndSndEvt resolution   (sec)
+    flCrpSnd As Single                      ' FndSndEvt snd thresh  (%max)
+    usCrpAtk As Integer                     ' FndSndEvt atk ratio   (%frm)
+    usCrpDcy As Integer                     ' FndSndEvt dcy ratio   (%frm)
+    flCrpGrd As Single                      ' FndSndEvt guard time   (sec)
+    flVolAdj As Single                      ' Volume adjust mult      (dB)
+    usNrmLvl As Integer                     ' Volume norm target level (%)
+    flNrmExc As Single                      ' Volume norm except thrsh (%)
+    usNrmMax As Integer                     ' Volume norm max adjust  (dB)
+    flDCELvl As Single                      ' DynCmpExp  level        (dB)
+    usCmpThr As Integer                     ' Compander  threshold     (%)
+    usCmpAtk As Integer                     ' Compander  attack time  (Hz)
+    flCmpMin As Single                      ' Compander  minimum      (dB)
+    usExpThr As Integer                     ' Expander   threshold     (%)
+    usExpAtk As Integer                     ' Expander   attack time  (Hz)
+    flExpMax As Single                      ' Expander   maximum      (dB)
+    usCE_Dcy As Integer                     ' Cmp / Exp  decay time   (Hz)
+    usNoiThr As Integer                     ' Noise Gate threshold     (%)
+    flNoiAtt As Single                      ' Noise Gate attenuation  (dB)
+    usTDLAAF As Integer                     ' Time Domain Anti-alias (Ord)
+    bfTDLFst As Integer                     ' Anti-alias fast math on/off
+    bfFFTDTM As Integer                     ' FFT DTMF filter   on/off
+    bfFFTAAF As Integer                     ' FFT Anti-aliasing on/off
+    bfFFTFEq As Integer                     ' FFT Freq Equalize on/off
+    bfFFTRes As Integer                     ' FFT Freq Resample on/off
+    usFFTOrd As Integer                     ' FFT filter size
+    flFEqGai As Single                      ' Freq equalizer gain adj (dB)
+    ulFEqBot As Long                        ' Freq equalizer bot freq (Hz)
+    ulFEqTop As Long                        ' Freq equalizer top freq (Hz)
+    usFEqCnt As Integer                     ' Freq equalizer point count
+    flFEqPnt(1 To FEQMAXCNT)  As Single     ' Freq equalizer data points
+    mhGloCfg As VISMEMHDL                   ' Global cfg memory buff
+    lpPolDsp As CVTPOLPRC                   ' Conversion poll display proc
+    ulRsvPol As Long                        ' Reserved
+    lpMsgDsp As CVTERRPRC                   ' Reserved
+    ulRsvMsg As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+    usCmpCod As Integer                     ' Conversion completion code
+    ucRsv002 As String * 32                 ' Reserved
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Declare Function CvtPCMVer Lib "DLGCVT.DLL" () As Integer
+Declare Function CvtPCMIni Lib "DLGCVT.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm2 As Long) As Integer
+Declare Function CvtPCMTrm Lib "DLGCVT.DLL" () As Integer
+
+Declare Function CvtCfgIni Lib "DLGCVT.DLL" (Prm1 As CVTBLK) As Integer
+Declare Function CvtCfgLod Lib "DLGCVT.DLL" (ByVal Prm1 As String, Prm2 As Long) As Integer
+Declare Function CvtCfgRel Lib "DLGCVT.DLL" (Prm1 As Long) As Integer
+Declare Function CvtCapQry Lib "DLGCVT.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm3 As Long) As Long
+  
+Declare Function CvtSetDeb Lib "DLGCVT.DLL" (ByVal Prm1 As Integer) As Integer
+Declare Function CvtSetDsp Lib "DLGCVT.DLL" (ByVal Prm1 As Long) As Long
+  
+Declare Function CvtPCMFil Lib "DLGCVT.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Integer, ByVal Prm3 As String, ByVal Prm4 As String, ByVal Prm5 As Long, ByVal Prm6 As Integer, Prm7 As CVTBLK) As Long
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const SI_CVTNO_ERR = 0               ' No error
+Global Const SI_CVTKEYERR = 1               ' Key/License not found, 8 sec lim
+Global Const SI_CVTVERERR = 2               ' Module version mismatch
+
+
+

@@ -1,0 +1,71 @@
+/************************************************************************/
+/* Speed Adjust Utility .DLL Resources: GenSpd.rc       V2.00  08/15/95 */
+/* Copyright (c) 1987-1996 Andrew J. Michalik                           */
+/*                                                                      */
+/************************************************************************/
+#include <windows.h>
+#include <ver.h>
+
+/************************************************************************/
+/************************************************************************/
+VISLgo  ICON    vislgo.ico
+
+/************************************************************************/
+/*                              Version                                 */
+/************************************************************************/
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	3,00,0,00
+PRODUCTVERSION 	3,00,0,00
+FILEFLAGSMASK  	0
+FILEFLAGS      	0
+FILEOS         	VOS__WINDOWS16
+FILETYPE       	VFT_DLL
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Voice Information Systems, Inc\0"
+            VALUE "FileDescription", "VISI Speed Adjust Utility DLL\0"
+            VALUE "FileVersion", "3.00.000\0"
+            VALUE "InternalName", "GenSpd\0"
+            VALUE "LegalCopyright", "Copyright \251 Andrew J. Michalik 1987 - 1995\0"
+            VALUE "LegalTrademarks", "SpdAdj\256 is a registered trademark of Andrew J. Michalik.#\0"
+#if defined (DLG) /******************************************************/
+            VALUE "OriginalFilename", "DLGSPD.DLL\0"
+            VALUE "ProductName", "VISI Dialogic\256 Speed Adjust Utility DLL\0"
+#endif /*****************************************************************/
+#if defined (G21) /******************************************************/
+            VALUE "OriginalFilename", "G21CHP.DLL\0"
+            VALUE "ProductName", "VISI CCITT G.721 Speed Adjust Utility DLL\0"
+#endif /*****************************************************************/
+#if defined (NWV) /******************************************************/
+            VALUE "OriginalFilename", "NWVCHP.DLL\0"
+            VALUE "ProductName", "VISI New Voice\256 Speed Adjust Utility DLL\0"
+#endif /*****************************************************************/
+#if defined (PTC) /******************************************************/
+            VALUE "OriginalFilename", "PTCCHP.DLL\0"
+            VALUE "ProductName", "VISI Perception Technology\256 Speed Adjust Utility DLL\0"
+#endif /*****************************************************************/
+#if defined (RTX) /******************************************************/
+            VALUE "OriginalFilename", "RTXCHP.DLL\0"
+            VALUE "ProductName", "VISI Rhetorex\256 Speed Adjust Utility DLL\0"
+#endif /*****************************************************************/
+            VALUE "ProductVersion", "3.00.000\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252 
+    END
+END
+
+/************************************************************************/
+/*                          User Registration                           */
+/************************************************************************/
+#include "..\\..\\regdev\\tbxreg.h"
+IDR_CODE AZ_KECHK PRELOAD "..\\..\\regdev\\kechk.win"
+
+
+

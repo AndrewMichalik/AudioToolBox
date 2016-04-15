@@ -1,0 +1,204 @@
+#
+# Standard compiler command line switches
+#	d       Redefined macros
+#	c       No link
+#	AM      Medium memory model
+#	Gsw     Stack probes & Windows
+#	G2      80286 Instruction Set
+#	G3      80386 Instruction Set
+#	Gh      C5.1 compatible object
+#	Ox      Max optimization (Note: C6.00a float op error for "ei")
+#	Od      No optimization
+#	W2      Intermediate warning level
+#	Zd      Symbolic Debug
+#	Zi      CodeView Debug
+#	NT      Named text (code area) follows
+#	Alnw	Check for DS==SS
+#	V       Imbed version string
+#
+# Standard linker command line switches
+#   NOD     No default library
+#   A:x     Segment alignment (default = 512 bytes)
+#   ST:x    Stack size larger than default 0x800 (2048)
+
+# -----------------------------------------------------------------------
+# Compile and Link options (distribution & debug)
+# -----------------------------------------------------------------------
+!IFDEF deb
+# ---- DEBUG ----
+ap=masm/MX/V/ZI
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2  -Zp -Od -Zi
+lp=link/NOD/NOE/NOI/M/CO$(L_Defs)
+!ELSE
+# ---- Default: DISTRIBUTION ----
+ap=masm/MX/V
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2s -Zp -Ocglt  
+lp=link/NOD/NOE/NOI/M$(L_Defs)
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Version Control and Copyright Defs
+# -----------------------------------------------------------------------
+V_Note = "Copyright AJM, 800-234-VISI"
+
+# -----------------------------------------------------------------------
+# Library specific build arguments
+# -----------------------------------------------------------------------
+!IFDEF mwe
+# ---- MS Windows Emulator (LARGE) ----
+W_Defs = -DW31
+M_Type = -ALw -FPi -Gw
+M_Name = mwe
+L_Libs = libw+llibcew
+DLLLib = libw+ldllcew
+rd = rc $(W_Defs) -D$(C_Defs)
+rc = rc $(W_Defs) -D$(C_Defs)
+DstPth = ..\..\reldev^\
+!ELSE
+!IFDEF mme
+# ---- MS Medium Emulator ----
+W_Defs = -DDOS
+M_Type = -AM -FPi
+M_Name = mme
+L_Libs = mlibce
+DstPth = ..\..\reldev^\
+!ELSE
+# ---- DEFAULT MS Large Emulator ----
+W_Defs = -DDOS
+M_Type = -AL -FPi
+M_Name = mle
+L_Libs = llibce
+DstPth = ..\..\reldev^\
+!ENDIF
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Hardware specific build paths
+# -----------------------------------------------------------------------
+!IFDEF dlg
+# ---- DIALOGIC ----
+C_Defs = DLG
+!ELSE
+!IFDEF g21
+# ---- CCITT G.721 ----
+C_Defs = G21
+!ELSE
+!IFDEF nwv
+# ---- NEW VOICE ----
+C_Defs = NWV
+!ELSE
+!IFDEF mpc
+# ---- MPC ----
+C_Defs = MPC
+!ELSE
+!IFDEF ptc
+# ---- PTC ----
+C_Defs = PTC
+!ELSE
+!IFDEF rtx
+# ---- RHETOREX ----
+C_Defs = RTX
+!ELSE
+!IFDEF tti
+# ---- TTI ----
+C_Defs = TTI
+!ELSE
+# ---- DEFAULT ALL ----
+C_Defs = ALL
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Standard inference rules
+# -----------------------------------------------------------------------
+.c{object\}.obj:
+    $(cp) $(@B).c
+.cpp{object\}.obj:
+    $(cp) $(@B).cpp
+
+# -----------------------------------------------------------------------
+# The Target File List
+# -----------------------------------------------------------------------
+!IF (DEFINED (mwe))
+$(DstPth)$(C_Defs)idx.dll: $(C_Defs)idx.def                             \
+            object\idxini.obj object\cfgsup.obj                         \
+            object\chplod.obj object\lstlod.obj                         \
+            object\paklod.obj object\reblod.obj                         \
+            object\vbsfil.obj object\vbsmth.obj                         \
+            object\filfnd.obj                                           \
+            object\filsup.obj object\fillow.obj                         \
+            object\winmem.obj object\winmsg.obj
+    $(lp)   $(LibEnt) @$(C_Defs)lnk.rsp $(DLLLib), $(C_Defs)idx.def;
+    $(rd)   genidx.rc  genidx.dll
+    implib  genidx.lib $(C_Defs)idx.def
+    copy    genidx.h   $(DstPth)dev\idxlib
+    copy    visdef.h   $(DstPth)dev\idxlib
+    copy    genidx.lib $(DstPth)dev\idxlib\$(C_Defs)mwe.lib
+    copy    genidx.lib $(C_Defs)mwe.lib
+    copy    genidx.dll $(DstPth)w31\$(C_Defs)idx.dll
+    copy    genidx.dll $(C_Defs)idx.dll
+!ELSE
+$(C_Defs)$(M_Name).lib:                                                 \
+            object\idxini.obj object\cfgsup.obj                         \
+            object\chplod.obj object\lstlod.obj                         \
+            object\paklod.obj object\reblod.obj                         \
+            object\vbsfil.obj object\vbsmth.obj                         \
+            object\filfnd.obj                                           \
+            object\filsup.obj object\fillow.obj                         \
+            object\usrstb.obj object\dosmem.obj object\dosmsg.obj
+    del     $(C_Defs)$(M_Name).lib
+    lib     $(C_Defs)$(M_Name).lib @$(C_Defs)$(M_Name).rsp;
+    copy    genidx.h               $(DstPth)dev\idxlib
+    copy    visdef.h               $(DstPth)dev\idxlib
+    copy    $(C_Defs)$(M_Name).lib $(DstPth)dev\idxlib 
+!ENDIF
+
+# -----------------------------------------------------------------------
+# The C and assembly File List
+# -----------------------------------------------------------------------
+object\chplod.obj: chplod.c genidx.h libsup.h vbsfil.h                  \
+    ..\..\fiodev\genfio.h ..\..\fiodev\filutl.h                         \
+    ..\..\os_dev\dosmem.h ..\..\os_dev\dosmsg.h                         \
+    ..\..\os_dev\winmem.h ..\..\os_dev\winmsg.h
+object\lstlod.obj: lstlod.c genidx.h libsup.h vbsfil.h                  \
+    ..\..\fiodev\genfio.h ..\..\fiodev\filutl.h                         \
+    ..\..\os_dev\dosmem.h ..\..\os_dev\dosmsg.h                         \
+    ..\..\os_dev\winmem.h ..\..\os_dev\winmsg.h
+object\paklod.obj: paklod.c genidx.h libsup.h vbsfil.h                  \
+    ..\..\fiodev\genfio.h ..\..\fiodev\filutl.h                         \
+    ..\..\os_dev\dosmem.h ..\..\os_dev\dosmsg.h                         \
+    ..\..\os_dev\winmem.h ..\..\os_dev\winmsg.h
+object\reblod.obj: reblod.c genidx.h libsup.h vbsfil.h                  \
+    ..\..\fiodev\genfio.h ..\..\fiodev\filutl.h                         \
+    ..\..\os_dev\dosmem.h ..\..\os_dev\dosmsg.h                         \
+    ..\..\os_dev\winmem.h ..\..\os_dev\winmsg.h
+object\vbsfil.obj: vbsfil.c ..\..\fiodev\filutl.h ..\..\os_dev\dosmem.h ..\..\os_dev\dosmem.h
+    $(cp)   vbsfil.c
+object\vbsmth.obj: vbsmth.c ..\..\fiodev\genfio.h vbsfil.h
+    $(cp)   vbsmth.c
+object\filfnd.obj: ..\..\fiodev\filfnd.c ..\..\fiodev\filutl.h ..\..\os_dev\dosmsg.h
+    $(cp)   ..\..\fiodev\filfnd.c
+object\filrep.obj: ..\..\fiodev\filrep.c ..\..\fiodev\filutl.h
+    $(cp)   ..\..\fiodev\filrep.c
+object\filsup.obj: ..\..\fiodev\filsup.c ..\..\fiodev\filutl.h
+    $(cp)   ..\..\fiodev\filsup.c
+object\fillow.obj: ..\..\fiodev\fillow.c
+    $(cp)   ..\..\fiodev\fillow.c
+object\winmem.obj: ..\..\os_dev\winmem.c ..\..\os_dev\winmem.h
+    $(cp)   ..\..\os_dev\winmem.c
+object\winmsg.obj: ..\..\os_dev\winmsg.c ..\..\os_dev\winmsg.h
+    $(cp)   ..\..\os_dev\winmsg.c
+object\dosmem.obj: ..\..\os_dev\dosmem.c ..\..\os_dev\dosmem.h ..\..\os_dev\dosmem.h
+    $(cp)   ..\..\os_dev\dosmem.c
+object\dosmsg.obj: ..\..\os_dev\dosmsg.c ..\..\usrdev\usrstb.h ..\..\os_dev\dosmsg.h
+    $(cp)   ..\..\os_dev\dosmsg.c
+object\usrstb.obj: ..\..\usrdev\usrstb.c ..\..\os_dev\dosmem.h
+    $(cp)   ..\..\usrdev\usrstb.c
+object\cfgsup.obj: ..\..\os_dev\cfgsup.c ..\..\os_dev\cfgsup.h
+    $(cp)   ..\..\os_dev\cfgsup.c
+

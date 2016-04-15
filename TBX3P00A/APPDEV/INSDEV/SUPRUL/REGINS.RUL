@@ -1,0 +1,289 @@
+
+//-----------------------------------------------------------------------------
+//                         InstallSHIELD Sample Files
+// Copyright ( c  ) 1990-1993, Stirling Technologies, Inc. All Rights Reserved
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+//      FILE:   REGINS.RUL
+//
+//      PURPOSE:
+//         This script implements a custom dialog box that allows the user
+//         to enter his name, company and serial number. The name, company
+//         and serial number is then confirmed in a confirmation dialog box.
+//
+//      RESOURCE: REGINS.DLG
+//         DLG_GETREGEX
+//
+//      RELATED FILES:
+//         REGINS.H
+//         MISC.RUL
+//
+//      INPUTS:
+//      szName       Name of the user if modified returned in this variable.
+//      szCompany    Name of the company if modified returned in this variable.
+//      szSerialNum  Serial Number
+//
+//      MAIN FUNCTION CALLS:
+//         _RegistrationUpdateEx(  BYREF szName, BYREF szCompany, BYREF szSerialNum  )
+//         _ConfirmRegistrationEx( BYREF szName, BYREF szCompany, BYREF szSerialNum  )
+//
+//      REQUIREMENTS:
+//         The dialogs used in this script must be available in a
+//         resource DLL called RESOURCE.DLL found in the SUPPORTDIR.
+//         The dialogs are loaded from this resource DLL.
+//
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//      This function displays a Regsitration Information dialog box. The user
+//      can enter his name, company name and serial number and press the
+//      CONTINUE button.
+
+//      A Registeration Confirmation dialog box is then displayed which allows
+//      the user to confirm the information entered.  If the information
+//      entered is not correct, the original Registration Information dialog
+//      is displayed again.
+
+// PARAMETERS:
+//      szName     Name of the user.
+//      szCompany  Company name of the user
+//      szSerialNum Serial number
+
+//-----------------------------------------------------------------------------
+
+function         _RegistrationUpdateEx( szName, szCompany, szSerialNum )
+
+begin
+
+        _CreateDLG( "DLG_GETREGEX", DLG_GETREGEX, HWND_INSTALL );
+        _GETREGEX_DlgProc( szName, szCompany, szSerialNum );
+
+        // Until the user Confirms Registeration by saying YES
+        // keep displaying the Registeration dialog box.
+
+
+        while (_ConfirmRegistrationEx( szName, szCompany, szSerialNum  ) = IDNO)
+
+              _CreateDLG( "DLG_GETREGEX", DLG_GETREGEX, HWND_INSTALL );
+              _GETREGEX_DlgProc( szName, szCompany, szSerialNum );
+
+        endwhile;
+
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//      This dialog box will prompt the user for registration information
+//      name, company name and serial number. NAME, COMPANY, SERIAL NUMBER
+//      fields must not be blank. CONTINUE button will be disabled until
+//      a value is entered in the NAME, COMPANY and SERIAL NUMBER edit fields.
+
+// PARAMETERS:
+//      szName      Name of the user.
+//      szCompany   Company name of the user
+//      szSerialNum Serial number
+
+//      The above are used as inputs and return values of this functions.
+//-----------------------------------------------------------------------------
+
+function        _GETREGEX_DlgProc(  szName, szCompany, szSerialNum )
+
+NUMBER   nDoneFlag, nDialogMessage, nMessage, nHwnd;
+STRING  szText[MAX_SIZE];
+
+
+begin
+        nDoneFlag = FALSE;
+        while nDoneFlag = FALSE
+
+           nDialogMessage = WaitOnDialog( "DLG_GETREGEX" );
+
+           if ( nDialogMessage = DLG_ERR ) then
+
+             MessageBox( "Unable to display Registration dialog box.", WARNING );
+             nDoneFlag = TRUE;
+
+           endif;
+
+           switch( nDialogMessage )
+
+           case DLG_INIT:
+                CtrlSetText( "DLG_GETREGEX", ID_DLG_GETREGEX_NAME, szName );
+                CtrlSetText( "DLG_GETREGEX", ID_DLG_GETREGEX_CO, szCompany );
+                CtrlSetText( "DLG_GETREGEX", ID_DLG_GETREGEX_SERNUM, szSerialNum );
+
+                CtrlSelectText( "DLG_GETREGEX", ID_DLG_GETREGEX_NAME );
+                nHwnd = CmdGetHwndDlg( "DLG_GETREGEX" );
+
+                // disable the continue button
+                _WinSubEnableControl( nHwnd, IDOK, DISABLE );
+
+                // check if all the fields are not empty if they are
+                // not then enable the continue button
+
+                if  ( szName != "" ) then
+
+                   if  ( szCompany != "" )  then
+
+                      if ( szSerialNum != "" ) then
+
+                         _WinSubEnableControl( nHwnd, IDOK, ENABLE );
+
+                      endif;
+
+                   endif;
+
+                endif;
+
+
+           case ID_DLG_GETREGEX_NAME:
+                nMessage = CtrlGetSubCommand( "DLG_GETREGEX" );
+
+                // if name field is NULL then disable the continue
+                // button else enable the continue button
+
+                if (  nMessage = EDITBOX_CHANGE  ) then
+                   CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_NAME, szName );
+                   if ( szName = "" ) then
+                      _WinSubEnableControl( nHwnd, IDOK, DISABLE );
+                   else
+
+                      if (szCompany != "" ) then
+                        if (szSerialNum != "" ) then
+                           _WinSubEnableControl( nHwnd, IDOK, ENABLE );
+                        endif;
+                      endif;
+
+                   endif;
+                endif;
+
+           case ID_DLG_GETREGEX_CO:
+                nMessage = CtrlGetSubCommand( "DLG_GETREGEX" );
+
+                if (  nMessage = EDITBOX_CHANGE  ) then
+                   CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_CO, szCompany );
+                   if ( szCompany = "" ) then
+                      _WinSubEnableControl( nHwnd, IDOK, DISABLE );
+                   else
+
+                      if (szName != "" ) then
+                        if (szSerialNum != "" ) then
+                           _WinSubEnableControl( nHwnd, IDOK, ENABLE );
+                        endif;
+                      endif;
+
+                   endif;
+                endif;
+
+           case ID_DLG_GETREGEX_SERNUM:
+                nMessage = CtrlGetSubCommand( "DLG_GETREGEX" );
+
+                if (  nMessage = EDITBOX_CHANGE  ) then
+                   CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_SERNUM, szSerialNum );
+                   if ( szSerialNum = "" ) then
+                      _WinSubEnableControl( nHwnd, IDOK, DISABLE );
+                   else
+
+
+                      if (szCompany != "" ) then
+                        if (szName != "" ) then
+                           _WinSubEnableControl( nHwnd, IDOK, ENABLE );
+                        endif;
+                      endif;
+                   endif;
+                endif;
+
+           case IDOK:
+
+                CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_NAME, szName );
+                CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_CO, szCompany );
+                CtrlGetText( "DLG_GETREGEX", ID_DLG_GETREGEX_SERNUM, szSerialNum );
+
+                nDoneFlag = TRUE;
+
+           case DLG_CLOSE:
+              nDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+
+        EndDialog(  "DLG_GETREGEX"  );
+        ReleaseDialog( "DLG_GETREGEX" );
+
+
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//      This dialog box will confirm the name, company and serial name entered by
+//      the user. YES & NO buttons allow the user to go back and re-enter
+//      the name, company name and serial number.
+
+// PARAMETERS:
+//      szName      User Name
+//      szCompany   Company Name
+//      szSerialNum Serial number
+
+
+// RETURN VALUE:
+//        YES - User confirmed name and company are ok.
+//        NO  - Name and Company name are not ok.
+//-----------------------------------------------------------------------------
+
+function        _ConfirmRegistrationEx( szName, szCompany, szSerialNum )
+
+NUMBER    nDoneFlag, nDialogMessage;
+LONG    lYesNoFlag;
+
+begin
+        _CreateDLG( "DLG_CONFIRMEX", DLG_CONFIRMEX, HWND_INSTALL );
+        nDoneFlag = FALSE;
+        while nDoneFlag = FALSE
+
+           nDialogMessage = WaitOnDialog( "DLG_CONFIRMEX" );
+
+           if ( nDialogMessage = DLG_ERR ) then
+
+              MessageBox( STR_ERR_DLG, WARNING );
+              nDoneFlag = TRUE;
+
+           endif;
+
+           switch( nDialogMessage )
+
+           case DLG_INIT:
+              CtrlSetText (  "DLG_CONFIRMEX", ID_DLG_CONFIRMEX_NAME, szName  );
+              CtrlSetText (  "DLG_CONFIRMEX", ID_DLG_CONFIRMEX_CO, szCompany  );
+              CtrlSetText (  "DLG_CONFIRMEX", ID_DLG_CONFIRMEX_SERNUM, szSerialNum  );
+
+           case IDYES:
+              lYesNoFlag = IDYES;
+              nDoneFlag = TRUE;
+
+           case IDNO:
+              lYesNoFlag = IDNO;
+              nDoneFlag = TRUE;
+
+           case DLG_CLOSE:
+              nDoneFlag = TRUE;
+              lYesNoFlag = IDYES;
+
+           endswitch;
+
+        endwhile;
+
+        EndDialog( "DLG_CONFIRMEX" );
+        ReleaseDialog( "DLG_CONFIRMEX" );
+
+        return lYesNoFlag;
+end;
+
+
+//-----------------------------------------------------------------------------
+//  End of REGINS.RUL
+//-----------------------------------------------------------------------------
+
+
+

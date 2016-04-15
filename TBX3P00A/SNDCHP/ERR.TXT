@@ -1,0 +1,1102 @@
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     DLGmle.lib
+	lib     DLGmle.lib @allmle.rsp @DLGmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\dlgxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\dlgxlt.lib : module not in library
+-+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    DLGmle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @DLGlnk.rsp libw+mdllcew, DLGchp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\dlgpcm.lib ..\..\effdev\dlgeff.lib +
+	rc -DW31 -DDLG   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib DLGchp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\DLGmwe.lib
+        1 file(s) copied
+	copy    genchp.lib DLGmwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\DLGchp.dll
+        1 file(s) copied
+	copy    genchp.dll DLGchp.dll
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_DLG -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     HARmle.lib
+	lib     HARmle.lib @allmle.rsp @HARmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\harxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\harxlt.lib : module not in library
+-+ ..\..\pcmdev\nwvxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\nwvxlt.lib : module not in library
+..\..\pcmdev\dlgxlt.lib -+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    HARmle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @HARlnk.rsp libw+mdllcew, HARchp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\harpcm.lib ..\..\effdev\hareff.lib +
+	rc -DW31 -DHAR   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib HARchp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\HARmwe.lib
+        1 file(s) copied
+	copy    genchp.lib HARmwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\HARchp.dll
+        1 file(s) copied
+	copy    genchp.dll HARchp.dll
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_DLG -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     G21mle.lib
+	lib     G21mle.lib @allmle.rsp @G21mle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\g21xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g21xlt.lib : module not in library
+-+ ..\..\pcmdev\dlgxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\dlgxlt.lib : module not in library
+-+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    G21mle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @G21lnk.rsp libw+mdllcew, G21chp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\g21pcm.lib ..\..\effdev\g21eff.lib +
+	rc -DW31 -DG21   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib G21chp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\G21mwe.lib
+        1 file(s) copied
+	copy    genchp.lib G21mwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\G21chp.dll
+        1 file(s) copied
+	copy    genchp.dll G21chp.dll
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_DLG -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     NWVmle.lib
+	lib     NWVmle.lib @allmle.rsp @NWVmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\nwvxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\nwvxlt.lib : module not in library
+-+ ..\..\pcmdev\dlgxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\dlgxlt.lib : module not in library
+-+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    NWVmle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @NWVlnk.rsp libw+mdllcew, NWVchp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\nwvpcm.lib ..\..\effdev\nwveff.lib +
+	rc -DW31 -DNWV   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib NWVchp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\NWVmwe.lib
+        1 file(s) copied
+	copy    genchp.lib NWVmwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\NWVchp.dll
+        1 file(s) copied
+	copy    genchp.dll NWVchp.dll
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_DLG -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     PTCmle.lib
+	lib     PTCmle.lib @allmle.rsp @PTCmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\ptcxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\ptcxlt.lib : module not in library
+-+ ..\..\pcmdev\nwvxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\nwvxlt.lib : module not in library
+..\..\pcmdev\dlgxlt.lib -+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    PTCmle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @PTClnk.rsp libw+mdllcew, PTCchp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\ptcpcm.lib ..\..\effdev\ptceff.lib +
+	rc -DW31 -DPTC   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib PTCchp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\PTCmwe.lib
+        1 file(s) copied
+	copy    genchp.lib PTCmwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\PTCchp.dll
+        1 file(s) copied
+	copy    genchp.dll PTCchp.dll
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\efffse.c
+..\..\effdev\efffse.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\effebs.c
+..\..\effdev\effebs.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\effdev\ebssup.c
+..\..\effdev\ebssup.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmfio.c
+..\..\pcmdev\pcmfio.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt -D_P_DLG -D_P_G11 -D_P_MSW ..\..\pcmdev\pcmini.c
+..\..\pcmdev\pcmini.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\pcmqry.c
+..\..\pcmdev\pcmqry.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\blkcvt.c
+..\..\pcmdev\blkcvt.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'endset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(146) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'lstbyt' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'chkset' : unreferenced label
+..\..\pcmdev\mpcsup.c(327) : warning C4102: 'fmstrt' : unreferenced label
+..\..\pcmdev\mpcsup.c(61) : warning C4704: 'MPCL16toM32' : in-line assembler precludes global optimizations
+..\..\pcmdev\mpcsup.c(209) : warning C4704: 'MPCP08toM32' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	del     RTXmle.lib
+	lib     RTXmle.lib @allmle.rsp @RTXmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\chpini.obj 
+LIB : warning U4155: object\chpini.obj : module not in library
+&
+Operations: -+ object\fillod.obj 
+LIB : warning U4155: object\fillod.obj : module not in library
+&
+Operations: -+ object\efffse.obj 
+LIB : warning U4155: object\efffse.obj : module not in library
+&
+Operations: -+ object\effebs.obj 
+LIB : warning U4155: object\effebs.obj : module not in library
+-+ object\ebssup.obj 
+LIB : warning U4155: object\ebssup.obj : module not in library
+&
+Operations: -+ object\wavfil.obj 
+LIB : warning U4155: object\wavfil.obj : module not in library
+-+ object\visfil.obj 
+LIB : warning U4155: object\visfil.obj : module not in library
+&
+Operations: -+ object\pcmfio.obj 
+LIB : warning U4155: object\pcmfio.obj : module not in library
+-+ object\pcmini.obj 
+LIB : warning U4155: object\pcmini.obj : module not in library
+-+ object\pcmqry.obj 
+LIB : warning U4155: object\pcmqry.obj : module not in library
+&
+Operations: -+ object\blkcvt.obj 
+LIB : warning U4155: object\blkcvt.obj : module not in library
+-+ object\mpcsup.obj 
+LIB : warning U4155: object\mpcsup.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: Operations: -+ ..\..\pcmdev\rtxxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\rtxxlt.lib : module not in library
+-+ ..\..\pcmdev\dlgxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\dlgxlt.lib : module not in library
+-+ ..\..\pcmdev\g11xlt.lib 
+LIB : warning U4155: ..\..\pcmdev\g11xlt.lib : module not in library
+-+ ..\..\pcmdev\mswxlt.lib 
+LIB : warning U4155: ..\..\pcmdev\mswxlt.lib : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genchp.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    RTXmle.lib ..\..\reldev\dev\chplib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt chpini.c
+chpini.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\wavfil.c
+..\..\fiodev\wavfil.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\visfil.c
+..\..\fiodev\visfil.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AMw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M    @alllnk.rsp @RTXlnk.rsp libw+mdllcew, RTXchp.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\chpini.obj +
+Object Modules [.obj]: object\fillod.obj +
+Object Modules [.obj]: object\wavfil.obj + object\visfil.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\cfgsup.obj
+Run File [chpini.exe]: genchp.dll
+List File [e:genchp.map]: NUL
+Libraries [.lib]: ..\..\pcmdev\rtxpcm.lib ..\..\effdev\rtxeff.lib +
+	rc -DW31 -DRTX   genchp.rc  genchp.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+	implib  genchp.lib RTXchp.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genchp.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\chplib
+        1 file(s) copied
+	copy    genchp.lib ..\..\reldev\dev\chplib\RTXmwe.lib
+        1 file(s) copied
+	copy    genchp.lib RTXmwe.lib
+        1 file(s) copied
+	copy    genchp.dll ..\..\reldev\w31\RTXchp.dll
+        1 file(s) copied
+	copy    genchp.dll RTXchp.dll
+        1 file(s) copied

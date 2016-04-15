@@ -1,0 +1,9 @@
+object\cvtini.obj +
+object\fillod.obj + object\fileff.obj + object\effftr.obj +
+object\wavfil.obj + object\visfil.obj +
+object\winmem.obj + object\winmsg.obj +
+object\fillow.obj + object\cfgsup.obj
+gencvt.dll
+NUL
+..\..\pcmdev\harpcm.lib ..\..\effdev\hareff.lib +
+

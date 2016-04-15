@@ -1,0 +1,139 @@
+Option Explicit
+
+' ------------------------------------------------------------------------
+' Generic Index File Utility Defs: GenIdx.Txt
+' Copyright (c) 1987-1996 Andrew J. Michalik
+' ------------------------------------------------------------------------
+Global Const IDXVERNUM = &H300              ' Idx support ver number
+
+' ------------------------------------------------------------------------
+' Define general purpose VISI data types for SDK users
+' ------------------------------------------------------------------------
+Global Const FIOMAXNAM = 256                ' Max length of file name
+
+Type VISMEMHDL
+    ulGloHdl As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type IDXPOLPRC
+    ulPrcAdr As Long
+End Type
+Type IDXERRPRC
+    ulPrcAdr As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type IDXBLK                                 ' Global Indexed Ops structure
+    ucRsv001 As String * 512                ' Reserved
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Declare Function IdxFilVer Lib "ALLIDX.DLL" () As Integer
+Declare Function IdxFilIni Lib "ALLIDX.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm2 As Long) As Integer
+Declare Function IdxFilTrm Lib "ALLIDX.DLL" () As Integer
+
+Declare Function IdxCfgIni Lib "ALLIDX.DLL" (Prm1 As IDXBLK) As Integer
+Declare Function IdxCfgLod Lib "ALLIDX.DLL" (ByVal Prm1 As String, Prm2 As Long) As Integer
+Declare Function IdxCfgRel Lib "ALLIDX.DLL" (Prm1 As Long) As Integer
+Declare Function IdxCapQry Lib "ALLIDX.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm3 As Long) As Long
+  
+Declare Function IdxSetDeb Lib "ALLIDX.DLL" (ByVal Prm1 As Integer) As Integer
+Declare Function IdxSetDsp Lib "ALLIDX.DLL" (ByVal Prm1 As Long) As Long
+  
+' ------------------------------------------------------------------------
+' Index Chop Definitions
+' ------------------------------------------------------------------------
+Type CHIBLK                                 ' Chop Index function block
+    lNamOff  As Long                        ' Source file format
+    ulIdxPos As Long                        ' Beginning index position
+    ulIdxCnt As Long                        ' Index count
+    lpPolDsp As IDXPOLPRC                   ' Conversion poll display proc
+    ulRsvPol As Long                        ' Reserved
+    lpMsgDsp As IDXERRPRC                   ' Reserved
+    ulRsvErr As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+End Type
+
+'VB does not yet support ByVal for user-defined data types
+'Type CHICHKCBK
+'    ulPrcAdr As Long
+'End Type
+'Type CHIENDCBK
+'    ulPrcAdr As Long
+'End Type
+
+Declare Function ChpIdxIni Lib "ALLIDX.DLL" (Prm1 As CHIBLK) As Integer
+Declare Function ChpIdxFil Lib "ALLIDX.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As String, ByVal Prm3 As String, ByVal CHICHKCBK As Long, ByVal Prm5 As Long, ByVal CHIENDCBK As Long, ByVal Prm7 As Long, Prm1 As CHIBLK) As Integer
+
+' ------------------------------------------------------------------------
+' Index List Definitions
+' ------------------------------------------------------------------------
+Global Const GENINHFLG = &H2                ' General info inhibit flag
+Global Const VOXINHFLG = &H8                ' Vox     info inhibit flag
+Global Const TXTINHFLG = &H20               ' Text    info inhibit flag
+
+Type LSIBLK                                 ' Index List function block
+    usLstFlg As Integer                     ' List request flags
+    lpMsgDsp As IDXERRPRC                   ' User message display proc
+    ulRsvErr As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+End Type
+
+Declare Function LstIdxIni Lib "ALLIDX.DLL" (Prm1 As LSIBLK) As Integer
+Declare Function LstIdxFil Lib "ALLIDX.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As String, ByVal Prm3 As String, ByVal Prm4 As Integer, Prm5 As LSIBLK) As Long
+
+' ------------------------------------------------------------------------
+' Index Pack Definitions
+' ------------------------------------------------------------------------
+Type PKIBLK                                 ' Pack Index function block
+    sSrtTyp  As Integer                     ' Sort order
+    ulSmpFrq As Long                        ' Header sample frequency
+    lpPolDsp As IDXPOLPRC                   ' Conversion poll display proc
+    ulRsvPol As Long                        ' Reserved
+    lpMsgDsp As IDXERRPRC                   ' Reserved
+    ulRsvErr As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+End Type
+
+'VB does not yet support ByVal for user-defined data types
+'Type PKICHKCBK
+'    ulPrcAdr As Long
+'End Type
+'Type PKIENDCBK
+'    ulPrcAdr As Long
+'End Type
+
+Declare Function PakIdxIni Lib "ALLIDX.DLL" (Prm1 As PKIBLK) As Integer
+Declare Function PakIdxFil Lib "ALLIDX.DLL" (ByVal Prm1 As String, ByVal Prm2 As String, ByVal Prm3 As String, ByVal PKICHKCBK As Long, ByVal Prm5 As Long, ByVal PKIENDCBK As Long, ByVal Prm7 As Long, Prm8 As PKIBLK) As Integer
+
+' ------------------------------------------------------------------------
+' Index Rebuild Definitions
+' ------------------------------------------------------------------------
+Type RBIBLK                                 ' Rebuild Index function block
+    sShfCnt As Integer                      ' Shift count
+    usAt_Pos As Integer                     ' Operation "at" position
+    ulSmpFrq As Long                        ' Header sample frequency
+    ucRepVox As String * FIOMAXNAM           ' Replacement vox file
+    ucRepTxt As String * FIOMAXNAM           ' Replacement text file
+    lpPolDsp As IDXPOLPRC                   ' Rebuild poll display proc
+    ulRsvPol As Long                        ' Reserved
+    lpMsgDsp As IDXERRPRC                   ' Reserved
+    ulRsvErr As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+End Type
+
+Declare Function RebIdxIni Lib "ALLIDX.DLL" (Prm1 As RBIBLK) As Integer
+Declare Function RebIdxFil Lib "ALLIDX.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Integer, ByVal Prm3 As String, ByVal Prm4 As String, ByVal Prm5 As String, ByVal Prm6 As Integer, ByVal Prm7 As Long) As Long
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const SI_IDXNO_ERR = 0               ' No error
+Global Const SI_IDXKEYERR = 1               ' Key/License not found, 8 sec lim
+Global Const SI_IDXVERERR = 2               ' Module version mismatch
+
+
+

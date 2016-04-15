@@ -1,0 +1,5 @@
+object\genchp.obj + object\chpcfg.obj +
+object\filfnd.obj
+genchp.exe
+NUL
+

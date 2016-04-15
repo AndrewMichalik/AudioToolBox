@@ -1,0 +1,421 @@
+                                                                 1
+
+
+
+
+      Audio ToolBox(TM) Conversion Utility Information on Site &
+              Distribution Licenses and Custom Versions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Private Use (Shareware version)
+
+This license is not necessary for clubs or user groups distributing
+the software on a SHAREWARE basis, providing that the entire Audio
+ToolBox package with accompanying documentation files is included in
+the distribution, and no more than a nominal fee (not to exceed $20)
+is charged for such distribution. The private use version displays a
+brief message containing Voice Information Systems contact information
+and copyright notification along with product marketing information.
+ALL OF THE SHAREWARE AUTHOR'S RIGHT, TITLE AND INTEREST IN AND TO THE
+SOFTWARE NOT EXPRESSLY GRANTED ARE RESERVED EXCLUSIVELY BY THE AUTHOR.
+
+
+
+Corporate and Governmental Site License
+
+To use Audio ToolBox in a commercial, educational or governmental
+agency on more than one computer, it is necessary to purchase a SITE
+LICENSE. This is a license for use of the software within your company
+or government agency, and is not transferable.  This allows internal
+use and copying of the software for as many sites / computers as
+contracted for. (See the ORDER FORM for Site License price schedule).
+An unlimited Site License allows unlimited copying of the software for
+internal use by your company or government agency. The Corporate and
+Governmental use version displays a brief message containing Voice
+Information Systems contact information and copyright notification.
+
+Distributing, repackaging, or reselling of the software to third
+parties is not allowed. All licenses are prepaid.
+
+                                                                 2
+
+
+
+
+Distribution License
+
+This allows distribution of the Audio ToolBox software with software
+that is distributed by your company or government agency. Private
+labelling is available.
+
+Complete and return the following Application for Distribution License
+to receive a quotation.  There is no obligation to complete and return
+the Application to receive a quotation.  You may fax or mail the
+completed Application. VISI will send a written quotation.
+
+This license is non-exclusive and non-transferable. A sample
+Distribution Agreement is enclosed.  All licenses are prepaid.
+
+
+
+Custom Versions of the Software
+
+If you require any modifications or changes to the software, please
+include detailed written information describing all changes you are
+interested in.  Customization fees will be based on the extent of the
+modifications required to the software so it performs as you describe.
+Depending on the changes requested, please allow six to eight weeks
+for custom versions of the software.
+
+                                                                 3
+
+
+
+
+Sample Site License:
+
+                   VOICE INFORMATION SYSTEMS, INC.
+                       2118 WILSHIRE BLVD, #973
+                     SANTA MONICA, CA  90403  USA
+                             310-392-8780
+                                   
+
+
+VOICE INFORMATION SYSTEMS, INC. hereby grants [ORGANIZATION NAME] a
+site license for [NUMBER OF SITES/COMPUTERS LICENSED] computers for
+the use of the following software programs:  [VISI PRODUCTS LICENSED].
+
+
+
+This is a perpetual license for the use of the software within your
+company, and is not transferable.  This license allows internal use
+and copying of the software by as many users/ machines as contracted
+for. Distribution, repackaging, or reselling of the software, to third
+parties, is not allowed under this agreement.
+
+
+
+The LICENSOR warrants that it is sole owner of the software and has
+full power and authority to grant this license herein without consent
+of any other party.
+
+
+
+VISI hereby disclaims all warranties relating to this software,
+whether express or implied, including without limitation any implied
+warranties of merchantability or fitness for a particular purpose.
+VISI will not be liable for any special, incidental, consequential,
+indirect or similar damages due to loss of data or any other reason,
+even if VISI or an agent of VISI has been advised of the possibility
+of such damages. In no event shall VISI's liability for any damages
+ever exceed the price paid for the license to use the software,
+regardless of the form of the claim.  The person using the software
+bears all risk as to the quality and performance of the software.
+
+
+
+This agreement shall be construed and enforced in accordance with the
+laws of the STATE OF CALIFORNIA.  Any action or proceeding brought by
+either party against the other arising out of or related to this
+agreement shall be brought only in a STATE or FEDERAL COURT of
+competent jurisdiction located in Los Angeles County, California. The
+parties hereby consent to in personam jurisdiction of said courts.
+
+
+
+
+
+                                                                 4
+
+
+COMPANY: [ORGANIZATION NAME]
+
+
+
+ADDRESS: [ORGANIZATION ADDRESS]
+
+
+
+CITY:    [ORGANIZATION'S CITY]  STATE:  __   ZIP CODE: _____
+
+
+
+COUNTRY: [ORGANIZATION'S COUNTRY]
+
+
+
+_________________________________________  _________________
+
+AUTHORIZED  SIGNATURE                      DATE
+
+
+
+_______________________
+
+TITLE
+
+
+
+
+
+_________________________________________  _________________
+
+VISI AUTHORIZED SIGNATURE                  DATE
+
+
+
+_______________________
+
+TITLE
+
+                                                                 5
+
+
+
+
+Sample Distribution License Agreement:
+
+
+
+                   VOICE INFORMATION SYSTEMS, INC.
+                       2118 WILSHIRE BLVD, #973
+                     SANTA MONICA, CA  90403  USA
+                             310-392-8780
+
+
+This agreement entered into, by and between VOICE INFORMATION SYSTEMS,
+INC., a California corporation, located at 2118 Wilshire Blvd, #973,
+Santa Monica, California 90403 (herein after referred to as
+"LICENSOR"), and <COMPANY NAME> a <STATE> CORPORATION  located at
+<ADDRESS, CITY, STATE, ZIP CODE> (herein after referred to as
+"LICENSEE").
+
+
+
+This contract allows LICENSEE to DISTRIBUTE the program(s) developed
+by LICENSOR referred to as <VISI PRODUCT'S NAME> with software
+developed by LICENSEE.  This perpetual license of the <VISI PRODUCT'S
+NAME> software by LICENSOR TO LICENSEE IS NON-EXCLUSIVE AND NON-
+TRANSFERABLE.  LICENSEE shall pay LICENSOR a one time fee of US
+$<xxx.xx> in exchange for said license.  This is a license for
+<DISTRIBUTION `TYPE'> distribution for use with <YOUR PRODUCT NAME>.
+
+The LICENSOR warrants that it is sole owner of the software and has
+full power and authority to grant this license herein without consent
+of any other party.
+
+
+
+Licensee represents and warrants the following: Licensee's Program(s)
+may load and run, through either a menu or a programmatic interface
+(i.e., through macros, DDE, etc.), Audio ToolBox *.Exe programs. If
+Licensee's Program(s) allows the creation of a application, it shall
+include documentation that clearly states that any application
+developer using Licensee's Program(s) to create an application must
+obtain a license agreement from VISI in order to distribute any VISI
+files or functionality included in the Licensee's Program(s). The
+following language must be displayed in a conspicuous location within
+the user documentation for Licensee's Program(s):
+
+"[Name of Licensee's Program] and Voice Information Systems Audio
+ToolBox
+
+"[Name of Licensee's Program] controls your file conversion through a
+set of programs called Audio ToolBox, created by Voice Information
+Systems Corporation. Audio ToolBox lets you batch process and convert
+your digital audio files to and from industry standard formats.
+
+                                                                 6
+
+
+"Audio ToolBox is licensed software provided by Voice Information
+Systems Incorporated, 2118 Wilshire Blvd, #973, Santa Monica, CA,
+90403, USA (Voice: 1-800-234-VISI, Fax: 1-800-234-FXIT). Audio ToolBox
+is Copyright 1987 - 1994 by authorized agent Voice Information Systems
+Incorporated which reserves all copyright protection worldwide. Audio
+ToolBox is provided to you for the exclusive purpose of running [Name
+of Licensee's Program]. [Licensee] is exclusively responsible for the
+support of [Name of Licensee's Program]. In no event will Voice
+Information Systems Incorporated be able to provide technical support
+for [Name of Licensee's Program]."
+
+
+
+Licensee warrants that it will cause this copyright notice for the
+PRODUCT, "Portions (C) Copyright Voice Information Systems Corp. 1987-
+1994. All rights reserved." to appear on the copyright page in the
+documentation of the Licensee's Program(s), on the labels of each disk
+that includes any part of the PRODUCT, as part of the sign-on message
+or boot-up screen for each of Licensee's Program(s), and as part of
+the "About..." dialog box in the Licensee's Program(s). Licensee
+agrees to use the appropriate trademark symbol and clearly indicate
+VISI's ownership of the trademark or trade name whenever the PRODUCT
+name, VISI's name, or VISI's trade name or trademark is first
+mentioned in any manner in connection with the PRODUCT or Licensee's
+Program(s). Licensee shall refer to the PRODUCT and Voice Information
+Systems Audio ToolBox by the trade name Voice Information Systems
+Audio ToolBox(TM). Licensee shall not represent, explicitly or
+implicitly, that functionality provided by the PRODUCT was developed
+by anyone other than VISI.
+
+
+
+VISI hereby disclaims all warranties relating to this software,
+whether express or implied, including without limitation any implied
+warranties of merchantability or fitness for a particular purpose.
+VISI will not be liable for any special, incidental, consequential,
+indirect or similar damages due to loss of data or any other reason,
+even if VISI or an agent of VISI has been advised of the possibility
+of such damages. In no event shall VISI's liability for any damages
+ever exceed the price paid for the license to use the software,
+regardless of the form of the claim.  The person using the software
+bears all risk as to the quality and performance of the software.
+
+This agreement shall be construed and enforced in accordance with the
+laws of the STATE OF CALIFORNIA.  Any action or proceeding brought by
+either party against the other arising out of or related to this
+agreement shall be brought only in a STATE or FEDERAL COURT of
+competent jurisdiction located in Los Angeles county, California. The
+parties hereby consent to in personam jurisdiction of said courts.
+
+
+
+This agreement can only be modified by mutual written consent of both
+parties.
+
+                                                                 7
+
+
+
+
+
+
+COMPANY:  <COMPANY NAME>
+
+
+
+_________________________________________  _________________
+
+AUTHORIZED  SIGNATURE                      DATE
+
+
+
+_______________________
+
+TITLE
+
+
+
+
+
+_________________________________________  _________________
+
+VISI AUTHORIZED SIGNATURE                  DATE
+
+
+
+_______________________
+
+TITLE
+
+
+
+                                                                 8
+
+
+
+
+Distribution License Application
+
+
+
+NAME: ______________________________________________________
+
+
+
+
+
+COMPANY: ___________________________________________________
+
+
+
+
+
+TITLE: _________________________________   DATE: ___________
+
+
+
+
+
+ADDRESS: ___________________________________________________
+
+
+
+
+
+CITY: _________________________________   STATE:  __________
+
+
+
+
+
+ZIP CODE: ____________   COUNTRY: __________________________
+
+
+
+
+
+TELEPHONE: (_____)______________   FAX: (____)______________
+
+
+
+
+
+
+
+1)   State the names(s) of the software package(s) or program(s) which
+     will be distributed using the VISI programs:
+     
+     _______________________________________________________
+
+                                                                 9
+
+
+2)   Please describe the intended usage of the VISI programs indicated
+     in question 1.  If possible, please describe the software
+     packages(s) that you intend to distribute with or using the VISI
+     programs, and their price or price range. Also, please list any
+     other relevant information (feel free to attach additional
+     sheets):
+
+
+
+
+
+
+
+
+
+
+
+
+3)   In what quantity do you estimate distributing the software
+     indicated above?  ________ copies per year ____ or one time ____
+     (check only one).
+
+
+4)  Incorporated in what state/country: ___________________.
+
+

@@ -1,0 +1,18 @@
+Done: 
+    Added 1 to equalizer panel and splash screen background color.
+    Install: Change szPgrp to SI_PRGGRP, delete szPgrp    
+    Install: Add website to info screen
+    SndChp: -f gets ahead of extension, invalid command line
+    Setup: change program group (szPgrp) name from AudTBx to Audio Toolbox
+    TBxAPP: GetLoadedModule - use strtokstr to remove trailing null
+    Volume normalize default changed to .2% over range
+    TBxAPP: Add kHz to Frequency labels (check all for units)
+    TBxAPP: Shrink height by at least title bar height for VGA - shrink more?
+    Help: Fix 800-4MY-GURU to 800-469-4874
+    TBxAPP: Add doevents to abttbx.frm form_activate
+    PCMCvt: Source file name saved, but not Data Type in .INI file (PCMCvt?)
+    SndChp: default destination file extension to input file extension
+    TBxAPP: Help file text on Module verification
+    Setup: Query before deleting old program group 
+    TBxAPP: Add hotkeys to all help menu items
+

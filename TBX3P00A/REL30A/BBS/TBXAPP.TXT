@@ -1,0 +1,56 @@
+                         Audio ToolBox Apprentice
+                The Digital Audio Processor and Converter
+
+
+Contents:
+
+    The TBXAPP.ZIP file contains the Audio ToolBox Apprentice, a Windows 
+    GUI for use with VISI's Audio ToolBox Program.
+
+    Audio ToolBox, The Batch Processor & Converter, converts between 
+    Multimedia Wave (16, 8 & MS ADPCM) unsigned 8, linear 16, 
+    Dialogic 4 & 8, CCITT G.711/G.721, NewVoice & more! Audio ToolBox 
+    lets you batch convert, chop, crop, dynamic compress/expand, filter, 
+    normalize & more - any file length, any frequency. And add conversion 
+    capability to your Windows or DOS programs with our ToolBox SDK!
+
+
+To Unpack:
+    
+    1)  Unzip the file TBXAPP.ZIP to extract each floppy image:
+        PKUNZIP TBXAPP.ZIP
+        [Note: If you are reading this file from your hard drive, you have
+        already completed this step.] 
+    2)  Unzip the disk image to floppy using the create directory option: 
+        PKUNZIP APP001.ZIP a: -d
+        Root files and two directories will be created - INSDIR 
+        and WIN3XX.
+    3)  From the Windows file manager, run the installation program: 
+        a:SETUP            
+    4)  Use the serial number "0000.0000.0000" when asked by the 
+        install program.
+    5)  Follow the instructions on screen!
+
+
+Other VISI Products:
+
+    Don't forget to ask about our other exciting products:
+    
+    VFEdit ("vee-ef-edit"), The Professional Prompt Editor,
+        is a Microsoft Windows graphical editor that lets
+        you edit sound the way a word processor lets you
+        edit text.
+    
+    TI/F DLL (tif-dee-el-el), The Microsoft Windows Voice
+        Mail Driver, lets you add Voice Mail power to your
+        Microsoft Windows applications.
+
+    VoxFonts, the "Software Only" Text-to-Speech adds an
+        unlimited vocabulary to your Interactive Voice
+        Response applications.
+    
+    Scribe, The DOS Speech to Text Transcription Utility,
+        lets you hear digital audio files without the need
+        for additional hardware. It's like turning your PC
+        into a transcription machine.
+

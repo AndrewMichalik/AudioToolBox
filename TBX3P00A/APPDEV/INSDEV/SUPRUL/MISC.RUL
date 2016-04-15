@@ -1,0 +1,582 @@
+//-----------------------------------------------------------------------------
+//                         InstallSHIELD Sample Files
+// Copyright (c) 1990-1993, Stirling Technologies, Inc. All Rights Reserved
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+//      FILE:   MISC.RUL
+//
+//      PURPOSE:
+//         This script implements various commonly used custom dialog boxes.
+//         1) _TerminateInstallation()
+//            DLG_EXIT
+//            User wishes to Cancel Setup this dialog will box will prompt
+//              the user with 2 choices RESUME or EXIT.
+//
+//         2) _PreviousVersionFound()
+//            DLG_VERSION
+//            If a previous version is found the user has three choices
+//              Continue, Change Directory, or Cancel Setup.
+//
+//         3) _InsufficientDiskSpace()
+//            DLG_DISKSPACE
+//            This function is called if the  target drive selected does not
+//              have the required amount of disk space. The user will have three
+//              choices Install Anyway, Main Menu, or  Cancel Setup
+//
+//         4) _WelcomeEx()
+//            DLG_START
+//            This function is called to welcome the user,
+//              the user has the option to continue setup or cancel setup.
+//
+//         5) _GiveOptionsWhenDoneInstalling()
+//            DLG_DONE
+//            This function will display a custom dialog box with three choices
+//              in EXAMPLE 1  1) Run the program Help 2) Run the Program
+//              3) Return to Windows
+//
+//
+//      RESOURCE: MISC.DLG
+//         DLG_EXIT
+//         DLG_VERSION
+//         DLG_DISKSPACE
+//         DLG_START
+//         DLG_DONE
+//
+//      RELATED FILES:
+//         MISC.H
+//         MISC.RUL
+//
+//
+//      MAIN FUNCTION CALLS:
+//         _CreateDLG             ( szDLG, iDLG_ID, lHwnd )
+//         _TerminateInstallation ()
+//         _PreviousVersionFound  ()
+//         _InsufficientDiskSpace ()
+//         _WelcomeEx             ()
+//         _GiveOptionsWhenDoneInstalling()
+//         _Error                 ( szErrorString )
+//         _CreateNewStringList   ( listFirst, listSecond, listFirstPlusSecond )
+//         _DrawBitMap            (OnOrOff, szBitmapFile)
+//         _PrepareForExit        (  )
+//         _BuildDrivesList       ( listDrives, nDiskSpaceRequired)
+//
+//
+//      REQUIREMENTS:
+//         The dialogs used in this script must be available in a
+//         resource DLL called RESOURCE.DLL found in the SUPPORTDIR.
+//         The dialogs are loaded from this resource DLL.
+//
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will define a custom dialog box.
+// PARAMETERS:
+//      szDLG    User defined string for the dialog
+//      iDLG_ID  Dialog identifier
+//      lHwnd    Window handle.
+//-----------------------------------------------------------------------------
+
+function        _CreateDLG( szDLG, iDLG_ID, lHwnd )
+
+STRING  szSupportDLL [ MAX_SIZE ];
+
+begin
+        szSupportDLL = SUPPORTDIR ^ "RESOURCE.DLL" ;
+        if (
+             DefineDialog( szDLG, 0 , szSupportDLL, iDLG_ID, "",
+             HWND_DESKTOP, lHwnd, DLG_MSG_STANDARD | DLG_CENTERED  )
+           )
+        then
+           _Error( STR_ERR_DEFINEDLG );
+        endif;
+
+end;
+
+//-----------------------------------------------------------------------------
+//  PUPOSE:
+//     This function will prompt the user for termination of Installation
+//     program.
+//-----------------------------------------------------------------------------
+
+function        _TerminateInstallation()
+LONG    lDoneFlag, lDialogMessage, lHwnd;
+
+begin
+       // Since this an Exit Dialog we shall disable the Exit button
+       // which is on the lower right corner.
+
+       Disable( EXIT );
+       lDoneFlag = FALSE;
+        while lDoneFlag = FALSE
+
+           lDialogMessage = WaitOnDialog( "DLG_EXIT" );
+
+           // check to make ure that the .DLL was found if not
+           // found WaitOnDialog returns DLG_ERR
+
+           if ( lDialogMessage = DLG_ERR ) then
+
+              MessageBox( STR_ERR_DLG, WARNING );
+              lDoneFlag = TRUE;
+
+           endif;
+
+           switch(lDialogMessage)
+
+           case IDOK:
+              lDoneFlag = TRUE;
+              // Since the user selected resume we will activate the EXIT button.
+              Enable( EXIT );
+
+           case IDCANCEL:
+              lDoneFlag = TRUE;
+              _PrepareForExit( );
+
+           case DLG_CLOSE:
+              lDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+
+        EndDialog( "DLG_EXIT" );
+        ReleaseDialog( "DLG_EXIT" );
+end;
+
+//-----------------------------------------------------------------------------
+//  PURPOSE:
+//     This function will prompt the user if a previous version of the product is
+//     found the user is given a choice whether to continue, Change Directory, or
+//     Cancel Setup
+//  RETURN VALUE:
+//    Return 0 if the user selected Continue, Return 1 if the user selected
+//    Change Directory.
+//-----------------------------------------------------------------------------
+
+function        _PreviousVersionFound()
+LONG    lDoneFlag, lDialogMessage, lHwnd;
+LONG    lReturnFlag;
+
+begin
+       lDoneFlag = FALSE;
+       lReturnFlag = 0;
+        while lDoneFlag = FALSE
+
+           lDialogMessage = WaitOnDialog( "DLG_VERSION" );
+
+           // check to make ure that the .DLL was found if not
+           // found WaitOnDialog returns DLG_ERR
+
+           if ( lDialogMessage = DLG_ERR ) then
+
+              MessageBox( STR_ERR_DLG, WARNING );
+              lDoneFlag = TRUE;
+
+           endif;
+
+           switch(lDialogMessage)
+
+           case IDOK:
+              lDoneFlag = TRUE;
+
+           case ID_DLG_VERSION_CHANGE_DIR:
+              lReturnFlag = 1;
+              lDoneFlag = TRUE;
+
+           case IDCANCEL:
+              lHwnd = CmdGetHwndDlg( "DLG_VERSION" );
+              _CreateDLG("DLG_EXIT", DLG_EXIT, lHwnd);
+              _TerminateInstallation();
+
+           case DLG_CLOSE:
+              lDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+        EndDialog( "DLG_VERSION" );
+        ReleaseDialog( "DLG_VERSION" );
+
+        return lReturnFlag;
+end;
+
+//-----------------------------------------------------------------------------
+//  PURPOSE:
+//     This function will prompt the user if the drive selected does not have the
+//     required amount of disk space. The user will have three choices to
+//     Install Anyway, Main Menu, or  Cancel Setup
+//  RETURN VALUE:
+//    Return 0 if the user selected Install Anyway, Return 1 if the user selected
+//    Main Menu.
+//-----------------------------------------------------------------------------
+
+function        _InsufficientDiskSpace()
+LONG    lDoneFlag, lDialogMessage, lHwnd;
+LONG    lReturnFlag;
+
+begin
+        lDoneFlag = FALSE;
+        lReturnFlag = 0;
+        while lDoneFlag = FALSE
+
+           lDialogMessage = WaitOnDialog( "DLG_DISKSPACE" );
+
+           // check to make ure that the .DLL was found if not
+           // found WaitOnDialog returns DLG_ERR
+
+           if ( lDialogMessage = DLG_ERR ) then
+
+              MessageBox( STR_ERR_DLG, WARNING );
+              lDoneFlag = TRUE;
+
+           endif;
+
+           switch(lDialogMessage)
+
+           case DLG_INIT:
+              // Get the window handle
+              lHwnd = CmdGetHwndDlg("DLG_DISKSPACE");
+
+           case IDOK:
+              lDoneFlag = TRUE;
+
+           case ID_DLG_DISKSPACE_MAINMENU:
+              lReturnFlag = 1;
+              lDoneFlag = TRUE;
+
+           case IDCANCEL:
+              _CreateDLG("DLG_EXIT", DLG_EXIT, lHwnd);
+              _TerminateInstallation();
+
+           case DLG_CLOSE:
+              lDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+        EndDialog( "DLG_DISKSPACE" );
+        ReleaseDialog( "DLG_DISKSPACE" );
+
+        return lReturnFlag;
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will display a custom dialog box for welcome in EXAMPLE 3
+//    the user has the option to Continue Setup or Cancel Setup.
+//-----------------------------------------------------------------------------
+
+function        _WelcomeEx()
+LONG    lDoneFlag, lDialogMessage, lHwnd;
+
+begin
+        _CreateDLG( "DLG_START", DLG_START, HWND_INSTALL );
+        lDoneFlag = FALSE;
+        while lDoneFlag = FALSE
+
+           lDialogMessage = WaitOnDialog( "DLG_START" );
+
+           // check to make ure that the .DLL was found if not
+           // found WaitOnDialog returns DLG_ERR
+
+           if ( lDialogMessage = DLG_ERR ) then
+              MessageBox( STR_ERR_DLG, WARNING );
+              lDoneFlag = TRUE;
+           endif;
+
+           switch(lDialogMessage)
+
+           case DLG_INIT:
+              lHwnd = CmdGetHwndDlg( "DLG_START" );
+
+              //set the text for caption
+              _WinSubSetWindowTitle( lHwnd, STR_WELCOME_TIT );
+
+           case IDOK:
+              lDoneFlag = TRUE;
+
+           case IDCANCEL:
+              lDoneFlag = TRUE;
+              _PrepareForExit ( );
+
+           case DLG_CLOSE:
+              lDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+        EndDialog( "DLG_START" );
+
+        // free the memory of the dialog
+        ReleaseDialog ( "DLG_START" );
+end;
+
+#ifdef _EXAMPLE3
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will display a custom dialog box with three choices in EXAMPLE 3
+//    1) Run the program Help 2) Run the Program  3) Return to Windows
+//    NOTE: szRunProgram is a GLOBAL variable declared in DECLARE.RUL
+//            szSaveHelp is a GLOBAL variable declared in DECLARE.RUL
+//-----------------------------------------------------------------------------
+
+function        _GiveOptionsWhenDoneInstalling()
+LONG    lDoneFlag, lDialogMessage, lHwnd, lFlag;
+STRING  szFirstString [ MAX_SIZE ];
+
+begin
+        _CreateDLG( "DLG_DONE", DLG_DONE, HWND_INSTALL );
+        lDoneFlag = FALSE;
+        while lDoneFlag = FALSE
+
+           lDialogMessage = WaitOnDialog("DLG_DONE");
+
+           // check to make ure that the .DLL was found if not
+           // found WaitOnDialog returns DLG_ERR
+
+           if ( lDialogMessage = DLG_ERR ) then
+              MessageBox( STR_ERR_DLG, WARNING );
+              lDoneFlag = TRUE;
+           endif;
+
+           switch( lDialogMessage )
+
+           case DLG_INIT:
+              lHwnd = CmdGetHwndDlg( "DLG_DONE" );
+
+              ListGetFirstString( listSelectedByUser, szFirstString );
+              if ( ListFindString( listSelectedByUser, "Program" ) = END_OF_LIST ) then
+                 _WinSubEnableControl( lHwnd, ID_DLG_DONE_RUN, 0 );
+              endif;
+
+              ListGetFirstString( listSelectedByUser, szFirstString );
+              if ( ListFindString( listSelectedByUser, "On-Line Help" ) = END_OF_LIST ) then
+                 _WinSubEnableControl( lHwnd, ID_DLG_DONE_HELP, 0 );
+              endif;
+
+           case ID_DLG_DONE_RUN:
+              lFlag = 0;
+              lDoneFlag = TRUE;
+
+           case ID_DLG_DONE_EXIT:
+              lFlag = 1;
+              lDoneFlag = TRUE;
+
+           case ID_DLG_DONE_HELP:
+              // szSaveHelp is a global variable when the path for
+              // help icon is created, same path is stored in szSaveHelp
+              LaunchApp( "WINHELP ", szSaveHelp );
+              lFlag = 1;
+              lDoneFlag = TRUE;
+
+           case DLG_CLOSE:
+              lDoneFlag = TRUE;
+
+           endswitch;
+        endwhile;
+
+        EndDialog( "DLG_DONE" );
+        ReleaseDialog( "DLG_DONE" );
+
+        if ( lFlag = 0 ) then
+            // szRunProgram is a global variable when the path for
+            // Program was created, same path was stored in szRunProgram.
+            LaunchApp( szRunProgram, "" ); // User choose Run Program
+        else
+            return 0;
+        endif;
+
+end;
+#endif
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function can be used to display any kind of error message
+//    encountered during the Installation Process. And will exit the
+//    program in a nice way.
+// PARAMETERS:
+//      szErrorString   String that will be displayed as error
+//
+//-----------------------------------------------------------------------------
+
+function        _Error( szErrorString )
+
+STRING  szOutput [ MAX_SIZE ];
+
+begin
+        szOutput =  "Error - ";
+        szOutput = szOutput + szErrorString;
+        MessageBox( szOutput, SEVERE );
+        _PrepareForExit ( );
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    Given two strings this function will simply concatenate them with an "="
+//    sign in between them. This is useful if you want to display PATH = "C:\\DOS"
+//    in a dialog box so the user can see what is being added to the AUTOEXEC.BAT
+//    file.
+//
+// PARAMETERS:
+//      listFirst               first list
+//      listSecond              second list
+//      listFirstPlusSecond     The result of putting an "=" sign in between.
+//
+//-----------------------------------------------------------------------------
+
+function        _CreateNewStringList( listFirst, listSecond, listFirstPlusSecond )
+
+SHORT   sListCheck;
+STRING  szFirst[MAX_SIZE], szSecond[MAX_SIZE], szFirstPlusSecond[MAX_SIZE];
+
+begin
+        ListGetFirstString( listSecond, szSecond );
+        sListCheck = ListGetFirstString( listFirst, szFirst );
+
+        while ( sListCheck = 0)
+
+           szFirstPlusSecond = szFirst + "=" + szSecond;
+           ListAddString( listFirstPlusSecond, szFirstPlusSecond, AFTER );
+
+           sListCheck = ListGetNextString(listFirst, szFirst);
+           ListGetNextString(listSecond, szSecond);
+
+        endwhile;
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will determine the path of the bitmap file and
+//    place the bitmap exactly in the center of Display device using the CENTERED
+//    flag.
+// PARAMETERS:
+//    OnOrOff         Switch to turn the bitmap on or off.
+//    szBitmapFile    Name of the bitmap file.
+//-----------------------------------------------------------------------------
+
+function        _DrawBitMap(OnOrOff, szBitmapFile)
+
+STRING  szSupportPath[ MAX_SIZE ];
+
+begin
+
+        szSupportPath = SUPPORTDIR ^  szBitmapFile ;
+
+        if (OnOrOff = 1) then
+
+           PlaceBitmap( szSupportPath, 102, CENTERED, CENTERED, UPPER_LEFT );
+
+        elseif (OnOrOff = 0) then
+
+           PlaceBitmap( szSupportPath, 102, CENTERED, CENTERED,  REMOVE );
+
+        endif;
+
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will prepare for exit.
+//-----------------------------------------------------------------------------
+
+function        _PrepareForExit(  )
+
+
+begin
+        // activate the screen saver if it was deactivated during installation.
+        _WinSubScreenSaver( TURNON );
+        exit;
+
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will build the drives list with a minimum space requirement.
+// PARAMETERS:
+//    listDrives      List of drive letters with a minimum space requirement
+//                    of nDiskSpaceRequired is placed in this list.
+//
+//    nDiskSpaceRequired    Space required
+//
+//-----------------------------------------------------------------------------
+
+function        _BuildDrivesList ( listDrives, nDiskSpaceRequired)
+
+NUMBER  nListCheck;
+STRING  szTemp1[MAX_SIZE], szTemp2[MAX_SIZE], szTemp3[MAX_SIZE];
+
+begin
+
+
+        // Will retrieve a list of drives on fixed as well as remote
+        //    drives and with a min free disk space of 0 bytes, i.e
+        //    will list all the existing drives.
+        GetValidDrivesList(listDrives, FIXED_DRIVE | REMOTE_DRIVE, nDiskSpaceRequired);
+
+
+        // Will convert all the drive letters in the list to UpperCase
+        //    and will attach a colon after the drive letter.
+        nListCheck = ListGetFirstString(listDrives, szTemp1);
+
+        while(nListCheck = 0)
+
+           StrToUpper(szTemp2, szTemp1);
+           szTemp3 = szTemp2 + ":";
+           ListSetCurrentString(listDrives, szTemp3);
+           nListCheck = ListGetNextString( listDrives, szTemp1);
+
+        endwhile;
+
+end;
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//      Generic Error Message box for File Set related errors.
+
+// PARAMETERS
+//      szErrorString  Error string that is to be displayed to the user
+//      sErrorType     Error type such as INFORMATION, WARNING, SEVERE
+
+//-----------------------------------------------------------------------------
+
+function        _ErrorMessageBox( szErrorString,  sErrorType)
+
+STRING  szDefaultErrorString[ _MAX_LENGTH ];
+
+begin
+        MessageBox( szErrorString, sErrorType );
+
+        // If it is SEVERE Error message that means the error is unrecoverable
+        // so exit the installation.
+
+        if (sErrorType = SEVERE ) then
+           MessageBox( STR_ERR_STRING, SEVERE );
+           exit;
+        endif;
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//      Function to display Please Wait.. dialog box while processing.
+//      something else.
+
+// PARAMETERS
+//      sDlgID         Dialog box ID to be displayed.
+
+//-----------------------------------------------------------------------------
+
+function _DisplayPleaseWaitDialog( sDlgID, szDlg )
+NUMBER nDialogMessage;
+NUMBER nHwnd, nRet;
+begin
+
+        _CreateDLG ( szDlg, sDlgID, HWND_INSTALL );
+        nDialogMessage = WaitOnDialog( szDlg);
+
+        if  ( nDialogMessage = DLG_ERR ) then
+           MessageBox( STR_ERR_DLG, WARNING );
+        endif;
+        nHwnd = CmdGetHwndDlg( szDlg );
+        nRet = ShowWindow ( nHwnd, 1 );
+        if ( nRet = -1 ) then
+           MessageBox( "Error in ShowWindow", WARNING );
+        endif;
+end;
+

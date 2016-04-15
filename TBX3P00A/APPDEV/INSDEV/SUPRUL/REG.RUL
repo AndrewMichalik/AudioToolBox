@@ -1,0 +1,154 @@
+//-----------------------------------------------------------------------------
+//                         InstallSHIELD Sample Files
+// Copyright (c) 1990-1993, Stirling Technologies, Inc. All Rights Reserved
+//-----------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------
+//      FILE:   REG.RUL
+//
+//      PURPOSE:
+//         This script file implements two sets of registration retrieve/write
+//         routines. One set of routines retrieves/writes username+company and
+//         another set of routines retrieves/writes username+company+S/N#.
+//
+//      RESOURCE: NONE
+//
+//      RELATED FILES: REG.H
+//
+//      MAIN FUNCTION CALLS:
+//         A. Set-1, the routines handle username+company
+//            1. RegistrationGet ( szIniFile, szSection,
+//                                 szUserStr, szUser, szIncStr, szInc );
+//            2. RegistrationPut ( szIniFile, szSection,
+//                                 szUserStr, szUser, szIncStr, szInc );
+//               where
+//                   szIniFile: the INI filename which the data stores to or
+//                              retrieves from
+//                   szSection: the section name
+//                   szUserStr: key name of username
+//                   szUser   : username
+//                   szIncStr : key name of company
+//                   szInc    : company
+//
+//         B. Set-2, the routines handle username+company+S/N
+//            3. RegistrationGetEx ( szIniFile, szSection, szUserStr, szUser,
+//                                   szIncStr,  szInc, szNumStr,  szNum )
+//            4. RegistrationPutEx ( szIniFile, szSection, szUserStr, szUser,
+//                                   szIncStr,  szInc, szNumStr,  szNum )
+//               where
+//                   szIniFile: the INI filename which the data stores to or
+//                              retrieves from
+//                   szSection: the section name
+//                   szUserStr: key name of username
+//                   szUser   : username
+//                   szIncStr : key name of company
+//                   szInc    : company
+//                   szNumStr : key name of S/N number
+//                   szNum    : S/N number
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+// PARAMETERS
+//      (INPUT)
+//      szIniFile: the INI filename which the data is retrieved from.
+//      szSection: the section name.
+//      szUserStr: key name of username.
+//      szIncStr : key name of company.
+//      (OUTPUT)
+//      szUser   : username.
+//      szInc    : company.
+//-----------------------------------------------------------------------------
+
+function        _RegistrationGet ( szIniFile, szSection,
+                                  szUserStr, szUser, szIncStr, szInc )
+
+begin
+        StrCopy ( szUser, "" );
+        GetProfString ( szIniFile, szSection, szUserStr, szUser );
+        StrCopy ( szInc, "" );
+        GetProfString ( szIniFile, szSection, szIncStr, szInc );
+
+        return 0;
+end;
+
+
+//-----------------------------------------------------------------------------
+// PARAMETERS
+//      szIniFile: the INI filename which the data is stored to.
+//      szSection: the section name.
+//      szUserStr: key name of username.
+//      szUser   : username.
+//      szIncStr : key name of company.
+//      szInc    : company.
+//-----------------------------------------------------------------------------
+
+function        _RegistrationPut ( szIniFile, szSection,
+                                  szUserStr, szUser, szIncStr, szInc )
+
+begin
+        WriteProfString ( szIniFile, szSection, szUserStr, szUser );
+        WriteProfString ( szIniFile, szSection, szIncStr, szInc );
+
+        return 0;
+end;
+
+
+//-----------------------------------------------------------------------------
+// PARAMETERS
+//      (INPUT)
+//      szIniFile: the INI filename which the data is retrieved from.
+//      szSection: the section name.
+//      szUserStr: key name of username.
+//      szIncStr : key name of company.
+//      szNumStr : key name of S/N number
+//      (OUTPUT)
+//      szUser   : username.
+//      szInc    : company.
+//      szNum    : S/N number
+//-----------------------------------------------------------------------------
+
+function        _RegistrationGetEx ( szIniFile, szSection,
+                                    szUserStr, szUser,
+                                    szIncStr,  szInc,
+                                    szNumStr,  szNum )
+
+begin
+        StrCopy ( szUser, "" );
+        GetProfString ( szIniFile, szSection, szUserStr, szUser );
+        StrCopy ( szInc, "" );
+        GetProfString ( szIniFile, szSection, szIncStr, szInc );
+        StrCopy ( szNum, "" );
+        GetProfString ( szIniFile, szSection, szNumStr, szNum );
+
+        return 0;
+end;
+
+
+//-----------------------------------------------------------------------------
+// PARAMETERS
+//      szIniFile: the INI filename which the data is stored to.
+//      szSection: the section name.
+//      szUserStr: key name of username.
+//      szUser   : username.
+//      szIncStr : key name of company.
+//      szInc    : company.
+//      szNumStr : key name of S/N number
+//      szNum    : S/N number
+//-----------------------------------------------------------------------------
+
+function        _RegistrationPutEx ( szIniFile, szSection,
+                                    szUserStr, szUser,
+                                    szIncStr,  szInc,
+                                    szNumStr,  szNum )
+
+begin
+        WriteProfString ( szIniFile, szSection, szUserStr, szUser );
+        WriteProfString ( szIniFile, szSection, szIncStr, szInc );
+        WriteProfString ( szIniFile, szSection, szNumStr, szNum );
+
+        return 0;
+end;
+
+
+

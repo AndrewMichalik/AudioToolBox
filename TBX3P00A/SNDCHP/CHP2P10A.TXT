@@ -1,0 +1,9 @@
+                            SndChp Release Notes
+                               Version  2.10a
+                                  10/15/95
+
+
+PCMCvt 3.00a.1:
+    Corrected memory overwrite bug in chop list memroy allocation
+
+

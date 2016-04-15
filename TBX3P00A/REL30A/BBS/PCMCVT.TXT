@@ -1,0 +1,38 @@
+
+                            PCM Conversion Utility
+
+
+Contents:
+
+    The DLGCVT.ZIP file contains a conversion utility and sample files
+    for converting Microsoft Multimedia Wave (8, 16 & MS ADPCM), linear 16
+    and unsigned 8 bit to and from industry standard telephone digital 
+    audio formats.
+
+To Run:
+    
+    1)  Unzip the file DLGCVT.ZIP using PKUNZIP DLGCVT.
+    2)  Rename the executable file ???CVT.EXE to PCMCVT.EXE.
+    3)  Run the test batch file PCMCVT.BAT, which converts the Multimedia 
+        Wave file CVTTST.WAV to the 4 bit telephone audio file CVTTST.V04.
+
+
+                            Other VISI Products
+
+Don't forget to call 1-800-234-VISI for more fabulous products:
+
+VFEdit ("vee-ef-edit"), The Professional Prompt Editor, is a Microsoft
+    Windows graphical editor that lets you edit sound the way a word
+    processor lets you edit text.
+
+TI/F DLL ("tif-dee-el-el"), The Microsoft Windows Voice Mail Driver, lets
+    you add Voice Mail power to your Microsoft Windows applications.
+
+VoxFonts, the "Software Only" Text-to-Speech adds an unlimited vocabulary
+    to your Interactive Voice Response applications.
+
+Scribe, The DOS Speech to Text Transcription Utility, lets you hear 
+    digital audio files without the need for additional hardware. It's 
+    like turning your PC into a transcription machine.
+
+

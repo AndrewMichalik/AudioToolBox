@@ -1,0 +1,19 @@
+object\geneff.obj +
+object\effcfg.obj + object\effini.obj + object\cfgsup.obj +
+object\fillod.obj + object\fileff.obj +
+object\effvol.obj + object\effchn.obj +
+object\efffqs.obj + object\fqsmst.obj + object\fqsobs.obj +
+object\firdes.obj +
+object\fftovr.obj + object\fftlow.obj +
+object\effebs.obj + object\ebssup.obj +
+object\filfnd.obj + object\filrep.obj +
+object\wavfil.obj + object\visfil.obj +
+object\filsup.obj + object\fillow.obj +
+object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj +
+object\pcmfio.obj + object\pcmini.obj + object\pcmqry.obj +
+object\blkcvt.obj + object\mpcsup.obj +
+..\regdev\object\kechk.obj
+geneff.exe
+NUL
+..\pcmdev\dlgxlt.lib ..\pcmdev\mswxlt.lib +
+

@@ -1,0 +1,5 @@
+object\cvttst.obj
+cvttst.exe
+NUL
+..\cvtlib\rtxxlt.lib ..\cvtlib\dlgxlt.lib ..\cvtlib\g11xlt.lib ..\cvtlib\mswxlt.lib +
+

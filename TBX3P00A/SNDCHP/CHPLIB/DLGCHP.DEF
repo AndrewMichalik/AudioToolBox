@@ -1,0 +1,31 @@
+LIBRARY         DLGCHP
+DESCRIPTION     'Dialogic Sound Chop Utility (C) Andrew J. Michalik, 1987-1996'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        CHPINI_TEXT PRELOAD FIXED        
+
+HEAPSIZE        2048
+
+EXPORTS
+    WEP              @2 RESIDENTNAME
+    CHPSNDVER        @4
+
+    CHPSNDINI       @10
+    CHPSNDTRM       @12
+
+    CHPSETDEB       @20
+    CHPSETDSP       @22
+
+    CHPCFGINI       @30
+    CHPCFGLOD       @32
+    CHPCFGREL       @34
+    CHPCAPQRY       @36
+
+    CHPHDRCRE       @52
+    CHPHDRCLS       @56
+
+    CHPSNDFIL       @112
+

@@ -1,0 +1,68 @@
+//=======================================================================
+//              InstallSHIELD Version 2.0 Resource DLL Example
+//
+//             Resource DLL RC-file for Example Installation
+//
+//        Copyright (c) 1993, Stirling Technologies, Inc.
+//                      All rights reserved.
+//=======================================================================
+//
+//=======================================================================
+//      File:   RESOURCE.RC
+//
+//      This file defines all referenced resources
+//=======================================================================
+//
+
+
+#include <windows.h>
+
+#ifndef ES_READONLY
+#define ES_READONLY         0x00000800L
+#define ES_WANTRETURN       0x00001000L
+#endif
+
+ICON_101 ICON "resource.ico"
+
+#include "..\..\DIALOGS\CUSTOM\CUSTOM.H"
+rcinclude ..\..\DIALOGS\CUSTOM\CUSTOM.DLG
+
+#include "..\..\DIALOGS\GETREG\GETREG.H"
+rcinclude ..\..\DIALOGS\GETREG\GETREG.DLG
+
+#include "..\..\DIALOGS\APPPATH\APPPATH.H"
+rcinclude ..\..\DIALOGS\APPPATH\APPPATH.DLG
+
+#include "..\..\DIALOGS\MAKEDIR\MAKEDIR.H"
+rcinclude ..\..\DIALOGS\MAKEDIR\MAKEDIR.DLG
+
+
+#include "..\..\DIALOGS\CONFIG\MODCON.H"
+rcinclude ..\..\DIALOGS\CONFIG\MODCON.DLG
+
+#include "..\..\DIALOGS\BATCH\MODAUT.H"
+rcinclude ..\..\DIALOGS\BATCH\MODAUT.DLG
+
+#include "..\..\DIALOGS\MISC\MISC.H"
+rcinclude ..\..\DIALOGS\MISC\MISC.DLG
+
+#include "..\..\DIALOGS\WELCOME\WELCOME.H"
+rcinclude ..\..\DIALOGS\WELCOME\WELCOME.DLG
+
+#include "..\..\DIALOGS\PATHVP\PATHVP.H"
+rcinclude ..\..\DIALOGS\PATHVP\PATHVP.DLG
+
+
+#include "..\..\DIALOGS\REGINS\REGINS.H"
+rcinclude ..\..\DIALOGS\REGINS\REGINS.DLG
+
+#include "..\..\DIALOGS\ICONS\ICONS.H"
+rcinclude ..\..\DIALOGS\ICONS\ICONS.DLG
+
+#include "..\..\DIALOGS\TYPE\TYPE.H"
+rcinclude ..\..\DIALOGS\TYPE\TYPE.DLG
+
+#include "..\..\DIALOGS\DEFAULT\DEFAULT.H"
+rcinclude ..\..\DIALOGS\DEFAULT\DEFAULT.DLG
+
+

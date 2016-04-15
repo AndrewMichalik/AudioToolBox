@@ -1,0 +1,28 @@
+LIBRARY         DLGSPD
+DESCRIPTION     'Dialogic Speed Adjust Utility (C) Andrew J. Michalik, 1987-1996'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        SPDINI_TEXT PRELOAD FIXED        
+
+HEAPSIZE        2048
+
+EXPORTS
+    WEP              @2 RESIDENTNAME
+    SPDADJVER        @4
+
+    SPDADJINI       @10
+    SPDADJTRM       @12
+
+    SPDSETDEB       @20
+    SPDSETDSP       @22
+
+    SPDCFGINI       @30
+    SPDCFGLOD       @32
+    SPDCFGREL       @34
+    SPDCAPQRY       @36
+
+    SPDADJFIL       @112
+

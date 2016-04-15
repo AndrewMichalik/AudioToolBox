@@ -1,0 +1,5 @@
+object\chptst.obj
+chptst.exe
+NUL
+..\chplib\ptcxlt.lib ..\chplib\nwvxlt.lib ..\chplib\dlgxlt.lib ..\chplib\g11xlt.lib ..\chplib\mswxlt.lib +
+

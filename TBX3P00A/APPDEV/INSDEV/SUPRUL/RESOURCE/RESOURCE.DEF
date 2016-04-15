@@ -1,0 +1,27 @@
+;;
+;;=======================================================================
+;;
+;;         Resource DLL def-file for Example Installation
+;;
+;;          Copyright (c) 1993, Stirling Technologies, Inc.
+;;                        All Rights Reserved.
+;;=======================================================================
+;;
+;;=======================================================================
+;;      File:   RESRES.DEF
+;;
+;;      This is makefile to create resres.dll
+;;=======================================================================
+;;
+
+LIBRARY                 RESOURCE
+
+DESCRIPTION             'Resource DLL for InstallSHIELD'
+EXETYPE                 WINDOWS
+CODE                    PRELOAD MOVEABLE DISCARDABLE
+DATA                    PRELOAD MOVEABLE SINGLE
+HEAPSIZE               1024
+EXPORTS
+    WEP             @1       RESIDENTNAME
+
+

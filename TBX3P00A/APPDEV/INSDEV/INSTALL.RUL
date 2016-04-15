@@ -1,0 +1,723 @@
+//
+//      ToolBox 3.x Installation Script
+//      (c) 1996 Voice Information Systems, Inc
+//
+
+//
+// Global constants.
+//
+#define MAX_SIZE            145
+#define BASE_FILE_SIZE  1500000
+#define ALT_FILE_SIZE    500000
+
+#define SI_PRGNAM   "Audio ToolBox"
+#define SI_PRGBMP   "AudTBx.BMP"
+#define SI_HLVFNT   "Helvetica"
+#define SI_APPINS   "Apprentice Install"
+#define SI_INSPRC   "Installing ToolBox Apprentice"
+#define SI_DEFPTH   "\\VTools"
+#define SI_WELCOM   "Welcome!"
+#define SI_QRYDST   "Where would you like to install ToolBox Apprentice?"
+#define SI_DSTERR   "The target location must be different than the source.\nPlease specify a different location."
+#define SI_BADDSK   "- is an invalid disk, press OK to return to the path selection"
+#define SI_CHKSPC   "Checking disk space"
+#define SI_SPCERR   "Not enough space on "
+#define SI_TRYDIF   "- Please press OK to try another target disk"
+#define SI_CHKDIR   "Checking directories" 
+#define SI_CORPTH   "Please enter a correct path like C:\\DIRECTORY"
+#define SI_CHKSRC   "Checking source files"
+#define SI_DSK001   "Please enter the location of your\nToolBox Apprentice Disk 1:"
+#define SI_CHK001   "WinXxx\\AudTBx.Exe"
+#define SI_CHKCAN   "Are you sure you want to CANCEL installation?"
+#define SI_XFRFIL   "Transferring files..."
+#define SI_XFRCMP   "File transfers ...completed"
+#define SI_GETINI   "Getting initialization settings"
+#define SI_INIFIL   "AudTBx.Ini"
+#define SI_INIOLD   "AudTBx.In~"
+#define SI_INISET   "AudTBx.Ini Settings"
+#define SI_SYSINI   "System.Ini Settings"
+#define SI_CREGRP   "Creating Program Group & Icons"
+#define SI_DELGRP   "Delete old "
+#define SI_OLDGRP   " Program Group?"
+#define SI_GRPNAM   "Audio ToolBox"
+#define SI_RELNAM   "Release notes"
+#define SI_APPNAM   "ToolBox Apprentice Program"
+#define SI_INSCMP   "Installation complete..."
+#define SI_QRYREL   "Would you like to view the release notes?"
+#define SI_COPPRC   "Copying... "
+#define SI_COPERR   "Unable to copy or decompress file: "
+#define SI_DIRERR   "Unable to create directory: "
+#define SI_REGFIL   "AudTBx.Lic"
+// #define SI_REGSEC   "ToolBox Licensee"
+#define SI_REGSEC   "Apprentice Licensee"
+#define SI_REGUSR   "User"
+#define SI_REGCMP   "Company"
+#define SI_REGSER   "SerialNumber"
+#define SI_INSCHR   "InstallationCharacteristics"
+#define SI_REGERR   "The serial number you entered is not valid. Retry?"
+#define SI_EDIKEY   "Edition"
+#define SI_MFGVER   "Manufacturer"
+#define SI_MFGDLG   "Dialogic"
+#define SI_MFGG21   "G.721 C-ITU (CCITT)"
+#define SI_MFGNWV   "NewVoice"
+#define SI_MFGPTC   "Perception"
+#define SI_MFGRTX   "Rhetorex"
+#define SI_RELFIL   "AppRel.txt"
+#define SI_APPEXE   "AudTBx.exe"
+#define SI_APPHLP   "ToolBox Apprentice Help"
+#define SI_HLPNAM   "AudTBx.Hlp"
+
+declare
+        // screen saver variable activated or deactivated
+        BOOL   bSCREENSAVER;
+
+        // constants for on and off a bitmap
+        #define TURNON          1
+        #define TURNOFF         0
+
+        //
+        // Global variables
+        //
+        string  szText[ MAX_SIZE ], szTemp[ MAX_SIZE ]; // Declare string vars
+        string  szDefPath[ MAX_SIZE ], szDisk[50];
+        string  szErrMsg [ 255 ], szErrFile [ 100 ];
+        string  szRELFIL [ 100 ], szPath[ 200 ];
+        string  szCommand[ 200 ];
+        POINTER pMfgVer;
+        number  nSpace;
+        number  nTmp;
+
+        // Screen extents
+        number  nScr__X, nScr__Y;
+        number  nTmp__X, nTmp__Y;
+
+        // Miscelleneous install .txt & .bmp files
+        string  szInsDir [ 100 ];
+
+        // IniFiles
+        string  szIniFil [ 100 ];
+        string  szIniDef [ 100 ];
+
+        //
+        // User registration
+        //
+        #include "SUPRUL\\REGINS.H"
+        #include "SUPRUL\\MODCON.H"
+        #include "SUPRUL\\MISC.H"
+        #include "SUPRUL\\REG.H"
+        #include "SUPRUL\\WINSUB.H"
+        #include "SUPRUL\\DIALOGS.H"
+
+        //
+        // Serial number verification
+        //
+        #define     CHKREGDLL   "TBXINS"
+        prototype   LONG TBXINS.ChkRegSer ( INT, STRING );
+        prototype   LONG TBXINS.ChkRegIns ( INT, LONG, STRING );
+
+        //
+        // Forward function references
+        //
+        prototype   _MsgInfDsp ( STRING, STRING, STRING );
+        prototype   _GetRegInf ( STRING, STRING, STRING );
+        prototype   _RenFilOvr ( STRING, STRING, STRING );
+        prototype   _CopFilOvr ( STRING, STRING, STRING, STRING, NUMBER, NUMBER, BOOL );
+        prototype   _Is_InsOld ( STRING, STRING, STRING );
+        prototype   _GetLstSel ( STRING, INT, LONG, STRING, POINTER);
+        prototype   _CreCusDlg ( STRING, INT, LONG, STRING );
+
+program /* Must use program keyword to start the statements */
+
+Start:
+        Disable( BACKGROUND );
+
+        nSpace = BASE_FILE_SIZE + ALT_FILE_SIZE;
+
+        // Get the screen extents
+        GetExtents (nScr__X, nScr__Y);
+
+        // Set info window position & size
+        // Set feedback window position & size
+        nTmp__X = nScr__X;
+        Mult   (nTmp__X, 3);
+        Divide (nTmp__X, 4);
+        nTmp__Y = nScr__Y;
+        Mult   (nTmp__Y, 2);
+        Divide (nTmp__Y, 5);
+        SizeWindow (INFO, nTmp__X, nTmp__Y);
+        PlaceWindow (INFO, 4, 4, LOWER_LEFT);
+        Add (nTmp__Y, 6);
+        PlaceWindow (FEEDBACK, 4, nTmp__Y, LOWER_LEFT);
+
+        // Set the color of the background to be BLUE
+        SetColor( BACKGROUND, RGB( 0,0,64 ) );
+        SetColor( STATUSBAR, RED );
+        SetFont( FONT_TITLE, STYLE_NORMAL, SI_HLVFNT );
+
+        SetTitle( SI_APPINS, 45, YELLOW );
+        SetStatusWindow( 2, SI_INSPRC );
+
+        // Enable various objects.
+        Enable( BITMAPFADE );    // All bitmaps will fade into the screen.
+        Enable( INDVFILESTATUS ); // Shows all filenames when copied.
+        Disable( HELP );        //
+        Enable( EXIT );         // Exit Button
+        Enable( PAUSE );        // Pause Button
+        Enable( STATUS );       // Status , % Complete Bar Window
+        Enable( TEXT );         // Info Windows
+        Enable( FEEDBACK_FULL); // Feedback window enabled
+        Enable( BACKGROUND );
+
+        // Check if the screen saver is activated.
+        bSCREENSAVER = _WinSubCheckScreenSaver( );
+
+        // Determine the source path of the miscelleneous files
+        StrCopy( szInsDir, SRCDIR );
+        AppendToPath( szInsDir, "insdir" );
+
+        // Determine target location for files
+        GetDisk( TARGETDIR, szDisk );
+        StrCopy( szDefPath, szDisk );
+        StrConcat( szDefPath, SI_DEFPTH ); // Note: the double slashes
+
+        // Set Info Window to display Beg001.Lis
+        _MsgInfDsp ( SI_WELCOM, szInsDir, "Beg001.Lis" );
+
+DrawBitmap:
+        // Determine the source path of the corporate logo bitmap file
+        StrCopy( szTemp, szInsDir );
+        AppendToPath( szTemp, "VISLgo.bmp" );
+        PlaceBitmap( szTemp, 101, 20, 20, UPPER_RIGHT );
+
+TargetLoc:
+        // Want to ask user for a path to install ToolBox Apprentice
+        StrCopy( szText, SI_QRYDST );
+        AskPath( szText, szDefPath, szTemp );
+        if LAST_RESULT = FALSE then call ConfirmCancel; endif;
+        StrCompare( szTemp, SRCDIR );
+        if LAST_RESULT = 0 then
+            MessageBox( SI_DSTERR, WARNING );
+            goto TargetLoc;
+        endif;
+
+        GetDisk( szTemp, szDisk );
+
+        // If correct disk entered, then BeginInstall;
+        ExistsDisk( szDisk );
+        if LAST_RESULT != 0 then
+            // Invalid disk entered, reprompt
+            StrCopy( szText,  szTemp );
+            StrConcat( szText, SI_BADDSK );
+            MessageBox( szText, WARNING );
+            goto TargetLoc;
+        endif;
+
+BeginInstall:
+        SetStatusWindow( 4, SI_CHKSPC );
+        GetDisk( szTemp, szDisk );
+
+        // Check to see if enough space is free on the destination.
+        // GetDiskSpace returns free space in LAST_RESULT.
+        GetDiskSpace( szDisk );
+        if LAST_RESULT < nSpace then
+            StrCopy( szText, SI_SPCERR );
+            StrConcat( szText, szDisk );
+            StrConcat( szText, SI_TRYDIF );
+            MessageBox( szText, WARNING );
+            goto TargetLoc;
+        endif;
+
+EnoughSpace:
+        SetStatusWindow( 6, SI_CHKDIR );
+
+        // Check to see if Directory Exists
+        // ExistsDir returns value in LAST_RESULT
+        ExistsDir( szTemp );
+        if LAST_RESULT = 0 goto DirExists;
+        CreateDir( szTemp );
+        if LAST_RESULT = 0 goto DirExists;
+        StrCopy( szText, SI_DIRERR );
+        StrConcat( szText, szTemp );
+        StrConcat( szText, SI_CORPTH );
+        MessageBox( szText, WARNING );
+        goto TargetLoc;
+
+DirExists:
+        SetStatusWindow( 8, SI_CHKSRC );
+        StrCopy( TARGETDIR, szTemp );
+
+        // Determine the source path of the bitmap file
+        StrCopy( szTemp, szInsDir );
+        AppendToPath( szTemp, SI_PRGBMP );
+        PlaceBitmap( szTemp, 101, 20, 20, UPPER_RIGHT );
+
+        // Ask user to enter a disk in drive.
+        // Check to see if SI_CHK001 file exists on this disk
+        // If it does, then it must the right disk.
+        StrCopy( szText, SI_DSK001 );
+        EnterDisk( szText, SI_CHK001 );
+
+        if LAST_RESULT != TRUE then
+            call ConfirmCancel;   // Call to confirm cancel
+            goto DirExists;       // returned, therefore continue
+        endif;
+
+PrivateIniFiles:
+        SetStatusWindow( 10, SI_GETINI );
+
+        // Set Info Window to display UsrReg.Lis
+        _MsgInfDsp( SI_INISET, szInsDir, "UsrReg.Lis" );
+
+        // Display the Registration Info dialog box, get the
+        // information and save it in the apps registration file.
+        _GetRegInf ( szInsDir, TARGETDIR, SI_REGFIL );
+
+        // Delete previous ".IN~" file (if present), rename original
+        _RenFilOvr ( WINDIR, SI_INIFIL, SI_INIOLD );
+
+        // Build full path file of new INI file
+        StrCopy( szIniFil, WINDIR );
+        AppendToPath( szIniFil, SI_INIFIL );
+        SetDialogTitle( DLG_ASK_TEXT, SI_INISET );
+
+        // Set Info Window to display MfgVer.Lis
+        _MsgInfDsp( SI_INISET, szInsDir, "MfgVer.Lis" );
+
+        // Create list to store the board manufacturer version
+        pMfgVer = ListCreate ( STRINGLIST );
+        ListAddString( pMfgVer, SI_MFGDLG, AFTER );
+        ListAddString( pMfgVer, SI_MFGG21, AFTER );
+        ListAddString( pMfgVer, SI_MFGNWV, AFTER );
+        ListAddString( pMfgVer, SI_MFGPTC, AFTER );
+        ListAddString( pMfgVer, SI_MFGRTX, AFTER );
+        ListFindString( pMfgVer, SI_MFGDLG );
+
+        // Ask user for manufacturer type
+        _GetLstSel ( "", DLG_SINGLELIST, HWND_INSTALL, "TBXINS.DLL" , pMfgVer);
+        ListCurrentString (pMfgVer, szIniDef);
+        ListDestroy( pMfgVer );
+        WriteProfString( szIniFil, SI_EDIKEY, SI_MFGVER, szIniDef);
+
+CopyDisks:
+        // Copy files from Disk 1
+        call TransferDisk1;
+
+        // Set Info Window to display End001.Lis
+        _MsgInfDsp( SI_XFRCMP, szInsDir, "End001.Lis" );
+        SetStatusWindow( 80, SI_XFRCMP );
+        StatusUpdate( OFF, 0);
+
+Complete:
+        // Now create a program group & icons
+        SetStatusWindow(  99, SI_CREGRP );
+        Delay( 1 );
+
+        // Delete the old program group if user says OK
+        AppCommand( PROGMAN, CMD_RESTORE );
+        if ( !QueryProgGroup( SI_GRPNAM, WINDIR, nTmp ) ) then
+            StrCopy( szTemp, SI_DELGRP );
+            StrConcat( szTemp, SI_GRPNAM );
+            StrConcat( szTemp, SI_OLDGRP );
+            if ( AskYesNo( szTemp, NO ) = YES) then
+                DeleteGroup( SI_GRPNAM );
+            endif;
+        endif;
+
+        StrCopy( szTemp, TARGETDIR );
+        AppendToPath( szTemp, SI_RELFIL );
+        StrCopy( szCommand, "NOTEPAD ");
+        StrConcat( szCommand, szTemp );
+
+        AddProgItem( SI_GRPNAM, SI_RELNAM, szCommand, "" );
+        Delay ( 1 );
+
+        StrCopy( szTemp, TARGETDIR );
+        AppendToPath( szTemp, SI_HLPNAM );
+
+        AddProgItem( SI_GRPNAM, SI_APPHLP, szTemp, "" );
+        Delay( 1 );
+
+        StrCopy( szTemp, TARGETDIR );
+        AppendToPath( szTemp, SI_APPEXE );
+
+        AddProgItem( SI_GRPNAM, SI_APPNAM, szTemp, "" );
+        Delay( 1 );
+
+        AppCommand( PROGMAN, CMD_PUSHDOWN );
+
+        SetStatusWindow( 100, SI_INSCMP );
+        Delay( 1 ); 
+
+        AskYesNo( SI_QRYREL, TRUE );
+        if LAST_RESULT = YES then
+            StrCopy( szRELFIL, TARGETDIR );
+            AppendToPath( szRELFIL, SI_RELFIL );
+            LaunchApp( "notepad.exe", szRELFIL );
+        endif;
+
+        // Activate the screen saver if it was turned on initially
+        _WinSubScreenSaver( TURNON );
+
+        exit;  //Exit installation program.
+
+
+//---------------------------------------------------------------------
+//
+//    TransferDisk1
+//    Descrip:  This procedure will transfer all the files from disk 1
+//
+//---------------------------------------------------------------------
+TransferDisk1:
+        // Set Info Window to display End001.Lis
+        _MsgInfDsp( SI_XFRFIL, szInsDir, "VISPrd.Lis" );
+
+        // Transfer files from root directory
+        _CopFilOvr ( "", SI_RELFIL, "", SI_RELFIL, 10, 10, FALSE );
+
+        // Transfer files from WinXxx directory
+        _CopFilOvr ( "WinXxx", "*.*", "", "*.*", 20, 20, FALSE );
+  
+        // Transfer files from MVB300 compression set
+        _CopFilOvr ( "", "MVB300.Z", "", "*.*", 40, 50, TRUE );
+  
+TransferDisk1End:
+        return;
+
+//---------------------------------------------------------------------
+//
+//    ConfirmCancel
+//
+//    Descrip:  This procedure will confirm with the users if they want
+//              to terminate the installation of the InstallSHIELD product.
+//
+//
+//---------------------------------------------------------------------
+ConfirmCancel:
+            AskYesNo( SI_CHKCAN, FALSE );
+            if LAST_RESULT = FALSE then return; endif;
+            exit;
+
+//-----------------------------------------------------------------------------
+// Display information message
+//-----------------------------------------------------------------------------
+function        _MsgInfDsp ( szMsg, szDir, szFil )
+        STRING  szSrcTmp[ MAX_SIZE ];
+begin
+        StrCopy( szSrcTmp, SRCDIR );        // Save original source directory
+        StrCopy( SRCDIR, szDir );
+        SetInfoWindow( szMsg, szFil );
+        StrCopy( SRCDIR, szSrcTmp );        // Restore source  directory
+        return 0;
+end;
+
+//-----------------------------------------------------------------------------
+// Get / Set Registration information
+//-----------------------------------------------------------------------------
+function        _GetRegInf ( szInsDir, szDstSub, szDstFil )
+        STRING  szSupOrg[ MAX_SIZE ];
+        STRING  szRegFil[ MAX_SIZE ];
+        STRING  szUsrNam[ MAX_SIZE ];
+        STRING  szCmpNam[ MAX_SIZE ];
+        STRING  szSerNum[ MAX_SIZE ];
+        STRING  szInsChr[ MAX_SIZE ];
+        LONG    ulInsChr;
+        INT     bfSer_OK;
+
+begin
+        // Prompt the user for Name, Company, and Serial#.
+        // Display the Registration Info dialog box, get the
+        // information and save it in the specified file.
+
+        // Save original support directory
+        StrCopy( szSupOrg, SUPPORTDIR );
+        StrCopy( SUPPORTDIR, szInsDir );
+
+        // Build registration file specification
+        StrCopy( szRegFil, szDstSub );
+        AppendToPath( szRegFil, szDstFil );
+
+        // Retrieve and setup registration information
+        if ( _RegistrationGetEx ( szRegFil, SI_REGSEC ,
+                                SI_REGUSR, szUsrNam,
+                                SI_REGCMP, szCmpNam,
+                                SI_REGSER, szSerNum ) >= 0 ) then
+            // Activate registration dialogbox; no empty strings accepted
+            _RegistrationUpdateEx ( szUsrNam, szCmpNam, szSerNum );
+
+            // Load check serial number DLL
+            szTemp = SUPPORTDIR ^ CHKREGDLL;
+            UseDLL (szTemp);
+
+            // Check serial number
+            bfSer_OK = ChkRegSer (0, szSerNum);
+            while (!bfSer_OK) 
+                // Loop until user gets it right or cancels 
+                AskYesNo( SI_REGERR, TRUE );
+                if LAST_RESULT = TRUE then 
+                    _RegistrationUpdateEx ( szUsrNam, szCmpNam, szSerNum );
+                    bfSer_OK = ChkRegSer (0, szSerNum);
+                else bfSer_OK = TRUE;        
+                endif;
+            endwhile;            
+
+            // Calculate installation characteristics checksum
+            ulInsChr = 0;
+            ulInsChr = ChkRegIns (0, ulInsChr, szUsrNam);
+            ulInsChr = ChkRegIns (0, ulInsChr, szCmpNam);
+            ulInsChr = ChkRegIns (0, ulInsChr, szSerNum);
+            NumToStr (szInsChr, ulInsChr);
+
+            // Unload check serial number DLL
+            UnUseDLL (CHKREGDLL);
+
+           // Store registration info in the INI file.
+           _RegistrationPutEx ( szRegFil, SI_REGSEC,
+                                SI_REGUSR, szUsrNam,
+                                SI_REGCMP, szCmpNam,
+                                SI_REGSER, szSerNum );
+
+// AJM 10/01/96: Tested but not enabled
+//           // Store installation checksum info in the INI file.
+//           WriteProfString ( szRegFil, SI_REGSEC, SI_INSCHR, szInsChr );
+
+        endif;
+
+        // Set registration file to "Hidden"
+        SetFileInfo (szRegFil, FILE_ATTRIBUTE, FILE_ATTR_HIDDEN, "");
+
+        // Restore original support directory
+        StrCopy( SUPPORTDIR, szSupOrg );
+
+        return 0;
+end;
+
+//----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will just show the dialog and no controls are enabled and
+//    when the user selects CLOSE from system menu dialog will be closed.
+//
+// PARAMETERS:
+//    szDialog     Contains the identification name of the dialog.
+//    iDialogID    Identifies the dialog's reaource in a resource file if the
+//                  user used a number to identify their resource rather than
+//                  a string.
+//    nHandle      Window handle of the dialog in question.
+//    szNameOfDll  Name of that .DLL that contains the dialog resource.
+//
+//----------------------------------------------------------------------------
+function        _GetLstSel( szDialog, iDialogID, nHandle, szNameOfDLL, pLstStr )
+        NUMBER  nDoneFlag, nDialogMessage;
+        STRING  szUsrSel [ MAX_SIZE ];        
+begin
+        _CreCusDlg ( szDialog, iDialogID, nHandle, szNameOfDLL );
+        // Reset "DONE" flag
+        nDoneFlag = FALSE;
+
+        // Loop to receive dialog messages
+        while nDoneFlag = FALSE
+
+           // The first call will create the dialogbox
+           //    and the following calls receive the messages
+           nDialogMessage = WaitOnDialog( szDialog );
+
+           if  ( nDialogMessage = DLG_ERR ) then
+
+              MessageBox( "Error in showing dialog", WARNING );
+              nDoneFlag = TRUE;
+
+           endif;
+
+           switch( nDialogMessage )
+
+           case DLG_INIT:            // WM_INITDIALOG message
+                // Set the string list 
+                CtrlSetList( szDialog, IDD_LIST1, pLstStr );
+
+           case IDD_CONTINUE:
+                nDoneFlag = TRUE;
+
+           case DLG_CLOSE:
+                // message when user clicks on Close in system menu
+                nDoneFlag = TRUE;
+
+           endswitch;
+
+        endwhile;
+
+        // Set current string to selected
+        ListGetFirstString (pLstStr, szUsrSel);     // Init to first item
+        CtrlGetCurSel( szDialog, IDD_LIST1, szUsrSel );
+        ListFindString (pLstStr, szUsrSel);
+
+        EndDialog( szDialog );
+        ReleaseDialog( szDialog );
+
+end;
+
+//-----------------------------------------------------------------------------
+// PURPOSE:
+//    This function will define a custom dialog box.
+//
+// PARAMETERS:
+//      szDLG           User defined string for the dialog
+//      iDLG_ID         Dialog identifier
+//      lHwnd           Window handle.
+//      szNameofDLL     Name of the DLL that contains the dialog resource.
+//-----------------------------------------------------------------------------
+function        _CreCusDlg( szDLG, iDLG_ID, lHwnd, szNameofDLL )
+        STRING  szSupportDLL [ MAX_SIZE ];
+
+begin
+        szSupportDLL = szInsDir ^ szNameofDLL;
+        if (
+             DefineDialog( szDLG, 0 , szSupportDLL , iDLG_ID, "",
+             HWND_DESKTOP, lHwnd, DLG_MSG_STANDARD | DLG_CENTERED  )
+           )
+        then
+           _Error( "Error in creating a dialog box." );
+        endif;
+
+end;
+
+//-----------------------------------------------------------------------------
+// Check the "\WINDOWS" and "\WINDOWS\SYSTEM" version of the specified file
+//-----------------------------------------------------------------------------
+function        _Is_InsOld ( szSrcSub, szSrcFil, szDstFil )
+        NUMBER  nOrgDat;
+        NUMBER  nInsDat;
+        STRING  szWrkDat[ 50 ]; 
+        STRING  szSrcOrg[ MAX_SIZE ];
+        STRING  szDstOrg[ MAX_SIZE ];
+begin
+
+        // Save original source and target directories
+        StrCopy( szSrcOrg, SRCDIR );            // Save source target directory
+        StrCopy( szDstOrg, TARGETDIR );         // Save product target directory
+
+        // Check dates in "Windows" directory
+        StrCopy( TARGETDIR, WINDIR );           // get windows dir
+        AppendToPath( TARGETDIR, szDstFil );
+        GetFileInfo( TARGETDIR, FILE_DATE, nOrgDat, szWrkDat);
+
+        // Check dates in "Windows\System" directory
+        StrCopy( TARGETDIR, WINSYSDIR );        // get windows system dir
+        AppendToPath( TARGETDIR, szDstFil );
+        GetFileInfo( TARGETDIR, FILE_DATE, nInsDat, szWrkDat);
+        if  nInsDat > nOrgDat  then             // Use newest date
+            nOrgDat = nInsDat;
+        endif;       
+
+        // Build source file specification
+        AppendToPath( SRCDIR, szSrcSub );
+        AppendToPath( SRCDIR, szSrcFil );
+        GetFileInfo( SRCDIR, FILE_DATE, nInsDat, szWrkDat);
+
+        // Restore original source and target directories
+        StrCopy( SRCDIR, szSrcOrg );    
+        StrCopy( TARGETDIR, szDstOrg ); 
+
+        if (nOrgDat > nInsDat) then return TRUE; endif;       
+        return FALSE;
+
+end;
+
+//-----------------------------------------------------------------------------
+// Copy/decompress a file (overlay existing)
+//-----------------------------------------------------------------------------
+function        _RenFilOvr ( szSrcSub, szSrcFil, szDstFil )
+        STRING  szSrcOrg[ MAX_SIZE ];
+        STRING  szDstOrg[ MAX_SIZE ];
+begin
+        // Save original source and target directories
+        StrCopy( szSrcOrg, SRCDIR );        // Save source target directory
+        StrCopy( szDstOrg, TARGETDIR );     // Save product target directory
+
+        // Set source and target to same directory
+        StrCopy( SRCDIR, szSrcSub );    
+        StrCopy( TARGETDIR, szSrcSub ); 
+        
+        // Delete previous file (if present)
+        DeleteFile (szDstFil);
+        RenameFile (szSrcFil, szDstFil);
+
+        // Restore original source and target directories
+        StrCopy( SRCDIR, szSrcOrg );    
+        StrCopy( TARGETDIR, szDstOrg ); 
+
+        return 0;
+end;
+
+//-----------------------------------------------------------------------------
+// Copy/decompress a file (overlay existing)
+//-----------------------------------------------------------------------------
+function        _CopFilOvr ( szSrcSub, szSrcFil, szDstSub, szDstFil, nBegPct, nTotPct, bCmpFlg )
+        NUMBER  nEndPct;
+        STRING  szFilMsg[ MAX_SIZE ];
+        STRING  szUsrMsg[ MAX_SIZE ];
+        STRING  szSrcOrg[ MAX_SIZE ];
+        STRING  szDstOrg[ MAX_SIZE ];
+begin
+        // Identify file in process...
+        StrCopy( szFilMsg, SRCDIR );
+        AppendToPath( szFilMsg, szSrcSub );
+        AppendToPath( szFilMsg, szSrcFil );
+        StrCopy( szUsrMsg, SI_COPPRC );
+        StrConcat( szUsrMsg, szFilMsg );
+
+        // Save original source and target directories
+        StrCopy( szSrcOrg, SRCDIR );        // Save source target directory
+        StrCopy( szDstOrg, TARGETDIR );     // Save product target directory
+
+        // Build source and target file specifications
+        AppendToPath( SRCDIR, szSrcSub );
+        AppendToPath( TARGETDIR, szDstSub );
+
+        // Create target subdirectory, unless already there.
+        ExistsDir( TARGETDIR );
+        if LAST_RESULT = NOTEXISTS then
+            CreateDir( TARGETDIR );
+            if LAST_RESULT < 0 then
+                StrCopy( szErrMsg, SI_DIRERR );
+                StrConcat( szErrMsg, TARGETDIR );
+                MessageBox( szErrMsg, SEVERE );
+                // Restore original source and target directories
+                StrCopy( SRCDIR, szSrcOrg );    
+                StrCopy( TARGETDIR, szDstOrg ); 
+                return -1;
+            endif;
+        endif;
+
+        // Set status bar
+        nEndPct = nBegPct + nTotPct;
+        SetStatusWindow( nBegPct, szUsrMsg );
+        StatusUpdate( ON, nEndPct);
+
+        // Copy (and decompress) requested files
+        if (bCmpFlg) then CompressGet ( szSrcFil, szDstFil, COMP_NORMAL );
+        else CopyFile( szSrcFil, szDstFil ); endif;
+
+        // Success?
+        if LAST_RESULT < 0 then
+            StrCopy( szErrMsg, SI_COPERR );
+            StrConcat( szErrMsg, szFilMsg );
+            MessageBox( szErrMsg, SEVERE );
+        endif;
+
+        // Restore original source and target directories
+        StrCopy( SRCDIR, szSrcOrg );    
+        StrCopy( TARGETDIR, szDstOrg ); 
+
+        return 0;
+end;
+
+//-----------------------------------------------------------------------------
+// Include Pre-written scripts from the ..\LIBRARY directory
+// Include Pre-written scripts for dialog boxes from ..\DIALOGS directory
+//-----------------------------------------------------------------------------
+
+        #include "SUPRUL\\REGINS.RUL"
+        #include "SUPRUL\\MISC.RUL"
+        #include "SUPRUL\\REG.RUL"
+        #include "SUPRUL\\WINSUB.RUL"
+
+

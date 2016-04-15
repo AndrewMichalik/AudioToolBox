@@ -1,0 +1,70 @@
+                             Audio ToolBox SDK 
+                    Development Kit & Programming Samples
+
+
+Contents:
+
+    The TBXSDK.ZIP file contains VISI's Audio ToolBox Software 
+    Development Kit (SDK) which lets you convert audio file formats 
+    from within your MS Windows and MS DOS applications. 
+
+    The ToolBox SDK contains sample programs that use the PCM
+    conversion libraries and DLLs. These programs were created using 
+    Visual Basic and Microsoft C version 8.0, and demonstrate usage 
+    under both Windows and DOS. The sample program performs a simple
+    .Wav to .Vox conversion.
+
+    The MSCCvt directory contains a sample MS Windows and DOS program
+    "CvtTst.c". To build both the Windows and DOS versions, run the 
+    batch file "MakeMe.bat". The associated makefile assumes that 
+    Microsoft C 8.0 tools are installed and accessible.
+
+    The CvtLib directory contains the "C" header and library files for
+    various PCM formats. The libraries are named PPPMMM.Lib to 
+    designate the formats. PPP = DLG for Dialogic, G21 for CCITT G.721,
+    NWV for NewVoice, and PTC for Perception Technology. MMM = MLE for
+    Microsoft Large memory model with floating point emulator, and MWE
+    for Microsoft Windows model with floating point emulator.
+
+    The MVBCvt directory contains a sample MS Windows Visual Basic 
+    project, "CvtTst.Mak". 
+
+    The WINDLL directory contains the DLLs necessary for the MS Windows 
+    executable versions.
+
+
+To Unpack:
+    
+    1)  Unzip the file TBXSDK.ZIP to extract each floppy image:
+        PKUNZIP TBXSDK.ZIP
+        [Note: If you are reading this file from your hard drive, you have
+        already completed this step.] 
+    2)  Unzip the disk images to floppy using the create directory option: 
+        PKUNZIP -d SDK001.ZIP a:
+        PKUNZIP -d SDK002.ZIP a:
+    3)  Run the Install program, and answer some simple installation
+        questions.
+
+
+Other VISI Products:
+
+    Don't forget to ask about our other exciting products:
+    
+    VFEdit ("vee-ef-edit"), The Professional Prompt Editor,
+        is a Microsoft Windows graphical editor that lets
+        you edit sound the way a word processor lets you
+        edit text.
+    
+    TI/F DLL (tif-dee-el-el), The Microsoft Windows Voice
+        Mail Driver, lets you add Voice Mail power to your
+        Microsoft Windows applications.
+
+    VoxFonts, the "Software Only" Text-to-Speech adds an
+        unlimited vocabulary to your Interactive Voice
+        Response applications.
+    
+    Scribe, The DOS Speech to Text Transcription Utility,
+        lets you hear digital audio files without the need
+        for additional hardware. It's like turning your PC
+        into a transcription machine.
+

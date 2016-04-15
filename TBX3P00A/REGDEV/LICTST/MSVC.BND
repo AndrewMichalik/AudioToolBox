@@ -1,0 +1,14 @@
+LICTST.OBJ +
+TBXLIC.OBJ +
+WINMEM.OBJ +
+WINMSG.OBJ +
+CFGSUP.OBJ +
+FILLOW.OBJ +
+
+LICTST.EXE
+nul
+E:\C151\CDK16\LIB\+
+e:\c151\lib\+
+e:\c151\mfc\lib\+
+oldnames libw commdlg shell olecli olesvr mlibcew
+LICTST.DEF;

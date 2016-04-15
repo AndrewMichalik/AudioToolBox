@@ -1,0 +1,362 @@
+@DefineProject
+    @Name       = "Audio ToolBox SDK"
+    @Version    = "3.0"
+    @Subdir     = "\\TBxSDK"
+    @OutDrive   = C
+    @Group      = "A"
+@EndProject
+  
+@Display
+    @Cls
+  
+    This program will install @Name Version @Version on your computer
+    system and verify the integrity of the distribution disk(s).
+    You may press the [Esc] key at any time to abort the installation.
+    INSTALL will ask you several questions about your computer
+    and then give you the option of installing @Name for your 
+    system.
+  
+    Each question has a default answer.  If the default answer is
+    correct, press the ENTER key in response to the question.
+    Otherwise, type the answer and then press the ENTER key.
+  
+    If you make a mistake while typing, just press the BACKSPACE key
+    and then retype the answer.
+  
+  
+    @Pause
+@EndDisplay
+  
+@GetOutDrive
+    @Cls
+    On which disk drive do you wish to install @Name?
+@EndOutDrive
+  
+@GetSubdir
+    @CLS
+    Please specify the hard disk destination subdirectory. The
+    subdirectory is the location on your disk where the @Name
+    will be installed.  If you don't know what a "subdirectory" is,
+    don't worry - just press the ENTER key at the next prompt.
+
+
+
+
+  
+    @Prompt = "Which subdirectory ([Enter] = @Subdir) ?"
+@EndSubdir
+  
+/************************************************************************/
+/************************************************************************/
+@GetGroups
+    @Cls
+    Please select the type of audio hardware you use:
+  
+
+
+
+  
+  
+  
+  
+  
+    Use the [Up Arrow], [Down Arrow], [PgUp], & [PgDn] keys to move the
+    highlight bar to select the audio hardware you use.  Press [Enter]
+    when you have completed your selection.
+  
+    @Set D = "Dialogic D/4x"
+    @Set G = "G.721 C-ITU (CCITT)"
+    @Set N = "NewVoice CVSD"
+    @Set P = "Perception Technology CVSD"
+    @Set R = "Rhetorex RDSP"
+  
+@EndGroups
+  
+/************************************************************************/
+/************************************************************************/
+@DefineDisk
+    @Label = "SDK Disk 1/2"
+  
+    /********************************************************************/
+    /* Install non-compressed license file if it exists                 */
+    /********************************************************************/
+    @If (@Exists ("TBXLIC.TXT"))
+        @File     TBXLIC.TXT    @Out TBXLIC.TXT
+    @EndIf
+  
+    /********************************************************************/
+    /* ToolBox SDK EXEs, and DLLs                                       */
+    /********************************************************************/
+    @BeginLib TBXSDK.RED
+        /****************************************************************/
+        /* Install the following files if the DLG option was selected   */
+        /****************************************************************/
+        @If ('D' [= @Group)
+            @File     DLGCHP.EXE    @Out WINDLL\\SNDCHP.EXE
+            @File     DLGCHP.DLL    @Out WINDLL\\DLGCHP.DLL
+            @File     DLGCVT.EXE    @Out WINDLL\\PCMCVT.EXE
+            @File     DLGCVT.DLL    @Out WINDLL\\DLGCVT.DLL
+            @File     DLGEFF.DLL    @Out WINDLL\\DLGEFF.DLL
+            @File     DLGPCM.DLL    @Out WINDLL\\DLGPCM.DLL
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the G21 option was selected   */
+        /****************************************************************/
+        @If ('G' [= @Group)
+            @File     G21CHP.EXE    @Out WINDLL\\SNDCHP.EXE
+            @File     G21CHP.DLL    @Out WINDLL\\G21CHP.DLL
+            @File     G21CVT.EXE    @Out WINDLL\\PCMCVT.EXE
+            @File     G21CVT.DLL    @Out WINDLL\\G21CVT.DLL
+            @File     G21EFF.DLL    @Out WINDLL\\G21EFF.DLL
+            @File     G21PCM.DLL    @Out WINDLL\\G21PCM.DLL
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the NWV option was selected   */
+        /****************************************************************/
+        @If ('N' [= @Group)
+            @File     NWVCHP.EXE    @Out WINDLL\\SNDCHP.EXE
+            @File     NWVCHP.DLL    @Out WINDLL\\NWVCHP.DLL
+            @File     NWVCVT.EXE    @Out WINDLL\\PCMCVT.EXE
+            @File     NWVCVT.DLL    @Out WINDLL\\NWVCVT.DLL
+            @File     NWVEFF.DLL    @Out WINDLL\\NWVEFF.DLL
+            @File     NWVPCM.DLL    @Out WINDLL\\NWVPCM.DLL
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the PTC option was selected   */
+        /****************************************************************/
+        @If ('P' [= @Group)
+            @File     PTCCHP.EXE    @Out WINDLL\\SNDCHP.EXE
+            @File     NWVCHP.DLL    @Out WINDLL\\NWVCHP.DLL
+            @File     PTCCVT.EXE    @Out WINDLL\\PCMCVT.EXE
+            @File     PTCCVT.DLL    @Out WINDLL\\PTCCVT.DLL
+            @File     PTCEFF.DLL    @Out WINDLL\\PTCEFF.DLL
+            @File     PTCPCM.DLL    @Out WINDLL\\PTCPCM.DLL
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the RTX option was selected   */
+        /****************************************************************/
+        @If ('R' [= @Group)
+            @File     DLGCHP.EXE    @Out WINDLL\\SNDCHP.EXE
+            @File     DLGCHP.DLL    @Out WINDLL\\DLGCHP.DLL
+            @File     DLGCVT.EXE    @Out WINDLL\\PCMCVT.EXE
+            @File     DLGCVT.DLL    @Out WINDLL\\DLGCVT.DLL
+            @File     DLGEFF.DLL    @Out WINDLL\\DLGEFF.DLL
+            @File     DLGPCM.DLL    @Out WINDLL\\DLGPCM.DLL
+        @EndIf
+
+        /****************************************************************/
+        /* Install the following files for all selections               */
+        /****************************************************************/
+        @File         IDXCHP.EXE    @Out WINDLL\\IDXCHP.EXE
+        @File         IDXLST.EXE    @Out WINDLL\\IDXLST.EXE
+        @File         IDXPAK.EXE    @Out WINDLL\\IDXPAK.EXE
+        @File         IDXREB.EXE    @Out WINDLL\\IDXREB.EXE
+        @File         ALLIDX.DLL    @Out WINDLL\\ALLIDX.DLL
+  
+        @File         SDKREL.TXT    @Out SDKREL.TXT
+        @File         README.TXT    @Out README.TXT
+
+    @EndLib
+
+@EndDisk
+
+@DefineDisk
+    @Label = "SDK Disk 2/2"
+  
+    /********************************************************************/
+    /* SndChp SDK LIBs and sample files                                 */
+    /********************************************************************/
+    @BeginLib CHPSDK.RED
+        /****************************************************************/
+        /* Install the following files if the DLG option was selected   */
+        /****************************************************************/
+        @If ('D' [= @Group)
+            @File     DLGMLE.LIB    @Out CHPLIB\\DLGMLE.LIB
+            @File     DLGMWE.LIB    @Out CHPLIB\\DLGMWE.LIB
+            @File     DLGMLE.RSP    @Out MSCCHP\\DLGMLE.RSP
+            @File     DLGMWE.RSP    @Out MSCCHP\\DLGMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the G21 option was selected   */
+        /****************************************************************/
+        @If ('G' [= @Group)
+            @File     G21MLE.LIB    @Out CHPLIB\\G21MLE.LIB
+            @File     G21MWE.LIB    @Out CHPLIB\\G21MWE.LIB
+            @File     G21MLE.RSP    @Out MSCCHP\\G21MLE.RSP
+            @File     G21MWE.RSP    @Out MSCCHP\\G21MWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the NWV option was selected   */
+        /****************************************************************/
+        @If ('N' [= @Group)
+            @File     NWVMLE.LIB    @Out CHPLIB\\NWVMLE.LIB
+            @File     NWVMWE.LIB    @Out CHPLIB\\NWVMWE.LIB
+            @File     NWVMLE.RSP    @Out MSCCHP\\NWVMLE.RSP
+            @File     NWVMWE.RSP    @Out MSCCHP\\NWVMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the PTC option was selected   */
+        /****************************************************************/
+        @If ('P' [= @Group)
+            @File     PTCMLE.LIB    @Out CHPLIB\\PTCMLE.LIB
+            @File     PTCMWE.LIB    @Out CHPLIB\\PTCMWE.LIB
+            @File     PTCMLE.RSP    @Out MSCCHP\\PTCMLE.RSP
+            @File     PTCMWE.RSP    @Out MSCCHP\\PTCMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the RTX option was selected   */
+        /****************************************************************/
+        @If ('R' [= @Group)
+            @File     DLGMLE.LIB    @Out CHPLIB\\DLGMLE.LIB
+            @File     DLGMWE.LIB    @Out CHPLIB\\DLGMWE.LIB
+            @File     DLGMLE.RSP    @Out MSCCHP\\DLGMLE.RSP
+            @File     DLGMWE.RSP    @Out MSCCHP\\DLGMWE.RSP
+        @EndIf
+
+        /****************************************************************/
+        /* Install the following files for all selections               */
+        /****************************************************************/
+        @File         GENCHP.H      @Out CHPLIB\\GENCHP.H
+        @File         VISDEF.H      @Out CHPLIB\\VISDEF.H
+
+        @File         DLGMLE.EXE    @Out MSCCHP\\DLGMLE.EXE 
+        @File         DLGMWE.EXE    @Out MSCCHP\\DLGMWE.EXE 
+        @File         MAKEFILE      @Out MSCCHP\\MAKEFILE  
+        @File         MAKEME.BAT    @Out MSCCHP\\MAKEME.BAT
+        @File         CHPTST.C      @Out MSCCHP\\CHPTST.C  
+        @File         CHPTST.DEF    @Out MSCCHP\\CHPTST.DEF
+        @File         VISLGO.ICO    @Out MSCCHP\\VISLGO.ICO
+        @File         CHPTST.RC     @Out MSCCHP\\CHPTST.RC 
+        @File         CHPTST.OBJ    @Out MSCCHP\\OBJECT\\CHPTST.OBJ
+
+    @EndLib
+
+    /********************************************************************/
+    /* PCMCvt SDK LIBs and sample files                                 */
+    /********************************************************************/
+    @BeginLib CVTSDK.RED
+        /****************************************************************/
+        /* Install the following files if the DLG option was selected   */
+        /****************************************************************/
+        @If ('D' [= @Group)
+            @File     DLGMLE.LIB    @Out CVTLIB\\DLGMLE.LIB
+            @File     DLGMWE.LIB    @Out CVTLIB\\DLGMWE.LIB
+            @File     DLGMLE.RSP    @Out MSCCVT\\DLGMLE.RSP
+            @File     DLGMWE.RSP    @Out MSCCVT\\DLGMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the G21 option was selected   */
+        /****************************************************************/
+        @If ('G' [= @Group)
+            @File     G21MLE.LIB    @Out CVTLIB\\G21MLE.LIB
+            @File     G21MWE.LIB    @Out CVTLIB\\G21MWE.LIB
+            @File     G21MLE.RSP    @Out MSCCVT\\G21MLE.RSP
+            @File     G21MWE.RSP    @Out MSCCVT\\G21MWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the NWV option was selected   */
+        /****************************************************************/
+        @If ('N' [= @Group)
+            @File     NWVMLE.LIB    @Out CVTLIB\\NWVMLE.LIB
+            @File     NWVMWE.LIB    @Out CVTLIB\\NWVMWE.LIB
+            @File     NWVMLE.RSP    @Out MSCCVT\\NWVMLE.RSP
+            @File     NWVMWE.RSP    @Out MSCCVT\\NWVMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the PTC option was selected   */
+        /****************************************************************/
+        @If ('P' [= @Group)
+            @File     PTCMLE.LIB    @Out CVTLIB\\PTCMLE.LIB
+            @File     PTCMWE.LIB    @Out CVTLIB\\PTCMWE.LIB
+            @File     PTCMLE.RSP    @Out MSCCVT\\PTCMLE.RSP
+            @File     PTCMWE.RSP    @Out MSCCVT\\PTCMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the RTX option was selected   */
+        /****************************************************************/
+        @If ('R' [= @Group)
+            @File     DLGMLE.LIB    @Out CVTLIB\\DLGMLE.LIB
+            @File     DLGMWE.LIB    @Out CVTLIB\\DLGMWE.LIB
+            @File     DLGMLE.RSP    @Out MSCCVT\\DLGMLE.RSP
+            @File     DLGMWE.RSP    @Out MSCCVT\\DLGMWE.RSP
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files for all selections               */
+        /****************************************************************/
+        @File         GENCVT.H      @Out CVTLIB\\GENCVT.H
+        @File         VISDEF.H      @Out CVTLIB\\VISDEF.H
+
+        @File         DLGMLE.EXE    @Out MSCCVT\\DLGMLE.EXE 
+        @File         DLGMWE.EXE    @Out MSCCVT\\DLGMWE.EXE 
+        @File         MAKEFILE      @Out MSCCVT\\MAKEFILE  
+        @File         MAKEME.BAT    @Out MSCCVT\\MAKEME.BAT
+        @File         CVTTST.C      @Out MSCCVT\\CVTTST.C  
+        @File         CVTTST.DEF    @Out MSCCVT\\CVTTST.DEF
+        @File         VISLGO.ICO    @Out MSCCVT\\VISLGO.ICO
+        @File         CVTTST.RC     @Out MSCCVT\\CVTTST.RC 
+        @File         CVTTST.OBJ    @Out MSCCVT\\OBJECT\\CVTTST.OBJ
+
+        @File         CVTTST.EXE    @Out MVBCVT\\CVTTST.EXE
+        @File         CVTTST.FRM    @Out MVBCVT\\CVTTST.FRM
+        @File         CVTTST.FRX    @Out MVBCVT\\CVTTST.FRX
+        @File         CVTTST.MAK    @Out MVBCVT\\CVTTST.MAK
+        @File         GENCVT.TXT    @Out MVBCVT\\GENCVT.TXT
+
+    @EndLib
+
+    /********************************************************************/
+    /* IdxFil SDK LIBs and sample files                                 */
+    /********************************************************************/
+    @BeginLib IDXSDK.RED
+        /****************************************************************/
+        /* Install the following files for all selections               */
+        /****************************************************************/
+        @File         ALLMLE.LIB    @Out IDXLIB\\ALLMLE.LIB
+        @File         ALLMWE.LIB    @Out IDXLIB\\ALLMWE.LIB
+
+        @File         GENIDX.H      @Out IDXLIB\\GENIDX.H
+        @File         VISDEF.H      @Out IDXLIB\\VISDEF.H
+
+        @File         ALLMLE.EXE    @Out MSCIDX\\ALLMLE.EXE 
+        @File         ALLMWE.EXE    @Out MSCIDX\\ALLMWE.EXE 
+        @File         MAKEFILE      @Out MSCIDX\\MAKEFILE  
+        @File         MAKEME.BAT    @Out MSCIDX\\MAKEME.BAT
+        @File         IDXTST.C      @Out MSCIDX\\IDXTST.C  
+        @File         IDXTST.DEF    @Out MSCIDX\\IDXTST.DEF
+        @File         VISLGO.ICO    @Out MSCIDX\\VISLGO.ICO
+        @File         IDXTST.RC     @Out MSCIDX\\IDXTST.RC 
+        @File         IDXTST.OBJ    @Out MSCIDX\\OBJECT\\IDXTST.OBJ
+
+    @EndLib
+
+@EndDisk
+
+/************************************************************************/
+/************************************************************************/
+@Finish
+    @Cls
+    Installation Successful!
+
+    @ChDrive @OutDrive
+    @ChDir "@SubDir"
+
+    @Pause
+
+@EndFinish
+  
+/* end-of-file */
+  
+

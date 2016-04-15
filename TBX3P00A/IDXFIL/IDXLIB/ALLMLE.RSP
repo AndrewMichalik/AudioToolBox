@@ -1,0 +1,9 @@
+-+ object\idxini.obj -+ object\cfgsup.obj &
+-+ object\chplod.obj -+ object\lstlod.obj &
+-+ object\paklod.obj -+ object\reblod.obj &
+-+ object\vbsfil.obj -+ object\vbsmth.obj &
+-+ object\filfnd.obj &
+-+ object\filsup.obj -+ object\fillow.obj &
+-+ object\usrstb.obj -+ object\dosmem.obj -+ object\dosmsg.obj &
+-+ ..\..\regdev\object\kechk.obj;
+

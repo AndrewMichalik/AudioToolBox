@@ -1,0 +1,2 @@
+..\IdxLst.Exe IdxTst.Vap
+

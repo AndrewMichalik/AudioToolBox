@@ -1,0 +1,472 @@
+
+10000 DIALOG FIXED 64, 74, 229, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 187, 9, 35, 14, WS_GROUP
+    CTEXT           "Indicate which applications you want to install:", 
+                    10008, 4, 9, 160, 14, SS_NOPREFIX
+    GROUPBOX        "", 10007, 8, 25, 172, 98, WS_GROUP
+    LISTBOX         10001, 12, 31, 164, 73, NOT LBS_NOTIFY | LBS_MULTIPLESEL | 
+                    LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Select All", 10006, 37, 104, 49, 14, WS_GROUP
+    PUSHBUTTON      "&Deselect All", 10005, 94, 104, 49, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 187, 27, 35, 14
+END
+
+16000 DIALOG FIXED 57, 111, 231, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Please register your name and company before continuing:", 
+                    16003, 9, 5, 146, 26, SS_NOPREFIX
+    LTEXT           "&Name:", 16004, 8, 33, 57, 8
+    EDITTEXT        16001, 8, 45, 149, 13, WS_GROUP
+    LTEXT           "&Company:", 16005, 8, 68, 75, 9
+    EDITTEXT        16002, 8, 82, 149, 13, WS_GROUP
+    DEFPUSHBUTTON   "Continue", IDOK, 176, 15, 41, 15, WS_GROUP
+END
+
+3000 DIALOG 40, 97, 225, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "You have provided the following registration information.", 
+                    3001, 16, 9, 184, 8
+    LTEXT           "Name:", 3002, 24, 29, 42, 8
+    LTEXT           "Company:", 3003, 24, 48, 49, 8
+    LTEXT           "Is this registration information correct?", 3004, 17, 
+                    70, 164, 8
+    LTEXT           "", 3005, 81, 29, 120, 8
+    LTEXT           "", 3006, 81, 48, 121, 8
+    PUSHBUTTON      "&Yes", 3007, 62, 86, 40, 14
+    PUSHBUTTON      "&No", 3008, 118, 86, 40, 14
+END
+
+31600 DIALOG FIXED 27, 70, 287, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Install &To:", 31616, 7, 52, 40, 8
+    EDITTEXT        31603, 7, 62, 206, 12, ES_AUTOHSCROLL | ES_OEMCONVERT | 
+                    WS_GROUP
+    LTEXT           "&Drives:", 31617, 7, 80, 42, 8
+    LISTBOX         31602, 6, 92, 45, 73, LBS_USETABSTOPS | WS_GROUP | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK", IDOK, 234, 6, 45, 16, WS_GROUP
+    PUSHBUTTON      "Cancel", IDCANCEL, 234, 27, 45, 16, WS_GROUP
+    PUSHBUTTON      "Custom...", 31604, 234, 46, 45, 16, WS_GROUP
+    LTEXT           "Choose 'Custom' to select individual components or choose OK for a Complete Install.", 
+                    31611, 7, 5, 201, 21
+    LTEXT           "Space Required:", 31612, 7, 29, 57, 8, NOT WS_GROUP
+    LTEXT           "Install From:", 31614, 7, 37, 57, 8, NOT WS_GROUP
+    LTEXT           "", 31613, 69, 29, 152, 8, NOT WS_GROUP
+    LTEXT           "", 31615, 69, 38, 153, 8, NOT WS_GROUP
+    GROUPBOX        "Target Drive Status", 31601, 63, 88, 148, 77
+    CTEXT           "BEFORE Installation", 31618, 70, 100, 136, 8
+    CTEXT           "AFTER Installation", 31619, 69, 132, 137, 8
+    LTEXT           "NOTE: The individual components of the product can be selected/deselected when you choose the 'Custom' option. ", 
+                    31620, 10, 170, 202, 20, SS_NOPREFIX
+    RTEXT           "", 31621, 95, 111, 108, 10
+    RTEXT           "", 31622, 95, 122, 108, 10
+    RTEXT           "", 31623, 94, 142, 109, 10
+    RTEXT           "", 31624, 94, 152, 109, 10
+    LTEXT           "Used:", 31625, 66, 112, 20, 8
+    LTEXT           "Free:", 31626, 67, 123, 20, 8
+    LTEXT           "Used:", 31627, 66, 142, 20, 8
+    LTEXT           "Free:", 31628, 67, 152, 20, 8
+END
+
+15000 DIALOG FIXED 59, 87, 242, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "&Yes", 15003, 48, 55, 46, 12
+    LTEXT           "You entered the following directory specification:", 
+                    15001, 7, 6, 179, 11, NOT WS_GROUP
+    LTEXT           "This directory does not exist.  Should Install create it for you?", 
+                    15002, 7, 36, 226, 14, NOT WS_GROUP
+    PUSHBUTTON      "&No", 15004, 143, 55, 47, 12
+    LTEXT           "", 15005, 17, 19, 216, 8, SS_NOPREFIX | NOT WS_GROUP
+END
+
+13000 DIALOG FIXED 76, 30, 203, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 161, 12, 35, 13, WS_GROUP
+    LTEXT           "The following line(s) need to be added to your config.sys file:", 
+                    13001, 8, 9, 131, 19, SS_NOPREFIX
+    LISTBOX         13002, 9, 31, 139, 34, WS_GROUP | WS_TABSTOP
+    GROUPBOX        "", 13003, 9, 64, 141, 61, WS_GROUP
+    CONTROL         "&Let Install modify the config.sys file", 13004, 
+                    "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 12, 
+                    72, 131, 12
+    CONTROL         "&Save the required changes to new file:", 13005, 
+                    "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 12, 85, 137, 
+                    12
+    EDITTEXT        13006, 29, 98, 88, 13, ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_OEMCONVERT
+    CONTROL         "&Do not make any changes", 13007, "Button", 
+                    BS_AUTORADIOBUTTON | WS_TABSTOP, 12, 112, 123, 10
+    EDITTEXT        13008, 9, 128, 189, 51, ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "Cancel", IDCANCEL, 161, 29, 35, 13
+    PUSHBUTTON      "&Edit >>", 13011, 161, 46, 35, 13, WS_DISABLED
+    PUSHBUTTON      "&Cancel Edit", 13013, 78, 184, 48, 13, WS_GROUP
+END
+
+6000 DIALOG FIXED 74, 32, 203, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 161, 11, 35, 14, WS_GROUP
+    LTEXT           "The following line(s) need to be added to your config.sys file:", 
+                    6001, 9, 9, 131, 19, SS_NOPREFIX
+    LISTBOX         6002, 9, 31, 139, 34, WS_GROUP | WS_TABSTOP
+    GROUPBOX        "", 6003, 9, 66, 141, 62, WS_GROUP
+    CONTROL         "&Let Install modify the config.sys file", 6004, 
+                    "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 13, 
+                    73, 131, 12
+    CONTROL         "&Do not make any changes", 6007, "Button", 
+                    BS_AUTORADIOBUTTON | WS_TABSTOP, 13, 114, 128, 9
+    CONTROL         "&Save the required changes to new file:", 6005, 
+                    "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 13, 86, 136, 
+                    12
+    EDITTEXT        6006, 29, 99, 88, 13, ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_OEMCONVERT | WS_GROUP
+    PUSHBUTTON      "Cancel", IDCANCEL, 161, 29, 35, 13
+    PUSHBUTTON      "&Edit >>", 6011, 161, 46, 35, 13
+END
+
+18000 DIALOG FIXED 89, 39, 203, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 161, 12, 35, 13, WS_GROUP
+    LTEXT           "The following line(s) need to be added to your autoexec.bat file:", 
+                    18001, 8, 9, 131, 19, SS_NOPREFIX
+    LISTBOX         18002, 9, 31, 139, 34, WS_GROUP | WS_TABSTOP
+    GROUPBOX        "", 18003, 9, 64, 141, 62, WS_GROUP
+    CONTROL         "&Let Install modify the autoexec.bat file", 18004, 
+                    "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 12, 
+                    73, 137, 12
+    CONTROL         "&Save the required changes to new file:", 18005, 
+                    "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 12, 86, 137, 
+                    12
+    EDITTEXT        18006, 29, 99, 88, 13, ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_OEMCONVERT
+    CONTROL         "&Do not make any changes", 18007, "Button", 
+                    BS_AUTORADIOBUTTON | WS_TABSTOP, 12, 113, 128, 9
+    EDITTEXT        18008, 9, 128, 189, 51, ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Cancel", IDCANCEL, 161, 28, 35, 13
+    PUSHBUTTON      "&Edit >>", 18011, 161, 45, 35, 13, WS_DISABLED
+    PUSHBUTTON      "&Cancel Edit", 18013, 78, 182, 48, 14, WS_GROUP
+END
+
+19000 DIALOG FIXED 78, 46, 203, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    DEFPUSHBUTTON   "OK", IDOK, 161, 12, 35, 13, WS_GROUP
+    LTEXT           "The following line(s) need to be added to your Autoexec.bat file:", 
+                    19001, 9, 9, 131, 19, SS_NOPREFIX
+    LISTBOX         19002, 9, 31, 144, 34, WS_GROUP | WS_TABSTOP
+    GROUPBOX        "", 19003, 9, 66, 146, 72, WS_GROUP
+    CONTROL         "&Let Install modify the autoexec.bat file", 19004, 
+                    "Button", BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 14, 
+                    73, 137, 12
+    CONTROL         "&Do not make any changes", 19007, "Button", 
+                    BS_AUTORADIOBUTTON | WS_TABSTOP, 14, 119, 124, 13
+    CONTROL         "&Save the required changes to new file:", 19005, 
+                    "Button", BS_AUTORADIOBUTTON | WS_TABSTOP, 14, 86, 138, 
+                    12
+    EDITTEXT        19006, 25, 101, 89, 13, ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "Cancel", IDCANCEL, 161, 29, 35, 13
+    PUSHBUTTON      "&Edit >>", 19011, 161, 46, 35, 13
+END
+
+5016 DIALOG FIXED 69, 89, 191, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        5018, 17, 19, 108, 13, ES_NOHIDESEL
+    LTEXT           "New Program Group:", 5017, 7, 6, 179, 11, NOT WS_GROUP
+    DEFPUSHBUTTON   "OK", IDOK, 31, 52, 46, 15
+    PUSHBUTTON      "Cancel", IDCANCEL, 117, 52, 47, 15
+END
+
+14000 DIALOG 27, 43, 228, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Exit Setup"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Setup is not complete.  If you quit the Setup program now, the product will not be installed.", 
+                    -1, 25, 10, 173, 18
+    LTEXT           "You can run the Setup program at a later time to complete the installation.", 
+                    -1, 25, 35, 176, 18
+    LTEXT           "To continue installing the product, choose the Resume button.  To quit the setup program, choose the Exit button.", 
+                    -1, 25, 58, 182, 25
+    DEFPUSHBUTTON   "&Resume", IDOK, 56, 92, 54, 16
+    PUSHBUTTON      "E&xit", IDCANCEL, 127, 92, 54, 16
+END
+
+1000 DIALOG 45, 93, 263, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "Installation Complete"
+FONT 8, "Helv"
+BEGIN
+    PUSHBUTTON      "&Run ResourceSHIELD", 1001, 152, 50, 92, 16
+    PUSHBUTTON      "Return to &Windows", 1002, 153, 81, 91, 16
+    LTEXT           "Installation is complete.", 1003, 16, 20, 98, 8
+    LTEXT           "Choose Run ResurceSHIELD to start using ResourceSHIELD, or Choose ResourceSHIELD Help to see on-line help, or Return to Windows to exit InstallSHIELD Setup.", 
+                    1004, 17, 44, 121, 50
+    PUSHBUTTON      "ResourceSHIELD &Help", 1005, 152, 18, 91, 16
+END
+
+2000 DIALOG 56, 92, 224, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Welcome"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Welcome to InstallSHIELD for Windows, Version 2.0 Setup.", 
+                    2001, 38, 9, 159, 18
+    LTEXT           "This program will install ResourceSHIELD on your computer. Simply follow the instructions.", 
+                    2002, 39, 32, 155, 22
+    LTEXT           "To install ResourceSHIELD on your computer, choose the Continue button or press ENTER.", 
+                    2003, 39, 54, 165, 16
+    LTEXT           "To quit the Setup program at any time, choose Exit which is on your lower right-hand corner.", 
+                    2004, 39, 77, 166, 17
+    PUSHBUTTON      "&Continue", 2005, 43, 116, 64, 14
+    PUSHBUTTON      "Cance&l Setup", 2006, 121, 116, 62, 14
+END
+
+1085 DIALOG 62, 42, 230, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Existing Version Found"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Setup has detected an existing version in the destination directory.", 
+                    -1, 21, 14, 179, 16
+    LTEXT           "Choose Continue if you want to upgrade or add options to your current installation.", 
+                    -1, 21, 37, 179, 19
+    LTEXT           "If you want to install in a different directory than your existing version, choose Change Directory and type different destination directory at the prompt.", 
+                    -1, 21, 61, 178, 25
+    PUSHBUTTON      "&Continue", IDOK, 11, 102, 62, 16
+    PUSHBUTTON      "C&hange Directory", 1086, 84, 102, 62, 16
+    PUSHBUTTON      "Cance&l Setup", IDCANCEL, 157, 102, 62, 16
+END
+
+1088 DIALOG 62, 42, 230, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Insufficient Disk Space"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Setup has determined that you do not have the required amount of disk space on the selected drive(s) for the options that have been selected.", 
+                    -1, 21, 13, 185, 23
+    LTEXT           "Choose Main Menu to go to a Type of Installation dialog box.  Custom Installation can be used to select the individual components.", 
+                    -1, 21, 41, 179, 27
+    LTEXT           "Alternatively, if you believe that Setup's assessment of available disk space is incorrect, you can attempt to install files anyway.  Choose this option with extreme care.", 
+                    -1, 21, 71, 178, 32
+    PUSHBUTTON      "&Install Anyway", IDOK, 11, 112, 62, 16
+    PUSHBUTTON      "&Main Menu", 1089, 84, 112, 62, 16
+    PUSHBUTTON      "Cance&l Setup", IDCANCEL, 157, 112, 62, 16
+END
+
+31500 DIALOG 40, 86, 260, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    PUSHBUTTON      "Continue", IDOK, 182, 133, 48, 16
+    EDITTEXT        31501, 30, 17, 218, 101, ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    ICON            31502, 31502, 3, 13, 21, 18
+END
+
+12000 DIALOG FIXED 30, 50, 293, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        12023, 113, 21, 129, 11, ES_AUTOHSCROLL
+    CONTROL         "&InstallSHIELD Program", 12003, "Button", 
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 8, 20, 87, 10
+    LTEXT           "Disk Usage:", 12017, 244, 5, 45, 8
+    RTEXT           "0K", 12001, 253, 23, 29, 7
+    GROUPBOX        "", 12005, 252, 18, 31, 14
+    CONTROL         "InstallSHIELD Help", 12002, "Button", BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP, 8, 35, 77, 10
+    CONTROL         "&Example1", 12007, "Button", BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP, 8, 50, 62, 8
+    RTEXT           "0K", 12042, 254, 51, 28, 7
+    GROUPBOX        "", 12009, 252, 46, 31, 14
+    CONTROL         "&Example2", 12011, "Button", BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP, 8, 65, 62, 8
+    RTEXT           "0K", 12044, 253, 65, 29, 7
+    GROUPBOX        "", 12013, 252, 60, 31, 14
+    CONTROL         "&Example3", 12015, "Button", BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP, 8, 81, 62, 8
+    RTEXT           "0K", 12045, 254, 81, 28, 7, NOT WS_GROUP
+    GROUPBOX        "", 12014, 252, 76, 31, 14
+    PUSHBUTTON      "Continue", IDOK, 235, 162, 46, 14
+    GROUPBOX        "", 12016, 9, 126, 194, 50
+    RTEXT           "Space Required:", 12019, 23, 150, 59, 8
+    RTEXT           "Space Available:", 12020, 21, 163, 61, 9
+    RTEXT           "0K", 12031, 95, 152, 30, 7
+    RTEXT           "57040K", 12032, 95, 164, 30, 7
+    CTEXT           "", 12033, 103, 139, 17, 7
+    LTEXT           "", 12021, 113, 51, 125, 9
+    LTEXT           "", 12022, 113, 66, 126, 9
+    LTEXT           "", 12027, 113, 81, 126, 9
+    RTEXT           "Drive:", 12018, 62, 137, 20, 8
+    LTEXT           "NOTE: The individual components of the product can be selected/ deselected when you click on the CheckBoxes. Choose Continue to start file transfer.", 
+                    12008, 8, 99, 276, 23
+    RTEXT           "0K", 12006, 254, 36, 28, 8
+    CONTROL         "", 12010, "Static", SS_BLACKFRAME, 252, 35, 31, 11
+    LTEXT           "", 12004, 113, 36, 129, 10
+END
+
+29000 DIALOG FIXED 78, 88, 219, 142
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "&Name:", 29004, 7, 31, 57, 8
+    EDITTEXT        29001, 7, 42, 149, 13, WS_GROUP
+    LTEXT           "&Company:", 29005, 7, 57, 75, 9
+    EDITTEXT        29002, 7, 68, 149, 13, WS_GROUP
+    LTEXT           "&Serial Number:", 29010, 7, 85, 61, 8
+    EDITTEXT        29009, 7, 96, 150, 14, ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      " Continue ", IDOK, 161, 118, 47, 14, WS_GROUP
+    LTEXT           "Please register your name, company and serial number before continuing:", 
+                    29003, 7, 5, 148, 23, SS_NOPREFIX
+END
+
+4000 DIALOG 40, 97, 225, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "You have provided the following registration information.", 
+                    4001, 18, 9, 191, 11
+    LTEXT           "Name:", 4002, 30, 28, 45, 8
+    LTEXT           "Company:", 4003, 30, 45, 53, 8
+    LTEXT           "Serial Number:", 4004, 30, 63, 55, 8
+    LTEXT           "", 4005, 98, 28, 105, 8
+    LTEXT           "", 4006, 98, 45, 119, 8
+    LTEXT           "", 4007, 99, 63, 115, 8
+    LTEXT           "Is this registration information correct?", 4008, 19, 
+                    83, 168, 8
+    PUSHBUTTON      "&Yes", 4009, 58, 102, 40, 14
+    PUSHBUTTON      "&No", 4010, 125, 103, 40, 14
+END
+
+5000 DIALOG 76, 49, 214, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    CONTROL         "InstallSHIELD Compiler", 5006, "Button", 
+                    BS_AUTOCHECKBOX | WS_TABSTOP, 52, 67, 93, 12
+    CONTROL         "InstallSHIELD Help", 5007, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 52, 97, 78, 10
+    DEFPUSHBUTTON   "OK", IDOK, 150, 94, 51, 15
+    PUSHBUTTON      "Cancel", IDCANCEL, 150, 124, 51, 14
+    LTEXT           "&Group Name:", 5002, 6, 8, 46, 10, NOT WS_GROUP
+    LTEXT           "Check the icons you want to add:", 5003, 6, 51, 129, 10, 
+                    NOT WS_GROUP
+    COMBOBOX        5001, 62, 7, 103, 36, CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Three Example Scripts", 5008, "Button", BS_AUTOCHECKBOX | 
+                    WS_TABSTOP, 52, 127, 87, 10
+    PUSHBUTTON      "New Group...", 5011, 150, 65, 51, 14
+    ICON            5013, 5013, 17, 64, 18, 20
+    ICON            5015, 5015, 17, 92, 18, 20
+    ICON            5014, 5014, 18, 121, 18, 20
+    LTEXT           "Select the group name either a new group or already existing one then select the icons you wish to Install and select OK.", 
+                    5005, 15, 150, 173, 28
+END
+
+34 DIALOG PRELOAD 36, 76, 256, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Choose the type of Installation by clicking one of the buttons.", 
+                    35, 8, 5, 247, 8
+    CONTROL         "Push", 36, "Button", BS_OWNERDRAW | WS_TABSTOP, 8, 24, 
+                    41, 38
+    CONTROL         "Push", 37, "Button", BS_OWNERDRAW | WS_TABSTOP, 8, 71, 
+                    41, 38
+    CONTROL         "Push", 38, "Button", BS_OWNERDRAW | WS_TABSTOP, 9, 118, 
+                    41, 38
+    LTEXT           "Complete Installation", 39, 59, 23, 74, 8
+    LTEXT           "Custom Installation", 40, 59, 70, 72, 8
+    LTEXT           "Installs all options.  This requires a total of 5MB of disk space", 
+                    41, 60, 33, 181, 21
+    LTEXT           "Lets you choose which options to install.  You can create a custom installation and add more options later by running Setup again.", 
+                    42, 60, 80, 181, 24
+END
+
+88 DIALOG FIXED 48, 26, 169, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "&Destination location:", 99, 17, 100, 86, 8
+    EDITTEXT        89, 17, 116, 117, 12, ES_AUTOHSCROLL | ES_OEMCONVERT | 
+                    WS_GROUP
+    PUSHBUTTON      "&Continue", 91, 63, 139, 42, 15
+    PUSHBUTTON      "Cancel", IDCANCEL, 115, 139, 42, 15
+    LTEXT           "Seup will place InstallSHIELD into the following directory, which it will create, if necessary", 
+                    -1, 17, 12, 148, 34
+    LTEXT           "on your hard disk.", -1, 17, 28, 85, 10
+    LTEXT           "To accept the suggested location, choose the Continue button.", 
+                    -1, 17, 45, 147, 19
+    LTEXT           "To change the suggested location, press the BACKSPACE key to delete characters, and then type the name of the drive and directory.", 
+                    -1, 17, 65, 150, 32
+END
+
+92 DIALOG FIXED 39, 22, 230, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "Directory", 1090, 8, 7, 70, 7
+    EDITTEXT        93, 8, 15, 70, 10, ES_AUTOHSCROLL | NOT WS_BORDER | 
+                    WS_GROUP
+    LTEXT           "&Directories:", -1, 83, 7, 71, 7
+    LTEXT           "", 94, 83, 16, 72, 8
+    LISTBOX         95, 82, 27, 72, 57, NOT LBS_NOTIFY | LBS_USETABSTOPS | 
+                    NOT WS_BORDER | WS_GROUP | WS_TABSTOP
+    LTEXT           "Dri&ves:", 1091, 83, 86, 71, 8
+    COMBOBOX        96, 83, 94, 71, 11, CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "OK", IDOK, 175, 15, 46, 11, WS_GROUP
+    PUSHBUTTON      "Cancel", IDCANCEL, 176, 34, 45, 11, WS_GROUP
+END
+
+1536 DIALOG 129, 24, 171, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "File &Name:", 1090, -116, 148, 76, 10
+    EDITTEXT        1152, 49, 169, 90, 12, ES_AUTOHSCROLL | ES_OEMCONVERT
+    LISTBOX         1120, -58, 166, 89, 67, LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Directories:", -1, 16, 5, 92, 9
+    LTEXT           "", 1088, 16, 17, 92, 9, SS_NOPREFIX
+    LISTBOX         1121, 16, 32, 92, 67, LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Files of &Type:", 1089, 68, 157, 90, 9
+    COMBOBOX        1136, -30, 141, 89, 36, CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Dri&ves:", 1091, 16, 104, 92, 8
+    COMBOBOX        1137, 16, 113, 92, 68, CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | 
+                    CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK", IDOK, 114, 5, 50, 14, WS_GROUP
+    PUSHBUTTON      "Cancel", IDCANCEL, 114, 24, 50, 13, WS_GROUP
+    PUSHBUTTON      "&Help", 1038, 114, 45, 50, 14, WS_GROUP
+    CONTROL         "&Read Only", 1040, "Button", BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP, 114, 67, 50, 13
+END

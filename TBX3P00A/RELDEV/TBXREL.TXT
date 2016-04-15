@@ -1,0 +1,72 @@
+                         Audio ToolBox Release Notes
+                               Version  3.00
+                                  10/01/96
+
+
+3.00a.1:
+    1)  Fixed wildcard destination files for drive root directory usage.
+    2)  PCMCvt: Changed minimum source frequency to 100 Hz.
+    3)  PCMCvt: Better equalizer command line support.
+    4)  Added SDK support for all ToolBox functions.    
+    5)  Source and destination frequencies now PCM context sensitive.
+    6)  SndChp supports all native PCM types.
+    7)  Improved all filter characteristics.
+    8)  Improved CVSD fidelity.
+    9)  Improved clipping on all volume adjust operations.
+    10) Improved speed on 386-class machines when DCE is inhibited.
+    11)  Improved Equalizer for all memory conditions.
+    12)  Improved DTMF filter. 
+    13)  Improved IIR filter.
+    14)  Volume normalize default changed to .2% over range.
+    15)  Added -q6 anti-aliasing filter.
+    16)  SDK: Increased size of function block, added initialization functions.
+    17)  SndChp: Accepts destination directory argument like "\temp\.vox"    
+    18)  Added -exit switch to assist technical support.
+    19)  SDK: Fixed header size error on certain wave files.
+    20)  Improved support for extended wave file formats.
+
+02.00d.1
+    1)  Corrected Auto-crop / Auto-chop for non-8 bit formats.
+    
+02.00d.0
+    1)  Corrected Auto-crop / Auto-chop memory leak.
+    2)  Fixed G.711 A-law & G.721 conversions.
+    3)  Improved resample size accuracy.
+    4)  Updated for version 1.10 support DLL's.
+    5)  Changed -ac switch to crop guard time, default changed to 0.05.
+    6)  Added -ac switch to SndChp.
+    7)  Added DC filter to SndChp and auto-crop.
+    8)  Licensed versions work correctly with low DOS memory.
+
+02.00c.0
+    1)  Set NewVoice default frequency to 32,000 Hz.
+    2)  Corrected NewVoice gain levels.
+    3)  Corrected volume normalize for multiple files.
+    4)  Corrected benign memory read beyond array bounds.
+    5)  Corrected low memory condition data losses.
+    6)  Corrected input mix for stereo files.
+
+02.00a.0
+    1)  Initial release.
+
+
+
+                            Other VISI Products
+
+Call 1-800-234-VISI or visit our website at www.vinfo.com to download 
+    working demos and learn about our other exciting products:
+
+VFEdit ("vee-ef-edit"), The Professional Prompt Editor, is a Microsoft
+    Windows graphical editor that lets you edit sound the way a word
+    processor lets you edit text.
+
+TI/F DLL ("tif-dee-el-el"), The Microsoft Windows Voice Mail Driver, lets
+    you add Voice Mail power to your Microsoft Windows applications.
+
+VoxFonts, the "Software Only" Text-to-Speech adds an unlimited vocabulary
+    to your Interactive Voice Response applications.
+
+Scribe, The DOS Speech to Text Transcription Utility, lets you hear 
+    digital audio files without the need for additional hardware. It's 
+    like turning your PC into a transcription machine.
+

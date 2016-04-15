@@ -1,0 +1,94 @@
+LIBRARY         G21EFF
+DESCRIPTION     'CCITT G.721 Sound Effects (C) Andrew J. Michalik, 1987-1995'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        GENEFF_TEXT PRELOAD FIXED        
+
+HEAPSIZE        1024
+
+EXPORTS
+    WEP              @2  RESIDENTNAME
+    EFFSUPVER        @4
+
+    EFFDLLINI       @10
+
+    EFFPTOEBS       @100
+    EFFMTOEBS       @102
+    EFFEBSTOE       @104
+    EFFEBSTOP       @106
+    EFFEBSTOM       @108
+
+    EFFFSEALO       @120
+    EFFFSEENU       @122
+    EFFFSEREL       @124
+    EFFFSECHP       @126
+
+    EFFCHNSSZ       @140
+    EFFCHNDSZ       @142
+    EFFCHXTOX       @144
+    EFFCHXTOM       @146
+                       
+    EFFNRMLVL       @160
+    EFFVOLADJ       @162
+    EFFVOLATD       @164
+    EFFL16TOG       @166
+    EFFGTOL16       @168
+
+    EFFNOIRED       @180
+
+    EFFDCEALO       @200
+    EFFVOLDCE       @202
+    EFFDCEREL       @204
+                    
+    EFFFADALO       @220
+    EFFFAD_IO       @222
+    EFFFADREL       @224
+
+    EFFECHALO       @240
+    EFFECHDEC       @242
+    EFFECHREL       @244
+
+    EFFMIXMUL       @262
+
+    EFFRESSET       @280
+    EFFRESSSZ       @282
+    EFFRESDSZ       @284
+    EFFFRQRES       @286
+    EFFINTDEC       @288
+                    
+    EFFFFTSSZ       @300
+    EFFFFTDSZ       @302
+    EFFFFTALO       @304
+    EFFFFTFTR       @306
+    EFFFFTREL       @308
+
+    EFFFFTOVR       @320
+    EFFFFTREA       @322
+    EFFWINRSP       @324
+    EFFWINGEN       @326
+
+    EFFEQUALO       @344
+    EFFEQUREL       @346
+
+    EFFVOCALO       @360
+    MSTVOCMST       @362
+    MSTVOCOBS       @364
+    MSTVOCANA       @366
+    MSTVOCSYN       @368
+    OBSVOCSYN       @370
+    EFFVOCREL       @372
+
+    EFFFFTVOC       @380
+    
+    EFFFIRALO       @400
+    EFFFIRFTR       @402
+    EFFFIRREL       @404
+
+    EFFIIRALO       @420
+    EFFIIRFTR       @422
+    EFFIIRREL       @424
+
+

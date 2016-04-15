@@ -1,0 +1,348 @@
+{\rtf1\ansi \deff5\deflang1033{\fonttbl{\f1\froman\fcharset2\fprq2 Symbol;}{\f4\froman\fcharset0\fprq2 Times New Roman;}{\f5\fswiss\fcharset0\fprq2 Arial;}{\f11\fmodern\fcharset0\fprq1 Courier New;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;
+\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\f5\fs20 \snext0 Normal;}{\s1\sb60\sa120\keepn \f5\fs32\cf13 \sbasedon0\snext0 heading 1;}{\s2\li360\ri360\sb120 \b\f5 
+\sbasedon0\snext0 heading 2;}{\s3\sb240\sa60\keepn \b\f5 \sbasedon0\snext0 heading 3;}{\s4\li360 \f5\ul \sbasedon0\snext0 heading 4;}{\s5\sb240\sa60 \f5\fs22 \sbasedon0\snext0 heading 5;}{\s6\sb240\sa60 \i\f5\fs22 \sbasedon0\snext0 heading 6;}{
+\s7\sb240\sa60 \f5\fs20 \sbasedon0\snext0 heading 7;}{\s8\sb240\sa60 \i\f5\fs20 \sbasedon0\snext0 heading 8;}{\s9\sb240\sa60 \i\f5\fs18 \sbasedon0\snext0 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\s15\sb60 \f5\fs20 \sbasedon0\snext15 
+Topic Text;}{\s16\sb120 \b\f5\fs28\cf13 \sbasedon0\snext15 Topic Heading;}{\s17\li180 \b\f5 \sbasedon0\snext16 Topic Caption;}{\s18\fi-360\li1080\sb120 \b\f5\fs20 \sbasedon15\snext18 Topic Text Item;}{\s19\li720\ri720\sb60 \f5\fs20 \sbasedon15\snext19 
+Topic Text Indent;}{\s20\li720 \f5\fs20 \sbasedon0\snext20 Normal Indent;}{\s21 \f5\fs20 \sbasedon0\snext21 footnote text;}{\*\cs22 \additive\super \sbasedon10 footnote reference;}{\s23\tqc\tx4320\tqr\tx8640 \f5\fs20 \sbasedon0\snext23 header;}{
+\s24\tqc\tx4320\tqr\tx8640 \f5\fs20 \sbasedon0\snext24 footer;}{\s25\li360\sa120 \f5\fs20 \sbasedon0\snext25 Body Text Indent;}{\s26\sa120 \f5\fs20 \sbasedon0\snext26 Body Text;}{\s27\li180\sb120 \b\f5\fs20\cf13 \sbasedon0\snext27 Topic Heading 1;}{
+\s28\li360\sb120 \b\f5\fs20\cf13 \sbasedon0\snext28 Topic Heading 2;}{\s29\li533\sb120 \b\f5\fs20\cf13 \sbasedon0\snext29 Topic Heading 3;}{\s30\li360\sb120 \f5\fs20 \sbasedon0\snext30 Topic Text 2;}{\s31\li533\sb120 \f5\fs20 \sbasedon0\snext31 
+Topic Text 3;}{\s32 \f5\fs20 \sbasedon0\snext32 footnote;}{\s33 \b\f5\fs28\cf13 \sbasedon0\snext33 Topic Title;}{\s34\li180\sb120 \f5\fs20 \sbasedon0\snext34 Topic Text 1;}{\*\cs35 \additive\i\v\f5\fs20\cf6\nosupersub\kerning0 \sbasedon10 
+topic jump context;}{\*\cs36 \additive\f5\fs20\uldb\cf11\nosupersub \sbasedon10 topic jump text;}{\*\cs37 \additive\v\f5\fs20\ul\cf12\nosupersub \sbasedon10 topic popup text;}{\s38\fi-360\li360 \f5\fs20 \sbasedon0\snext38 List;}{
+\s39\fi-360\li360\sa160{\*\pn \pnlvl11\pnf1\pnstart1\pnindent360\pnhang{\pntxtb \'a8}}\f4\fs28 \sbasedon38\snext39 List Bullet;}{\s40\fi-360\li360\sa160{\*\pn \pnlvl10\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\f4\fs28 \sbasedon38\snext40 List Number;}
+{\s41\sb120\keepn\pagebb \caps\f4\fs40\expnd8\expndtw42\kerning56 \sbasedon0\snext0 Chapter Label;}{\s42\fi-280\li280\tqr\tx4320 \f4\fs18 \sbasedon0\snext42 index 1;}{\s43\fi-280\li560\tqr\tx4320 \f4\fs18 \sbasedon0\snext43 index 2;}{
+\s44\fi-280\li840\tqr\tx4320 \f4\fs18 \sbasedon0\snext44 index 3;}{\*\cs45 \additive\super \sbasedon10 endnote reference;}{\s46\fi-280\li1120\tqr\tx4320 \f4\fs18 \sbasedon0\snext46 index 4;}{\s47\fi-280\li1400\tqr\tx4320 \f4\fs18 \sbasedon0\snext47 
+index 5;}{\s48\qc\sb240\sa120 \b\f4\fs26 \sbasedon0\snext42 index heading;}{\*\cs49 \additive\f5\fs22 \sbasedon10 line number;}{\s50\fi-360\li1440\sa80\tx1440 \f4\fs28 \sbasedon38\snext50 List 3;}{\s51\fi-360\li1800\sa80\tx1800 \f4\fs28 
+\sbasedon38\snext51 List 4;}{\s52\fi-360\li2160\sa80\tx2160 \f4\fs28 \sbasedon38\snext52 List 5;}{\s53\fi-360\li1440\sa160{\*\pn \pnlvl11\pnf1\pnfs16\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs28 \sbasedon39\snext53 List Bullet 3;}{
+\s54\fi-360\li1800\sa160{\*\pn \pnlvl11\pnf1\pnfs16\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs28 \sbasedon39\snext54 List Bullet 4;}{\s55\fi-360\li2160\sa160{\*\pn \pnlvl11\pnf1\pnfs16\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs28 
+\sbasedon39\snext55 List Bullet 5;}{\s56\sb360\tqr\tx9360 \b\caps\f5 \sbasedon0\snext56 toc 1;}{\s57\li280\sb240\tqr\tx9360 \b\f4\fs20 \sbasedon0\snext57 toc 2;}{\s58\li560\tqr\tx9360 \f4\fs20 \sbasedon0\snext58 toc 3;}{\s59\li840\tqr\tx9360 \f4\fs20 
+\sbasedon0\snext59 toc 4;}{\s60\fi-360\li1080\sa160{\*\pn \pnlvl10\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\f4\fs28 \sbasedon40\snext60 List Number 2;}{\s61\keep\tqc\tx4320\tqr\tx8640 \f4\fs28 \sbasedon0\snext61 Header Base;}{
+\s62\li1440\keep\tqc\tx4320\tqr\tx8640 \b\f5\fs28 \sbasedon23\snext62 Header Even;}{\s63\qc\keep\tqc\tx4320 \f4\fs28 \sbasedon23\snext63 Header First;}{\s64\qr\ri1440\keep\tqr\tx0\tqc\tx4320\tqr\tx8640 \b\f5\fs28 \sbasedon23\snext64 Header Odd;}{
+\s65\sb240\sa120\keepn \b\f5\fs36\kerning28 \sbasedon0\snext26 Heading Base;}{\s66\fi-360\li1440\sa160{\*\pn \pnlvl10\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\f4\fs28 \sbasedon40\snext66 List Number 3;}{\s67\li1120\tqr\tx9360 \f4\fs20 
+\sbasedon0\snext67 toc 5;}{\s68\tqr\tldot\tx8640 \f5\fs28 \sbasedon0\snext68 TOC Base;}{\s69\qj\sb120\sa120\box\brdrs\brdrw15\brsp40 \shading500 \f5\fs28 \sbasedon0\snext69 Box Text;}{\s70\fi-360\li1080\sa80\tx1080 \f4\fs28 \sbasedon38\snext70 List 2;}{
+\s71\fi-360\li1080\sa160{\*\pn \pnlvl11\pnf1\pnfs16\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\f4\fs28 \sbasedon39\snext71 List Bullet 2;}{\s72\qc\sb360\sa160\keepn \b\f5\fs96\kerning28 \sbasedon0\snext72 Title;}{
+\s73\sb480\sa480\pvpara\phmrg\posxc\posy0\dxfrtext360\dfrmtxtx360\dfrmtxty0\nowrap \f5\fs28 \sbasedon0\snext73 Picture Frame;}{\s74\sb240\sa120\keepn\pagebb \b\scaps\f5\fs44\kerning28 \sbasedon1\snext74 Heading 10;}{\s75\qc\sb120\sa160\keepn 
+\b\f5\fs32\kerning28 \sbasedon0\snext0 Title Text;}{\s76\qj \f4\fs22 \sbasedon0\snext76 License Text;}{\s77\li720\sa120 \f11\fs28 \sbasedon0\snext77 Command Line;}{\s78\qc\sb720\sa160\keepn \b\f5\fs96\kerning28 \sbasedon65\snext0 Title Cover;}{
+\s79\fi-720\li720\tqr\tldot\tx8640 \f4\fs28 \sbasedon0\snext79 table of figures;}{\s80\sa160 \b\f4\fs28 \sbasedon26\snext80 macro;}{\s81\li1400\tqr\tx9360 \f4\fs20 \sbasedon0\snext0 toc 6;}{\s82\li1680\tqr\tx9360 \f4\fs20 \sbasedon0\snext0 toc 7;}{
+\s83\li1960\tqr\tx9360 \f4\fs20 \sbasedon0\snext0 toc 8;}{\s84\li2240\tqr\tx9360 \f4\fs20 \sbasedon0\snext0 toc 9;}{\s85\li360\sa120 \f4\fs28 \sbasedon0\snext85 List Continue;}{\s86\fi-280\li1680\tqr\tx4320 \f4\fs18 \sbasedon0\snext0 index 6;}{
+\s87\fi-280\li1960\tqr\tx4320 \f4\fs18 \sbasedon0\snext0 index 7;}{\s88\fi-280\li2240\tqr\tx4320 \f4\fs18 \sbasedon0\snext0 index 8;}{\s89\fi-280\li2520\tqr\tx4320 \f4\fs18 \sbasedon0\snext0 index 9;}{\s90\li720\sa120 \f4\fs28 \sbasedon0\snext90 
+List Continue 2;}{\s91\li1080\sa120 \f4\fs28 \sbasedon0\snext91 List Continue 3;}}{\info{\title # Audio Toolbox}{\author Keith B. Knight}{\operator Keith B. Knight}{\creatim\yr1995\mo9\dy19\min9}{\revtim\yr1995\mo9\dy19\min43}
+{\printim\yr1995\mo9\dy24\hr13\min38}{\version1}{\edmins1}{\nofpages0}{\nofwords0}{\nofchars0}{\vern49203}}\widowctrl\ftnbj\aenddoc\noextrasprl\prcolbl\cvmme\sprsspbf\brkfrm\swpbdr\linkstyles\hyphcaps0 \fet0{\*\template 
+E:\\BETDEV\\TBXDEV\\APPDEV\\HLPDEV\\WINHLP.DOT}\sectd \linex0\endnhere {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}
+{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 {\cs22\super {\*\bkmkstart ANCHOR}#
+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refContents}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Contents}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K} Contents;Audio ToolBox}+{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super +} AUDTBX:002}}{\*\bkmkend ANCHOR}A{\*\bkmkstart TITLE}udio ToolBox{\fs28\super \'ae}{\fs28 \line }Voice Information Systems, Inc.{\*\bkmkend TITLE}
+\par \pard\plain \s15\sb60 \f5\fs20 Save time & sound great! {\b\i Audio ToolBox }lets you batch process and convert your digital audio files to and from industry standard formats. {\b\i Audio ToolBox }
+is a professional quality conversion utility for the MS-DOS\'ae and Microsoft Windows\'ae operating system.
+\par Convert to and from Microsoft Multimedia Wave (8, 16 & MS ADPCM), linear 16 and unsigned 8 bit, Dialogic 4 and 8 bit, plus other industry standard formats. {\b\i Audio ToolBox }
+lets you convert files recorded at 22 kHz, 11 kHz, 8 kHz and 6 kHz -- and provides filters for proper re-sampling.
+\par Automatically chop a single recording session into separate files -- normalize the volume across multiple files -- recombine them into an indexed file. Add dynamic compression / expansion for improved sound, auto-crop silence f
+rom both ends, even filter DTMF Touch-Tones to eliminate \ldblquote talk-off\rdblquote  application errors. And {\b\i Audio ToolBox }handles files of any length- in less than 256K of memory!
+\par Now you can record, edit and review prompts with your Multimedia system, then batch process and transfer them with enhanced fidelity!
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Utilities
+\par \pard\plain \s15\sb60 \f5\fs20 {\uldb\cf11 Audio Conversion}{\v refAudioConversion}
+\par {\uldb\cf11 Sound Chop}{\v refSoundChop}
+\par {\uldb\cf11 Index Chop}{\v refIndexChop}
+\par {\uldb\cf11 Index List}{\v refIndexList}
+\par {\uldb\cf11 Index Pack}{\v refIndexPack}
+\par {\uldb\cf11 Index Rebuild}{\v refIndexRebuild} 
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Resources
+\par \pard\plain \s15\sb60 \f5\fs20 {\uldb\cf11 About Voice Information Systems, Inc}{\v refVISI} 
+\par {\uldb\cf11 Technical Support}{\v refTechnicalSupport} 
+\par {\uldb\cf11 Other Products from VISI}{\v refProducts} 
+\par 
+\par {\fs16 
+This publication could include technical inaccuracies or typographical errors. Changes are periodically made to the information herein; these changes will be incorporated in new editions. The publisher reserves the right to make improvements and/or change
+s in the product and/or program described herein at any time. Copyright \'a9 1987-1996 Andrew J. Michalik. All rights reserved. No part of this publication may be reproduced or distributed in any form or by any means without prior permission in writing.
+
+\par }\pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refVISI}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} About Voice Information System, Inc}K{\footnote \pard\plain \s21 
+\f5\fs20 {\cs22\super K} VISI;Voice Information System, Inc}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:004}}About Voice Information System, Inc
+\par \pard\plain \s15\sb60 \f5\fs20 Voice Information Systems, Inc specializes in the application and development of digital signal processing techniques to the interactive telephony market. Current VISI products include software f
+or editing and manipulating digital sound and programming tools to simplify integration of custom applications
+\par Sales:\tab 1-800-234-VISI \tab (+310-392-8780)\line Fax:\tab 1-800-234-FXIT\tab (+310-392-5511)\line Web:\tab http://www.vinfo.com/\line email:\tab sales@vinfo.com
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refTechnicalSupport}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Technical support}K{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super K} Technical support}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:006}}Technical Support
+\par \pard\plain \s15\sb60 \f5\fs20 As easy as our products are to use, there are times when you just can\rquote t manage on your own. Or maybe you don\rquote t have the time to search the manual for answers. Or perhaps you just have a general problem that
+\rquote s frustrating you.
+\par That\rquote s why we offer comprehensive support for all of our products, as well as any voice or telephony problems that may arise. We offer help in several ways, so you can choose the plan that\rquote 
+s right for you. Let our extensive knowledge of this technology and troubleshooting expertise work for you.
+\par VISI offers a number of comprehensive technical support options for users. For more information, call 1-310-392-8780. VISI support services are subject to VISI prices, terms, and conditions in place at the time the service is used.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 When you call...
+\par \pard\plain \s15\sb60 \f5\fs20 When you call, you should be at your computer and have the appropriate product documentation at hand. Be prepared to give the following information:
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 The product name and serial number of the VISI product you are using.
+\par The type of hardware you are using
+\par The exact wording of any messages that appeared on your screen.
+\par What happened and what you were doing when the problem occurred.
+\par How you tried to solve the problem.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Setup and Installation
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 For setup and installation assistance with VISI products, dial 1-310-392-6266. This service is designed to get you up and running quickly with our products.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 How-to and in-depth support
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 For programming \ldblquote how to\rdblquote 
+ questions, user training, and support for non-VISI products, dial our credit card line at 1-800-469-4874. Please have your Visa, MasterCard, or American Express card ready.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Download Service
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Access technical notes and supplementary files covering common VISI product support issues are available on our website at {\b www.vinfo.com}
+ and via modem on the VISI Support BBS at 310-392-6610. These services are available 24 hours a day, seven days a week.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Free and Paid Support
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Our free technical support covers setup, installation, bug reporting and product menu usage. Our free technical support does not cover programming \ldblquote how to\rdblquote 
+ questions, user training, and support for non-VISI products.
+\par Why not? The time required to answer these questions depends on the customer\rquote s technical background and specific nee
+ds. These factors vary dramatically from customer to customer, and there is no way for us to charge for these services at a fixed rate.
+\par The solution? We provide paid consulting services for customers that need help with programming \ldblquote how to\rdblquote  questions, user training and support for non-VISI products.
+\par And for your protection, all of our consulting contracts are pre-paid, so we will not perform any work until authorized by you.
+\par VISI offers a number of comprehensive technical support options for users. For more information, call 1-310-392-8780. VISI support services are subject to VISI prices, terms, and conditions in place at the time the service is used.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refProducts}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Other products available from VISI}K{\footnote \pard\plain \s21 
+\f5\fs20 {\cs22\super K} Other products available from VISI}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:008}}Other Products Available from VISI
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Hot Sound, Simple!\line VFEdit\'ae: The Professional Prompt Editor
+\par \pard\plain \s15\sb60 \f5\fs20 Sound your best! Let {\b\i VFEdit}{\b\i\super \'ae}{\b  }turn your multimedia or voice processing PC into a voice prompt recording studio.
+\par {\b\i VFEdit}{\b  }lets you edit sound the way a word processor lets you edit text. A word processor lets you to cut, copy, paste and re-arrange {\i written words}. {\b\i VFEdit} lets you do the same thing with {\i spoken words}\emdash and a lot more.
+
+\par Your voice system is only as good as it sounds. You want your audio presentations to sound good\emdash 
+just as you want your written presentations to look good. If you develop for voice processing, or if you only change, fix, and improve your voice prompts, you\rquote ll find {\b\i VFEdit} just about indispensable.
+\par {\b\i VFEdit}
+ lets you record and edit voice prompts with your multimedia and telephony hardware. Our full-screen graphical interface provides a super accurate representation of the audio waveform for precise editing. Quickly perform basic functions like record, play,
+ crop, cut, copy, and paste anywhere within a file, plus more sophisticated operations such as import/export, fade, echo, equalize, and mix. Our \ldblquote on-the-fly\rdblquote 
+ conversion technology lets you review edits instantly and works with any length file.
+\par {\i \ldblquote Superb Voice Editor - No more scissors and tape! Now you do it all on screen.\rdblquote \line - Harry Newton, Publisher and Editor, Computer Telephony Magazine.
+\par }\pard\plain \s16\sb120 \b\f5\fs28\cf13 Windows Developers: Voice Mail Now!\line TI/F DLL\'99: The Microsoft Windows Voice Mail Driver
+\par \pard\plain \s15\sb60 \f5\fs20 Voice developers rave about {\b\i TI/F DLL}{\b\i {\field{\*\fldinst SYMBOL 228 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}} because it makes their life easy! With it, developing voice apps with VB, C, and C++ is a breeze.
+\par How? By letting you make standard driver function calls from your windows apps, letting you port your voice program in record time.
+\par Add Voice Mail power to your Windows applications with our Telephone Interface (TI/F) Dynamic Link Library (DLL). Use C or C++ or Visual Basic to create applications for Windows without wanting to jump out of one. And use {\b\i TI/F DLL}
+ to control your Dialogic (and compatible) voice communications hardware.
+\par {\i \ldblquote To the advanced programmer looking for the serious tool with all the teeth of a great white shark, TI/F DLL will provide you with all of the bite you can handle.\rdblquote \line -Robert Cristello, Computer Telephony Magazine.
+\par }\pard\plain \s16\sb120 \b\f5\fs28\cf13 Teach Your Apps to Read: No Hardware!\line VoxFonts\'99: The Software Only Text-to-Speech Library
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i VoxFonts}{\b\i {\field{\*\fldinst SYMBOL 228 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}}{\b\i :} The \ldblquote Software Only\rdblquote 
+ Text-to-Speech Library, lets you add an unlimited vocabulary to applications. This means your PC can literally {\i read} text out loud! {\b\i VoxFonts}
+ is a text to speech synthesis library that translates ASCII text into a digital audio file. Then play that file through your existing voice hardware.
+\par {\b\i VoxFonts} gives you Microsoft \ldblquote C\rdblquote  DOS & Windows callable functions for converting an ASCII text string into a digital file. No more hours of recording to produce every possible message - your vocabulary\rquote 
+s now unlimited, just a function call away!
+\par No more hours of recording to produce every possible message{{\field{\*\fldinst SYMBOL 190 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}}your vocabulary\rquote s now unlimited, just a function call away!
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Simplify Transcription:\line Scribe: The Essential Speech to Text Transcription Tool
+\par \pard\plain \s15\sb60 \f5\fs20 Do you have thousands of files to transcribe?
+\par Do you need to quickly review files when working at the DOS prompt?
+\par Do you need to hear the contents of a file - but don't have your telephony board nearby?
+\par Then let our {\b\i Scribe}{\b\i {\field{\*\fldinst SYMBOL 228 \\f "Symbol" \\s 10}{\fldrslt\f1\fs20}}}, playback utility help you review and transcribe digitally recorded files.
+\par {\b\i Scribe} is a Command Line and TSR (Terminate & Stay Resident) utility that plays digital audio files without the need for additional hardware. It\rquote s like turning your PC into a Dictaphone{\super \'ae}!
+\par {\b\i Scribe} gives you single keystroke play, pause, and mo
+re through the PC speaker. Attach our audio adapter (included) for higher fidelity playback. Add sound to your DOS batch files or run in the background with your current word processor and data entry software.
+\par No more fooling with recorders or phone sets - it\rquote s all at your fingertips, just a keystroke away
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refAudioConversion}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Audio conversion}K{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super K} Audio conversion;Conversion}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:020}}Audio Conversion
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }allows you to convert to and from Microsoft Multimedia Wave (8, 16 & MS ADPCM), linea
+r 16 and unsigned 8 bit, Dialogic 4 and 8 bit plus other industry standard formats. PCMCvt lets you convert files recorded at 22 kHz, 11 kHz, 8 kHz and 6 kHz -- and provides filters for proper re-sampling. Optionally choose volume adjustments, dynamic com
+pression/ expansion and fast or high fidelity filtering and re-sampling algorithms.
+\par Convert the sample 11 kHz 16 bit Multimedia Wave file PCMCvt.Wav into a Dialogic 6 kHz 4 bit ADPCM file by entering:
+\par {\f11 PCMCvt PCMCvt.Wav AccTst.v04<ENTER>
+\par }You have now created AccTst.v04, a Dialogic 6 kHz 4 bit ADPCM audio file. You can play the file with a playback utility such as VISI\rquote s Scribe Transcription Playback Utility, or edit with a Dialogic compatible editor such as VISI\rquote s VFEdit
+\'ae Professional Prompt Editor.
+\par Now use the command line switches to convert the sample Dialogic 6 kHz 4 bit ADPCM file AccTst.Vox into an 11 kHz 8 bit Multimedia Wave file by entering:
+\par {\f11 PCMCvt AccTst.Vox AccTst.wav -diDLG004 -fi6 -fo11.025 -doWAV008<ENTER>
+\par }You have now created AccTst.wav, an 11 kHz 8 bit Multimedia Wave audio file. You may now play the file with a playback utility such as VISI\rquote s Scribe Transcription Playback Utility, or edit with a Multimedia compatible editor such as VISI\rquote 
+s VFEdit Professional Prompt Editor.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Audio File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Data Type
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Optional input data format, default is Wave Multimedia. Use this setting to specify the format of the source audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Frequency
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Frequency of input file. Use this setting to override the default sample frequency of the source audio file.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Destination
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Destination Audio File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination output file name specification. If not specified, {\b\i Audio ToolBox }will overwrite the input file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Data Type
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Optional output data format, user selects default when running setup. Use this setting to specify the destination audio file format.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Frequency
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Frequency of output file. Use this setting to override the sample frequency of the destination audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Backup
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Create a backup file when no output file is specified. Use this setting to save disk space when no destination audio file is specified.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 {\cs22\super {\*\bkmkstart ROBOHELP}#{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refFilters}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K} Conversion Filters;Filters}}Filters
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 {\*\bkmkend ROBOHELP}Anti-aliasing 2nd order
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Low pass 2nd order anti-alias filter off/ on/ fast (Default is \ldblquote on\rdblquote ). Use the default \ldblquote on\rdblquote  setting for standard fidelity. Use \ldblquote fast\rdblquote 
+ for standard fidelity with improved speed on 286/386 class computers. Use \ldblquote off\rdblquote  for maximum conversion speed.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Anti-aliasing 6th order
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Low pass 6th order anti-alias filter off/ on/ fast (Default is \ldblquote on\rdblquote ). Use the \ldblquote on\rdblquote  setting for better fidelity. Use \ldblquote fast\rdblquote 
+ for better fidelity with improved speed on 286/386 class computers.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Anti-aliasing FFT low pass
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Low pass anti-aliasing FFT filter on/ off (Default is \ldblquote off\rdblquote ). Use the \ldblquote on\rdblquote  setting for best fidelity.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 FFT interpolation re-sampling
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Re-sample FFT filter on/ off (Default is \ldblquote off\rdblquote ). Use the \ldblquote on\rdblquote  setting for best fidelity.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 DTMF Notch Filter
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 DTMF touch-tone FFT filter on/ off (Default is \ldblquote off\rdblquote ). Use this setting to remove touch-tone frequencies during conversion.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Auto-Crop
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 
+Auto-crop (Default sound guard time is .05 seconds).Use this setting to automatically remove silence from the beginning and end of the audio file. Increase the guard time for more silence at the beginning and end.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Normalize
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Volume normalize (Default is 0.2% over range). Use this setting to adjust the volume levels across multiple files.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Dynamic Compress/Expand
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Volume dynamic compress/ expand (Default is 6.0 dB). Use this setting to improve the dynamic range of the destination audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Volume Adjust
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Volume adjust (+/-) (Default is 0.0 dB). Use this setting to increase the volume level of the destination audio file.
+\par \pard\plain \s15\sb60 \f5\fs20 {\uldb\cf11 Advanced Options}{\v refAdvanced} 
+\par {\uldb\cf11 Frequency Equalizer}{\v refEqualizer} 
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refAdvanced}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Advanced options}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K
+} Advanced options;Conversion options}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:024}}Advanced Options
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Data Byte Format
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Position
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Position of input file beginning (Default is byte 0). Use this setting to skip a portion of the source audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Length
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Length of input file in bytes (Default is entire file). Use this setting to convert only a portion of the source audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Swap Input
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Swap input bit, nibble, byte or word (Default is none). Use this setting when converting files from non-Intel based computer. For advanced users only.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Swap Output
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Swap output bit, nibble, byte or word (Default is none). Use this setting when converting files for non-Intel based computer. For advanced users only.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Configuration Files
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Global
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Name of global configuration file (Default is none). Use this setting to override internal conversion variables. For advanced users only.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Input
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Name of input configuration file (Default is none). Use this setting to override internal conversion variables. For advanced users only.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Output
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Name of output configuration file (Default is none). Use this setting to override internal conversion variables. For advanced users only.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refEqualizer}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Frequency equalizer}K{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super K} Frequency equalizer;Conversion options}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:026}}Frequency Equalizer
+\par \pard\plain \s15\sb60 \f5\fs20 
+The Frequency Equalizer command lets you fine tune the sound of your words, to change the quality of the vibrations themselves. While a microphone records the whole range of vibration in sound levels, the equalizer can be used to make certain ranges softe
+r and other ranges louder, so that the net effect makes you sound different.
+\par When you select Equalize, you will be presented with a dialog box that lets you adjust the relative levels of frequency bands. By moving the controls 
+up or down from the center point, you will increase or decrease the volume level of the audio in those frequency bands. After adjusting the frequency band controls, press \ldblquote OK\rdblquote  to add the changes to the command line.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refSoundChop}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Sound chop}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K}
+ Sound chop}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:030}}Sound Chop
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }
+allows you to record a continuous stream of prompts into a single file, and then automatically break the single file into individual files. SndChp separates a single file into individual files based upon periods 
+of silence used as a separator. The resulting individual files can then be converted, volume normalized and packed using other {\b\i Audio ToolBox }utilities.
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 {\f11 SndChp PCMCvt.wav<ENTER>
+\par }\pard\plain \s15\sb60 \f5\fs20 You have now created 0001.Wav and 0002.Wav, which contain the active audio portions of the original file. You may now process the file further using other {\b\i Audio ToolBox }utilities.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Audio File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Data Type
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Optional input data format, default is Wave Multimedia. Use this setting to specify the format of the source audio file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Frequency
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Frequency of input file. Use this setting to override the default sample frequency of the source audio file.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Destination File Extension
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination audio file extension (Default is .vox)
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Guard Time
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 
+Auto-crop (Default sound guard time is .05 seconds).Use this setting to automatically remove silence from the beginning and end of the audio file. Increase the guard time for more silence at the beginning and end.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 File Name Offset
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination file name counter offset (Default is \ldblquote 0000"). Use this setting to change the beginning numeric name of the newly created audio files.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Sound Threshold
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Sound threshold level maximum percentage (Default is 2%). Use this setting to changed the audio level interpreted as \ldblquote sound\rdblquote 
+. Higher values result in higher immunity to noise, but lower sensitivity to sound.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refIndexChop}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Index chop}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K}
+ Index chop}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:040}}Index Chop
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }
+supports both pure (raw amplitude data) and indexed format files. Pure files contain only digitized sound; indexed files contain groups of digitized sound, plus format and annotation text. IdxChp allows you to \ldblquote chop\rdblquote 
+ indexed files into pure audio and text files that can be batch processed, converted and edited.
+\par Chop the sample Dialogic 6 kHz 4 bit ADPCM indexed file IdxTst.vap into its component pure audio and text files:
+\par {\f11 IdxChp IdxTst.vap<ENTER>
+\par }You have now created 0001.Vox, 0001.Txt and 0002.Vox, a set of pure Dialogic 6 kHz 4 bit ADPCM audio files and their associated annotation text files. You can play the audio files with a playback utility such as VISI\rquote 
+s Scribe Transcription Playback Utility, or edit with a Dialogic compatible editor such as VISI\rquote s VFEdit\'ae Professional Prompt Editor. The text files can be viewed and edited with any standard DOS editor.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Index File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Vox Extension
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination audio file extension (Default is .vox). Use this setting to change the file name extension of the newly created audio files.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Text Extension
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination text file extension (Default is .txt). Use this setting to change the file name extension of the newly created text files.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 File Name Offset
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Chop @ index position (default is 1, end is 9999). Use this setting to limit the extraction to a range of indices.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Number of Indexes
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Number of indexes to chop (Default is all). Use this setting to limit the extraction to a range of indices.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Begin at Index #
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination file name counter offset (Default is \ldblquote 0001"). Use this setting to change the beginning numeric name of the newly created audio and text files.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refIndexList}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Index list}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K}
+ Index list}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:050}}Index List
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }
+supports both pure (raw amplitude data) and indexed format files. Pure files contain only digitized sound; indexed files contain groups of digitized sound, plus format and annotation text. IdxLst allows you to list the header and conte
+nt information of an indexed file.
+\par List the contents of the sample Dialogic 6 kHz 4 bit ADPCM indexed file IdxTst.vap and route the output to a text file for future reference:
+\par {\f11 IdxLst IdxTst.vap >list.txt<ENTER>
+\par }You have now created list.txt, a text file containing header, audio extents and annotation text information for IdxTst.vap. You can review and edit the information file with any standard text editor.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Index File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Header Information Inhibit
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 General header information listing inhibited. Use this setting to ignore the header information.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Text Listing Inhibit
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Text listing inhibited. Use this setting to ignore the text content of the indexed file.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Audio Information Inhibit
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Vox audio data listing inhibited. Use this setting to ignore the audio extent information of the indexed file.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refIndexPack}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Index pack}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super K}
+ Index pack}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:060}}Index Pack
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }supports both pure (raw amplitude data) and indexed format files. Pure files contain only dig
+itized sound; indexed files contain groups of digitized sound, plus format and annotation text. IdxPak allows you to \ldblquote pack\rdblquote  pure audio and text files into an indexed file.
+\par Pack the sample Dialogic 6 kHz 4 bit ADPCM pure files Pak00?.vox and Pak00?.txt into a composite indexed file:
+\par {\f11 IdxPak Pak00?.vox IdxTst.vap -t*.txt<ENTER>
+\par }You have now created IdxTst.Vap, a composite indexed file containing groups of digitized sound plus format and annotation text. You can load the file into your indexed file compatible v
+oice response system or edit it with a Dialogic compatible editor such as VISI\rquote s VFEdit\'ae Professional Prompt Editor.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Vox File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Destination
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Destination Index File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination file name specification.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Frequency
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Set sample frequency to value NNNN (Default is 6000). Use this setting to change the frequency stored in the header of the indexed file. This setting DOES NOT change the audio data.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Sort Order
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Sort files; + up, - down, u unsorted. (Default is +). Use this setting to pack the files in descending or unsorted directory order.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Text Source
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Text file specification with * wildcard (Default is no text). Use this setting to include annotation text data in the indexed file.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refIndexRebuild}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Index rebuild}K{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super 
+K} Index rebuild}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:070}}Index Rebuild
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }supports both pure (raw amplitude data) and indexed format files. Pure files contain only digitized sound; indexed files contain groups of d
+igitized sound, plus format and annotation text. IdxReb allows you to lengthen, shorten, replace entries and \ldblquote rebuild\rdblquote  indexed files.
+\par Rebuild the sample Dialogic 6 kHz 4 bit ADPCM indexed file IdxTst.vap and add 98 new empty index entries to the end; reset the frequency specified in the header to 6053.
+\par {\f11 IdxReb IdxTst.vap -i98 -@9999 -f6053<ENTER>
+\par }You have now modified IdxTst.Vap, increasing the total entry count to 100 indices and changing the frequency specified in the header to 6053 Hz.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Source
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Source Index File{\b0 
+\par }\pard\plain \s19\li720\ri720\sb60 \f5\fs20 Source file name specification.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Destination
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Destination Index File{\b0 
+\par }\pard\plain \s19\li720\ri720\sb60 \f5\fs20 Destination file name specification, if different from OldFile.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Options
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Frequency
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Set sample frequency to value NNNN. Use this setting to change the frequency stored in the header of the indexed file. This setting DOES NOT change the audio data.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Insert / Delete / Replace
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Begin at Index#
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Perform operations @ index position (default is 1, end is 9999). Use this setting to limit operations to a range of indices.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Insert Count
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Insert NNNN new indexes before @ position (Default is none). Use this setting to add empty index entries.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Delete Count
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Delete NNNN indexes, including @ position (Default is none). Use this setting to remove index entries and the associated audio and text.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Replace Vox with File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Replace audio data @ position (Default is none). Use this setting to replace the audio contents of the specified index.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Replace Text with File
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Replace annotation text @ position (Default is none). Use this setting to replace the annotation text contents of the specified index.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Backup
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Create a backup file when no output file is specified. Use this setting to save disk space when no destination audio file is specified.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refEnvironment}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Environment Options}K{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super K} Options;Environment options}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:100}}Environment Options
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }lets you set operational preferences. Normally, you will not need to change these settings.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Execution Mode
+\par \pard\plain \s15\sb60 \f5\fs20 Set the default execution window to Normal, Minimized, or Hidden. This will affect what is displayed when you press the Execute button for your {\b\i Audio ToolBox }command.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Exit Mode
+\par \pard\plain \s15\sb60 \f5\fs20 Set the default exit mode to Normal, Pause on error, Pause on warning, or Pause always. This will affect what is displayed after you press the Execute button and the {\b\i Audio ToolBox} command has completed processing..
+
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Program Files
+\par \pard\plain \s15\sb60 \f5\fs20 Specify the location of the {\b\i Audio ToolBox }tools. These are the executable files that end with the \ldblquote EXE\rdblquote  extension.
+\par \pard\plain \s1\sb60\sa120\keepn \f5\fs32\cf13 \page {\cs22\super #{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super #} refModuleVerification}${\footnote \pard\plain \s21 \f5\fs20 {\cs22\super $} Module verification}K{\footnote \pard\plain \s21 \f5\fs20 {
+\cs22\super K} Module verification}+{\footnote \pard\plain \s21 \f5\fs20 {\cs22\super +} AUDTBX:200}}Module Verification
+\par \pard\plain \s15\sb60 \f5\fs20 {\b\i Audio ToolBox }has detected a mismatch between the version numbers of shareable software components. {\b\i Audio ToolBox }
+installs shareable software components into its own directory on your hard disk. Some other program has loaded a different version of this component into memory. In many cases, the difference between versions will not affect normal operation. You should, 
+however, note the version numbers of the modules found in memory if the product behaves in a peculiar manner.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Module
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Expected
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 This is the expected version of the shareable software component.
+\par \pard\plain \s18\fi-360\li1080\sb120 \b\f5\fs20 Found
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 This is the version of the shareable software component currently loaded in memory. Please note this version number for future reference.
+\par \pard\plain \s16\sb120 \b\f5\fs28\cf13 Set expected to found version
+\par \pard\plain \s19\li720\ri720\sb60 \f5\fs20 Once you have verified that the product is behaving normally, you set the loaded version number to the expected version number. That will prevent this message from appearing when the found ve
+rsion is already loaded in memory.
+\par \pard\plain \f5\fs20 
+\par }

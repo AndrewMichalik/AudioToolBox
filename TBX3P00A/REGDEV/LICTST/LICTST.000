@@ -1,0 +1,119 @@
+#define  STRICT
+#include <windows.h>
+#include "lictst.h"
+#include "tbxlic.h"                     /* ToolBox licensing defs       */
+
+#include <string.h>
+#include <stdio.h>
+
+LRESULT APIENTRY MainWndProc(HWND, UINT, UINT, LONG);
+
+/************************************************************************/
+/*                  Global & External References                        */
+/************************************************************************/
+TBXGLO  TBxGlo = {                      /* ToolBox Application Globals  */
+    "",                                 /* Library name                 */
+    "",                                 /* Library version              */
+    {'s','r','0','0','z','h','a','0'},  /* Operating/Demo Only Key      */
+    {'1','0','0','0'},                  /* Op/Demo sequence number      */
+    {'0','0','0','0'},                  /* Security check sum           */
+    0,                                  /* usRegKey                     */
+    0xffff,                             /* Debug errors flag            */
+    (HANDLE) NULL,                      /* Global instance handle       */
+};
+
+/**************************************************************************\
+*
+*  function:  WinMain()
+*
+*  input parameters:  c.f. generic sample
+*
+\**************************************************************************/
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+                     LPSTR lpCmdLine, int nCmdShow)
+{
+    HWND   hwnd;
+    MSG    msg;
+
+    TBxGlo.hLibIns = hInstance;
+
+    /* Check for previous instance.  If none, then register class. */
+    if (!hPrevInstance) {
+        WNDCLASS  wc;
+
+        wc.style = 0;
+        wc.lpfnWndProc = (WNDPROC)MainWndProc;
+
+        wc.cbClsExtra = 0;
+        wc.cbWndExtra = 0;
+        wc.hInstance = hInstance;
+        wc.hIcon = LoadIcon(hInstance, "lictstIcon");
+        wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+        wc.hbrBackground = GetStockObject(LTGRAY_BRUSH);
+        wc.lpszMenuName = "lictstMenu";
+        wc.lpszClassName = "lictst";
+
+        if (!RegisterClass(&wc)) return (FALSE);
+    }  /* class registered o.k. */
+
+
+    /* Create the main window.  Return false if CreateWindow() fails */
+    hwnd = CreateWindow(
+        "lictst",
+        "lictst",
+        WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN | WS_VISIBLE,
+        CW_USEDEFAULT,
+        CW_USEDEFAULT,
+        CW_USEDEFAULT,
+        CW_USEDEFAULT,
+        NULL,
+        NULL,
+        hInstance,
+        NULL);
+
+    if (!hwnd) return (FALSE);
+
+    /* Loop getting messages and dispatching them. */
+    while (GetMessage(&msg,NULL, 0, 0)) {
+      TranslateMessage(&msg);
+      DispatchMessage(&msg);
+    }
+
+    return (msg.wParam);
+}
+
+
+/***************************************************************************\
+*    FUNCTION: MainWndProc
+\***************************************************************************/
+LRESULT APIENTRY MainWndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+  WORD  usCmpCod;
+
+  switch (message) {
+
+    /**********************************************************************\
+    *  Menu item support.
+    *
+    \**********************************************************************/
+    case WM_COMMAND:
+      switch (LOWORD(wParam)) {
+
+        case IDM_DIALOG1:
+            ChkLicFil ("e:\\betdev\\licdev\\tbx\\audtbx.lic", NULL, &usCmpCod);
+        break;
+
+      }  /* end switch */
+    break;  /* end wm_command */
+
+    case WM_DESTROY:
+      PostQuitMessage(0);
+    break;
+
+    } /* end switch */
+    return (DefWindowProc(hwnd, message, wParam, lParam));
+}
+
+
+
+

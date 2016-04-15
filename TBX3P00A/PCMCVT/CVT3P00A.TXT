@@ -1,0 +1,39 @@
+                            PCMCvt Release Notes
+                               Version  3.00a
+                                  04/15/96
+
+
+PCMCvt 3.00a.3:
+    Changed minimum source frequency to 100 Hz.
+    Increased size of Function block, added initialization functions
+    Volume normalize default changed to .2% over range
+    Improved clipping on all volume adjust operations
+    DCE inhibit if zero
+    Equalizer bug fixes
+    DTMF filter improved 
+    IIR filter improved
+    CVSD conversion improved
+    tbxreg.c: moved check below seq number checks for debug of DOS license ver
+    
+PCMCvt 2.00d.1:
+    Correct FndSndChp for memory leak with wildcard and -ac switch
+    Correct EffResSSz and DSz for accurate calculation
+    Correct G.711 a law conversion
+    Update for better key access (v2.16)
+    Update Effects DLL entry points, EffPCM function names
+    Padded effects data structures
+    Updated -ac for crop guard time, default changed to 0.0
+    update pcmcvt.cfg with new guard time setting
+    SndChp -ac setting
+    SndChp and auto-crop DC filter added
+    fixed low dos memory limit on licensed versions
+    -siJUNK, -soJUNK handled correctly
+
+PCMCvt 2.00a.0:
+
+PCMCvt 1.10a.1:
+    1)  Added switch to Skip Header special characters
+    2)  Added -debug switch
+    3)  Tighter filters.
+    4)  Gain adjust
+

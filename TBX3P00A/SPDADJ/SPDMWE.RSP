@@ -1,0 +1,8 @@
+object\genspd.obj + object\spdcfg.obj +
+object\filfnd.obj + object\filrep.obj +
+object\filsup.obj + object\fillow.obj +
+object\dosmem.obj + object\dosmsg.obj +
+object\usrstb.obj + object\cfgsup.obj
+genspd.exe
+NUL
+

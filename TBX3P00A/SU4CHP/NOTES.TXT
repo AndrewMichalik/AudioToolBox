@@ -1,0 +1,3 @@
+Note: error when running Su4Chp subdir1\*.* subdir2\*.*
+      *.HDR files are placed in current directory
+

@@ -1,0 +1,90 @@
+Option Explicit
+
+' ------------------------------------------------------------------------
+' Generic Index File Utility Defs: GenChp.h
+' Copyright (c) 1987-1996 Andrew J. Michalik
+' ------------------------------------------------------------------------
+Global Const CHPVERNUM = &H300              ' Chp support ver number
+
+' ------------------------------------------------------------------------
+' Define general purpose VISI data types for SDK users
+' ------------------------------------------------------------------------
+Global Const FIOMAXNAM = 256                ' Max length of file name
+
+Type VISMEMHDL
+    ulGloHdl As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const SRCFRQMIN = 100&               ' Minimum frequency       (Hz)
+Global Const SRCFRQMAX = 65000              ' Maximum frequency       (Hz)
+
+Global Const CHPFRMDEF = 1#                 ' Chop frame length      (sec)
+Global Const CHPDCFDEF = 20                 ' Crop DC high pass filt  (Hz)
+Global Const CHPRESDEF = .01                ' Chop resolution        (sec)
+Global Const CHPSNDDEF = 2#                 ' Chop threshold        (%max)
+Global Const CHPATKDEF = 20                 ' Chop atk ratio        (%frm)
+Global Const CHPDCYDEF = 10                 ' Chop dcy ratio        (%frm)
+Global Const CHPGRDDEF = .05                ' Chop guard time        (sec)
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type CHPPOLPRC
+    ulPrcAdr As Long
+End Type
+Type CHPERRPRC
+    ulPrcAdr As Long
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Type CHPBLK                                 ' Sound Chop structure
+    usSrcFmt As Integer                     ' Source file format
+    usSrcPCM As Integer                     ' Source PCM type
+    usSrcChn As Integer                     ' Source file chan count
+    usSrcBIO As Integer                     ' Source bit encoding
+    ulSrcFrq As Long                        ' Source sample frequency
+    ulSrcOff As Long                        ' Source byte offset
+    ulSrcLen As Long                        ' Source byte length
+    mhSrcCfg As VISMEMHDL                   ' Source cfg memory buff
+    usDstFmt As Integer                     ' Destination file format
+    flChpFrm As Single                      ' FndSndEvt frame size   (sec)
+    flChpRes As Single                      ' FndSndEvt resolution   (sec)
+    flChpSnd As Single                      ' FndSndEvt snd thresh  (%max)
+    usChpAtk As Integer                     ' FndSndEvt atk ratio   (%frm)
+    usChpDcy As Integer                     ' FndSndEvt dcy ratio   (%frm)
+    flChpGrd As Single                      ' FndSndEvt guard time   (sec)
+    mhGloCfg As VISMEMHDL                   ' Global cfg memory buff
+    lpPolDsp As CHPPOLPRC                   ' Conversion poll display proc
+    ulRsvPol As Long                        ' Reserved
+    lpMsgDsp As CHPERRPRC                   ' Reserved
+    ulRsvMsg As Long                        ' Reserved
+    ucRsv001 As String * 32                 ' Reserved
+    usCmpCod As Integer                     ' Conversion completion code
+    ucRsv002 As String * 32                 ' Reserved
+End Type
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Declare Function ChpSndVer Lib "DLGCHP.DLL" () As Integer
+Declare Function ChpSndIni Lib "DLGCHP.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm2 As Long) As Integer
+Declare Function ChpSndTrm Lib "DLGCHP.DLL" () As Integer
+
+Declare Function ChpCfgIni Lib "DLGCHP.DLL" (Prm1 As CHPBLK) As Integer
+Declare Function ChpCfgLod Lib "DLGCHP.DLL" (ByVal Prm1 As String, Prm2 As Long) As Integer
+Declare Function ChpCfgRel Lib "DLGCHP.DLL" (Prm1 As Long) As Integer
+Declare Function ChpCapQry Lib "DLGCHP.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As Long, ByVal Prm3 As Long) As Long
+  
+Declare Function ChpSetDeb Lib "DLGCHP.DLL" (ByVal Prm1 As Integer) As Integer
+Declare Function ChpSetDsp Lib "DLGCHP.DLL" (ByVal Prm1 As Long) As Long
+
+Declare Function ChpSndFil Lib "DLGCHP.DLL" (ByVal Prm1 As Integer, ByVal Prm2 As String, ByVal CHPOPNCBK As Long, ByVal CHPCOPCBK As Long, ByVal CHPCLSCBK As Long, ByVal Prm6 As Long, Prm7 As CHPBLK) As Long
+
+' ------------------------------------------------------------------------
+' ------------------------------------------------------------------------
+Global Const SI_CHPNO_ERR = 0               ' No error
+Global Const SI_CHPKEYERR = 1               ' Key/License not found, 8 sec lim
+Global Const SI_CHPVERERR = 2               ' Module version mismatch
+
+

@@ -1,0 +1,37 @@
+
+                            Index Packing Utility
+
+
+Contents:
+
+    The IDXPAK.ZIP file contains an index file packing utility and sample
+    files for converting pure audio and text files into indexed files that
+    can be edited using VISI's VFEdit Professional Prompt Editor.
+
+To Run:
+    
+    1)  Unzip the file IDXPAK.ZIP using PKUNZIP IDXPAK.
+    2)  Run the test batch file PAKTST.BAT, which converts the pure audio
+        files PAK00?.VOX and PAK00?.TXT into and indexed file IDXTST.VAP.
+    3)  Edit using the VFEdit "File Open" "Format" selection buttton.
+
+
+                            Other VISI Products
+
+Don't forget to call 1-800-234-VISI for more fabulous products:
+
+VFEdit ("vee-ef-edit"), The Professional Prompt Editor, is a Microsoft
+    Windows graphical editor that lets you edit sound the way a word
+    processor lets you edit text.
+
+TI/F DLL ("tif-dee-el-el"), The Microsoft Windows Voice Mail Driver, lets
+    you add Voice Mail power to your Microsoft Windows applications.
+
+VoxFonts, the "Software Only" Text-to-Speech adds an unlimited vocabulary
+    to your Interactive Voice Response applications.
+
+Scribe, The DOS Speech to Text Transcription Utility, lets you hear 
+    digital audio files without the need for additional hardware. It's 
+    like turning your PC into a transcription machine.
+
+

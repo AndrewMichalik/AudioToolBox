@@ -1,0 +1,8 @@
+object\genchp.obj + object\chpcfg.obj +
+object\filfnd.obj +
+object\fillow.obj +
+object\dosmem.obj + object\dosmsg.obj +
+object\usrstb.obj + object\cfgsup.obj
+genchp.exe
+NUL
+

@@ -1,0 +1,106 @@
+                ToolBox Change Implementation: Version 3.00
+                                09/20/96
+
+
+Future To Do:
+    1)  Manual: Better documentation of lpPolDsp callback procedure.
+    2)  Manual: Motorola CVSD approx equal to NewVoice CVSD.
+    3)  IdxReb: Add header setting option (Chris Bajorek request?)
+    4)  Use ChpHdrCre (...) and ChpHdrCls(..) functions for Wave and
+        other headered output.
+    5)  Create VB samples for Chop and Index functions; Move VB headers to 
+        new demo directory.
+    6)  Treat key/license as errors for -exit setting.
+    7)  Should probably activate ulDstOff for future compatability.
+    8)  Manual: Improve tech support help section.
+    10) X-Or the returned progress measurements for SDK encryption.
+    11) Include process count limit as in VoxFonts. May need to be more
+        sophisticated, as in module usage count in TI/F DLL.
+    12) M16Mix utility: Src, ..., Dst
+    13) AIFF & .AU conversions
+    14) Silence eliminator modification to sndchp (same file output)
+
+Done: 10/01/96
+    Added fixes to WavFil.c (DLG OKI, WIOOutEnd() RIFF & DATA chunk lengths) 
+    Added fixes to FilLow.c (define llseek return)
+    Install: copy license file TBXLIC.TXT if it exists.
+    Install: Removed InstallationCharacteristics from Apprentice install
+    Shut down license dialog in WEP procedure:
+        TBxGlo: HANDLE  hLicDlg;    /* License dialog window handle */
+        Init to (HANDLE) NULL,      /* License dialog window handle */
+        WEP: if (TBxGlo.hLicDlg) SendMessage (TBxGlo.hLicDlg, WM_CLOSE, 0, 0L);
+        LicDlgPrc: case WM_DESTROY: VxFGlo.hLicDlg = (HWND) NULL;
+    Help File: Improved tech support help section.
+    Install: It's OK to temporarily remove disk #1...
+
+Done: 09/15/96
+    1)  Add "-hXX persist" or "-exitXX" switch to Gen???.c main routines 
+        to determine exit persistence, or remove persist from QuickWin version.
+        -0: execute, exit always. (default)
+        -1: execute, always pause at end.
+        -2: execute, exit on success, pause on warning or error (example: no files).
+        -3: execute, exit on success, pause on error (ex: no files).
+        Added support for -exit in ToolBox Apprentice.
+    2)  Change ulDotCnt = strnlen (szFulNam) on Gen???.c QuickWin callbacks.
+    3)  Add PCMCvt help screen for -ci and -qe parameter.
+    4)  Change ???Ini.c routines to return composite error code flags.
+        The current implementation reverts to a demo on benign software
+        module mismatch. Update sample programs also.
+    5)  Change "CCITT" references to "C-ITU (CCITT)"
+    6)  Add license library test (like VoxFonts) for NT use.
+    7)  Changed Apprentice licensing to "Apprentice Licensee"
+    8)  Install: changed TBxApp.txt to AppRel.txt to prevent name conflict.
+    9)  Need .h definitions for:
+        FIOENCSWP logically "OR-ed" with FIOSWPBIT FIOSWPNIB FIOSWPBYT FIOSWPWRD
+    10) Need Filter Types defines: AAF_Q2TYP, AAF_Q6TYP
+        FFT: FFTORDDEF
+    11) -> GenCvt.h & GenCvt.Txt
+        #define CRPRESDEF  (float)  .01         /* Crop resolution        (sec) */
+        #define CRPSNDDEF  (float) 2.0          /* Crop threshold        (%max) */
+        #define CRPATKDEF         20            /* Crop atk ratio        (%frm) */
+        #define CRPDCYDEF         10            /* Crop dcy ratio        (%frm) */
+        #define NRMMAXDEF          6            /* VolNrm adjust max       (dB) */
+        #define CMPTHRDEF         80            /* Comp  threshold          (%) */
+        #define CMPATKDEF         50            /* Comp  attack time       (Hz) */
+        #define EXPTHRDEF         30            /* Exp   threshold          (%) */
+        #define EXPATKDEF          5            /* Exp   attack time       (Hz) */
+        #define CE_DCYDEF          5            /* C/E   decay time        (Hz) */
+        #define NOITHRDEF          2            /* NGate threshold          (%) */
+        #define NOIATTDEF          3            /* NGate attenuation       (dB) */
+    12) PCMCvt: ulDstOff and ulDstLen should be implemented or reserved for
+        future in .H.
+    13) SndChp: Move destination wave header control to Opn/Cls routines?
+        No, because then default processing for copy would not work for
+        wave files. Would REQUIRE user supplied routine.
+    14) Check for NULL callbacks in all tools.
+    15) "Edit .Ini File" Button: Can get confused if 
+        miscellaneous .INI's are in various directories, but the defaults 
+        will be read from the one in the Windows\ directory. Used 
+        GetWindowsDirectory() to hard-code .INI path name.
+    16) Create VB headers and sample for Chop and Index functions.
+        Place in IdxLib and ChpLib directories (temporarily).
+
+Done: 06/03/96
+    1)  Use the improved "overview & unpacking" instructions for BBS ZIP files.
+    2) Changed mscidx sample C functions to IdxChkCBk() and IdxEndCBk().
+
+Done: 05/22/96
+    1)  App: Removed accelerators (don't work) from field labels. Re-instate
+        some day?
+    2)  App: Added (*.wav) to list of files type dialog box.
+    3)  Cvt: Added -ci for channel count.
+
+04/15/96
+    1)  Changed configuration file handlers to accept section without "[]" and "=".
+        (affects SpdAdj and PCMCvt LibSup.h files)
+    2)  Add xchdir and related to FilUtl.h
+    3)  Fixed FilFnd.c for root xchdir() and NULL arg to xsetdrive
+    4)  Modified WinMem.c GloMemUnL() to ignore NULL memory handle
+    5)  TbxReg.c: Changed fmemcpy to fstrncpy to avoid read past end off string.
+    6)  FilRep.c: Fixed call to FilMov with NULL lpErrCod argument.
+    7)  WinMem.c: Fixed return to NEAR for LocalAllocate & Lock
+    6)  PCMFIO.c: PCMWr_PCM(,,,ulDstByt), PCMG16toP(,,,ulDstByt): fixed count
+    7)  FFTEqu.c: Line 56, check for ">=".
+
+
+

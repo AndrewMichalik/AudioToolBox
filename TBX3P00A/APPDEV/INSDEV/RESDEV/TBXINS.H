@@ -1,0 +1,13 @@
+/////////////////////////////////////////////////////////////////////////////
+// Audio ToolBox Installation DLL
+// Copyright (c) 1987-1996 Andrew J. Michalik
+/////////////////////////////////////////////////////////////////////////////
+#define INSDLLVER       0x0220          // Installation DLL version
+
+/////////////////////////////////////////////////////////////////////////////
+extern "C"
+WORD FAR PASCAL _export	InsDLLIni (WORD usReqTyp, DWORD ulPrm001, DWORD ulPrm002); 
+extern "C"
+DWORD FAR PASCAL _export ChkRegSer (WORD usRsv001, LPCSTR szSerNum);
+
+

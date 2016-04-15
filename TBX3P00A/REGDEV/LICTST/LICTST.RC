@@ -1,0 +1,17 @@
+#include "windows.h"
+#define IDM_DIALOG1     101
+//#include "lictst.h"
+
+lictstIcon ICON lictst.ico
+
+lictstMenu MENU
+BEGIN
+
+    POPUP "&Create"
+    BEGIN
+        MENUITEM "Dialog &1",               IDM_DIALOG1
+    END
+
+END
+
+

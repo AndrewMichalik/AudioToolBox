@@ -1,0 +1,49 @@
+LIBRARY         TTIPCM
+DESCRIPTION     'TTI PCM Conversion (C) Andrew J. Michalik, 1987-1995'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        GENPCM_TEXT PRELOAD FIXED        
+
+HEAPSIZE        2048
+
+EXPORTS
+    WEP              @2  RESIDENTNAME
+    PCMSUPVER        @4
+
+    PCMDLLINI       @10
+
+    PCMSETDEB       @20
+
+    PCMTYPENU       @30
+    PCMCHNENU       @32
+    PCMFRQENU       @34
+    PCMDESQRY       @36
+    PCMCAPQRY       @38
+
+    PCMSETSIL       @80
+    PCMALOITC       @82
+    PCMGRDITC       @84
+    PCMRELITC       @86
+
+    PCMBYT2SL       @100
+    PCMSMP2BH       @102
+    PCMSMPLOW       @104
+    PCMSMPHGH       @106
+    
+    PCMRD_G16       @120
+    PCMWR_PCM       @122
+    
+    PCMPTOG16       @140
+    PCMG16TOP       @142
+
+    PCML16TOG       @160
+    PCMGTOL16       @162
+    PCMGTOATD       @164
+
+    PCMRD_MXM       @180
+    PCMPTOMXM       @182
+
+

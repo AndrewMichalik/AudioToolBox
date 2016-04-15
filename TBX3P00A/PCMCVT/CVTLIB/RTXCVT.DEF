@@ -1,0 +1,28 @@
+LIBRARY         RTXCVT
+DESCRIPTION     'Rhetorex PCM Conversion Utility (C) Andrew J. Michalik, 1987-1996'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        CVTINI_TEXT PRELOAD FIXED        
+
+HEAPSIZE        2048
+
+EXPORTS
+    WEP              @2 RESIDENTNAME
+    CVTPCMVER        @4
+
+    CVTPCMINI       @10
+    CVTPCMTRM       @12
+
+    CVTSETDEB       @20
+    CVTSETDSP       @22
+
+    CVTCFGINI       @30
+    CVTCFGLOD       @32
+    CVTCFGREL       @34
+    CVTCAPQRY       @36
+
+    CVTPCMFIL       @112
+

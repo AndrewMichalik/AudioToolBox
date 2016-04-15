@@ -1,0 +1,1187 @@
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt binrep.c
+binrep.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -D -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	link/NOD/NOE/NOI/M/ST:4096   @binrep.rsp, llibce, ;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\binrep.obj   object\fillod.obj +
+Object Modules [.obj]: object\filrep.obj + object\filfnd.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\usrstb.obj + object\dosmem.obj + object\dosmsg.obj
+Run File [binrep.exe]: binrep.exe
+List File [e:binrep.map]: NUL
+	copy binrep.exe bfr.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genspd.c
+genspd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt spdcfg.c
+spdcfg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:4096 @spdmle.rsp llibce spdlib\DLGmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\genspd.obj   object\spdcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [genspd.exe]: genspd.exe
+List File [e:genspd.map]: NUL
+	REM -No Rc- genspd.rc genspd.exe
+	copy  genspd.exe ..\reldev\dos\DLGspd.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxchp.c
+idxchp.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxcfg.c
+idxcfg.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	link/NOD/NOE/NOI/M/ST:4096 object\idxchp.obj + @idxmle.rsp,, NUL, llibce idxlib\ALLmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\idxchp.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+	REM -No Rc- genidx.rc idxchp.exe
+	copy  idxchp.exe ..\reldev\dos\idxchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxlst.c
+idxlst.c
+	link/NOD/NOE/NOI/M/ST:4096 object\idxlst.obj + @idxmle.rsp,, NUL, llibce idxlib\ALLmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\idxlst.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+	REM -No Rc- genidx.rc idxlst.exe
+	copy  idxlst.exe ..\reldev\dos\idxlst.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxpak.c
+idxpak.c
+	link/NOD/NOE/NOI/M/ST:4096 object\idxpak.obj + @idxmle.rsp,, NUL, llibce idxlib\ALLmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\idxpak.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+	REM -No Rc- genidx.rc idxpak.exe
+	copy  idxpak.exe ..\reldev\dos\idxpak.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxreb.c
+idxreb.c
+	link/NOD/NOE/NOI/M/ST:4096 object\idxreb.obj + @idxmle.rsp,, NUL, llibce idxlib\ALLmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\idxreb.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+	REM -No Rc- genidx.rc idxreb.exe
+	copy  idxreb.exe ..\reldev\dos\idxreb.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt idxchp.c
+idxchp.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt idxcfg.c
+idxcfg.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	link/NOD/NOE/NOI/M object\idxchp.obj + @idxmwe.rsp,, NUL, llibcewq+libw+llibcew idxlib\ALLmwe.lib,genidx;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\idxchp.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+	rc -DW31 -DALL   -K genidx.rc idxchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  idxchp.exe ..\reldev\w31\idxchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt idxlst.c
+idxlst.c
+	link/NOD/NOE/NOI/M object\idxlst.obj + @idxmwe.rsp,, NUL, llibcewq+libw+llibcew idxlib\ALLmwe.lib,genidx;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\idxlst.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+	rc -DW31 -DALL   -K genidx.rc idxlst.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  idxlst.exe ..\reldev\w31\idxlst.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt idxpak.c
+idxpak.c
+	link/NOD/NOE/NOI/M object\idxpak.obj + @idxmwe.rsp,, NUL, llibcewq+libw+llibcew idxlib\ALLmwe.lib,genidx;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\idxpak.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+	rc -DW31 -DALL   -K genidx.rc idxpak.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  idxpak.exe ..\reldev\w31\idxpak.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt idxreb.c
+idxreb.c
+	link/NOD/NOE/NOI/M object\idxreb.obj + @idxmwe.rsp,, NUL, llibcewq+libw+llibcew idxlib\ALLmwe.lib,genidx;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\idxreb.obj   object\idxcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+	rc -DW31 -DALL   -K genidx.rc idxreb.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  idxreb.exe ..\reldev\w31\idxreb.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\DLGmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\DLGcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\DLGmwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DDLG   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\DLGcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\G21mle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\G21cvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\G21mwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DG21   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\G21cvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\HARmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\HARcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\HARmwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DHAR   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\HARcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\NWVmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\NWVcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\NWVmwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DNWV   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\NWVcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\PTCmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\PTCcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\PTCmwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DPTC   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\PTCcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @cvtmle.rsp llibce cvtlib\RTXmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	REM -No Rc- gencvt.rc gencvt.exe
+	copy  gencvt.exe ..\reldev\dos\RTXcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt gencvt.c
+gencvt.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt cvtcfg.c
+cvtcfg.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @cvtmwe.rsp llibcewq+libw+llibcew cvtlib\RTXmwe.lib,gencvt;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\gencvt.obj   object\cvtcfg.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [gencvt.exe]: gencvt.exe
+List File [e:gencvt.map]: NUL
+	rc -DW31 -DRTX   -K gencvt.rc gencvt.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  gencvt.exe ..\reldev\w31\RTXcvt.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\DLGmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\DLGchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\DLGmwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DDLG   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\DLGchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\G21mle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\G21chp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DG21 -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\G21mwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DG21   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\G21chp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\HARmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\HARchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DHAR -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\HARmwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DHAR   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\HARchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\NWVmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\NWVchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DNWV -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\NWVmwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DNWV   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\NWVchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\PTCmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\PTCchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DPTC -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\PTCmwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DPTC   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\PTCchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M/ST:6144 @chpmle.rsp llibce chplib\RTXmle.lib,;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:6144 object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	REM -No Rc- genchp.rc genchp.exe
+	copy  genchp.exe ..\reldev\dos\RTXchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt genchp.c
+genchp.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt chpcfg.c
+chpcfg.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	cl -c -FoObject\ -DW31 -DRTX -V"Copyright AJM, 800-234-VISI" -AL -FPi -Mq -W3 -G2s -Zp -Ocglt   ..\os_dev\cfgsup.c
+..\os_dev\cfgsup.c
+	link/NOD/NOE/NOI/M @chpmwe.rsp llibcewq+libw+llibcew chplib\RTXmwe.lib,genchp;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\genchp.obj   object\chpcfg.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj +
+Object Modules [.obj]: object\usrstb.obj + object\cfgsup.obj
+Run File [genchp.exe]: genchp.exe
+List File [e:genchp.map]: NUL
+	rc -DW31 -DRTX   -K genchp.rc genchp.exe
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+	copy  genchp.exe ..\reldev\w31\RTXchp.exe
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt su4chp.c
+su4chp.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt su4cvt.c
+su4cvt.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	link/NOD/NOE/NOI/M/ST:4096   @su4chp.rsp, llibce, ;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\su4chp.obj   object\fillod.obj   object\su4cvt.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+Run File [su4chp.exe]: su4chp.exe
+List File [e:su4chp.map]: NUL
+	copy su4chp.exe ..\reldev\dos
+        1 file(s) copied
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt su4pak.c
+su4pak.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt fillod.c
+fillod.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt su4cvt.c
+su4cvt.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filfnd.c
+..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filrep.c
+..\fiodev\filrep.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\filsup.c
+..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\fiodev\fillow.c
+..\fiodev\fillow.c
+..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmem.c
+..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\os_dev\dosmsg.c
+..\os_dev\dosmsg.c
+	cl -c -FoObject\ -DDOS -DDLG -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\usrdev\usrstb.c
+..\usrdev\usrstb.c
+	link/NOD/NOE/NOI/M/ST:4096   @su4pak.rsp, llibce, ;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M/ST:4096 object\su4pak.obj   object\fillod.obj   object\su4cvt.obj +
+Object Modules [.obj]: object\filfnd.obj + object\filrep.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\dosmem.obj + object\dosmsg.obj + object\usrstb.obj
+Run File [su4pak.exe]: su4pak.exe
+List File [e:su4pak.map]: NUL
+	copy su4pak.exe ..\reldev\dos
+        1 file(s) copied

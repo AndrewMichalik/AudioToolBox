@@ -1,0 +1,49 @@
+                             Audio ToolBox
+                The Digital Audio Processor and Converter
+
+Contents:
+
+    The TBXALL.ZIP file contains the VISI Audio ToolBox, which converts 
+    between Multimedia Wave (16, 8 & MS ADPCM) unsigned 8, linear 16, 
+    Dialogic 4 & 8, CCITT G.711/G.721, NewVoice & more! Audio ToolBox 
+    lets you batch convert, chop, crop, dynamic compress/expand, filter, 
+    normalize & more - any file length, any frequency. And add conversion 
+    capability to your Windows or DOS programs with our ToolBox SDK!
+
+
+To Unpack:
+    
+    1)  Unzip the file TBXALL.ZIP to extract each floppy image:
+        PKUNZIP TBXALL.ZIP
+        [Note: If you are reading this file from your hard drive, you have
+        already completed this step.] 
+    2)  Unzip the disk image to floppy using the create directory option: 
+        PKUNZIP -d TBX001.ZIP a:
+    3)  Run the Install program, and answer some simple installation
+        questions.
+
+
+Other VISI Products:
+
+    Don't forget to ask about our other exciting products:
+    
+    VFEdit ("vee-ef-edit"), The Professional Prompt Editor,
+        is a Microsoft Windows graphical editor that lets
+        you edit sound the way a word processor lets you
+        edit text.
+    
+    TI/F DLL (tif-dee-el-el), The Microsoft Windows Voice
+        Mail Driver, lets you add Voice Mail power to your
+        Microsoft Windows applications.
+
+    VoxFonts, the "Software Only" Text-to-Speech adds an
+        unlimited vocabulary to your Interactive Voice
+        Response applications.
+    
+    Scribe, The DOS Speech to Text Transcription Utility,
+        lets you hear digital audio files without the need
+        for additional hardware. It's like turning your PC
+        into a transcription machine.
+
+
+

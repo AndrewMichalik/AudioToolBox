@@ -1,0 +1,160 @@
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt idxini.c
+idxini.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt chplod.c
+chplod.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt lstlod.c
+lstlod.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt paklod.c
+paklod.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt reblod.c
+reblod.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   vbsfil.c
+vbsfil.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   vbsmth.c
+vbsmth.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filfnd.c
+..\..\fiodev\filfnd.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(94) : warning C4101: 'sFilHdl' : unreferenced local variable
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\usrdev\usrstb.c
+..\..\usrdev\usrstb.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmem.c
+..\..\os_dev\dosmem.c
+	cl -c -FoObject\ -DDOS -DALL -V"Copyright AJM, 800-234-VISI" -AL -FPi -W3 -G2s -Zp -Ocglt   ..\..\os_dev\dosmsg.c
+..\..\os_dev\dosmsg.c
+	del     ALLmle.lib
+	lib     ALLmle.lib @ALLmle.rsp;
+
+Microsoft (R) Library Manager  Version 3.40
+Copyright (C) Microsoft Corp 1983-1993.  All rights reserved.
+
+Library name: -+ object\idxini.obj 
+LIB : warning U4155: object\idxini.obj : module not in library
+-+ object\cfgsup.obj 
+LIB : warning U4155: object\cfgsup.obj : module not in library
+&
+Operations: -+ object\chplod.obj 
+LIB : warning U4155: object\chplod.obj : module not in library
+-+ object\lstlod.obj 
+LIB : warning U4155: object\lstlod.obj : module not in library
+&
+Operations: -+ object\paklod.obj 
+LIB : warning U4155: object\paklod.obj : module not in library
+-+ object\reblod.obj 
+LIB : warning U4155: object\reblod.obj : module not in library
+&
+Operations: -+ object\vbsfil.obj 
+LIB : warning U4155: object\vbsfil.obj : module not in library
+-+ object\vbsmth.obj 
+LIB : warning U4155: object\vbsmth.obj : module not in library
+&
+Operations: -+ object\filfnd.obj 
+LIB : warning U4155: object\filfnd.obj : module not in library
+&
+Operations: -+ object\filsup.obj 
+LIB : warning U4155: object\filsup.obj : module not in library
+-+ object\fillow.obj 
+LIB : warning U4155: object\fillow.obj : module not in library
+&
+Operations: -+ object\usrstb.obj 
+LIB : warning U4155: object\usrstb.obj : module not in library
+-+ object\dosmem.obj 
+LIB : warning U4155: object\dosmem.obj : module not in library
+-+ object\dosmsg.obj 
+LIB : warning U4155: object\dosmsg.obj : module not in library
+&
+Operations: -+ ..\..\regdev\object\kechk.obj;
+LIB : warning U4155: ..\..\regdev\object\kechk.obj : module not in library
+
+	copy    genidx.h               ..\..\reldev\dev\idxlib
+        1 file(s) copied
+	copy    visdef.h               ..\..\reldev\dev\idxlib
+        1 file(s) copied
+	copy    ALLmle.lib ..\..\reldev\dev\idxlib
+        1 file(s) copied
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt idxini.c
+idxini.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\cfgsup.c
+..\..\os_dev\cfgsup.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt chplod.c
+chplod.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt lstlod.c
+lstlod.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt paklod.c
+paklod.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt reblod.c
+reblod.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   vbsfil.c
+vbsfil.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   vbsmth.c
+vbsmth.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filfnd.c
+..\..\fiodev\filfnd.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\filsup.c
+..\..\fiodev\filsup.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c
+..\..\fiodev\fillow.c(201) : warning C4704: 'Rd_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(273) : warning C4704: 'Wr_FilFwd' : in-line assembler precludes global optimizations
+..\..\fiodev\fillow.c(354) : warning C4704: 'Wr_FilCom' : in-line assembler precludes global optimizations
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmem.c
+..\..\os_dev\winmem.c
+	cl -c -FoObject\ -DW31 -DALL -V"Copyright AJM, 800-234-VISI" -ALw -FPi -Gw -W3 -G2s -Zp -Ocglt   ..\..\os_dev\winmsg.c
+..\..\os_dev\winmsg.c
+	link/NOD/NOE/NOI/M    @ALLlnk.rsp libw+ldllcew, ALLidx.def;
+
+Microsoft (R) Segmented Executable Linker  Version 5.60.220 Sep  9 1994
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+Object Modules [.obj]: /NOD/NOE/NOI/M object\idxini.obj   object\cfgsup.obj +
+Object Modules [.obj]: object\chplod.obj + object\lstlod.obj +
+Object Modules [.obj]: object\paklod.obj + object\reblod.obj +
+Object Modules [.obj]: object\vbsfil.obj + object\vbsmth.obj +
+Object Modules [.obj]: object\filfnd.obj +
+Object Modules [.obj]: object\filsup.obj + object\fillow.obj +
+Object Modules [.obj]: object\winmem.obj + object\winmsg.obj
+Run File [idxini.exe]: genidx.dll
+List File [e:genidx.map]: NUL
+	rc -DW31 -DALL   genidx.rc  genidx.dll
+Microsoft (R) Windows Resource Compiler Version 3.11
+Copyright (C) Microsoft Corp. 1985-1992. All rights reserved.
+
+RC: warning RW4002: Non-discardable segment 2 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 3 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 4 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 5 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 6 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 7 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 8 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 9 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 10 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 11 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 12 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 13 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 14 set to PRELOAD
+RC: warning RW4002: Non-discardable segment 16 set to PRELOAD
+	implib  genidx.lib ALLidx.def
+
+Microsoft (R) Import Library Manager  Version 1.50
+Copyright (C) Microsoft Corp 1984-1993.  All rights reserved.
+
+	copy    genidx.h   ..\..\reldev\dev\idxlib
+        1 file(s) copied
+	copy    visdef.h   ..\..\reldev\dev\idxlib
+        1 file(s) copied
+	copy    genidx.lib ..\..\reldev\dev\idxlib\ALLmwe.lib
+        1 file(s) copied
+	copy    genidx.lib ALLmwe.lib
+        1 file(s) copied
+	copy    genidx.dll ..\..\reldev\w31\ALLidx.dll
+        1 file(s) copied
+	copy    genidx.dll ALLidx.dll
+        1 file(s) copied

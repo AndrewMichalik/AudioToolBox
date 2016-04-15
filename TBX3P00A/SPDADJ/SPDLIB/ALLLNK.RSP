@@ -1,0 +1,9 @@
+object\spdini.obj +
+object\fillod.obj + object\fileff.obj + object\effftr.obj +
+object\wavfil.obj + object\visfil.obj +
+object\winmem.obj + object\winmsg.obj +
+object\filsup.obj + object\fillow.obj +
+object\cfgsup.obj
+genspd.dll
+NUL
+

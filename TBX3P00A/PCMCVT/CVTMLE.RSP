@@ -1,0 +1,6 @@
+object\gencvt.obj + object\cvtcfg.obj +
+object\filfnd.obj + object\filrep.obj +
+object\filsup.obj
+gencvt.exe
+NUL
+

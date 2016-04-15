@@ -1,0 +1,217 @@
+#
+# Standard compiler command line switches
+#	d       Redefined macros
+#	c       No link
+#	AM      Medium memory model
+#	Gsw     Stack probes & Windows
+#	G2      80286 Instruction Set
+#	G3      80386 Instruction Set
+#	Gh      C5.1 compatible object
+#	Ox      Max optimization (Note: C6.00a float op error for "ei")
+#	Od      No optimization
+#	W2      Intermediate warning level
+#	Zd      Symbolic Debug
+#	Zi      CodeView Debug
+#	NT      Named text (code area) follows
+#	Alnw	Check for DS==SS
+#	V       Imbed version string
+#
+# Standard linker command line switches
+#   NOD     No default library
+#   A:x     Segment alignment (default = 512 bytes)
+#   ST:x    Stack size larger than default 0x800 (2048)
+
+# -----------------------------------------------------------------------
+# Compile and Link options (distribution & debug)
+# -----------------------------------------------------------------------
+!IFDEF deb
+# ---- DEBUG ----
+ap=masm/MX/V/ZI
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2  -Zp -Od -Zi
+lp=link/NOD/NOE/NOI/M/CO$(L_Defs)
+!ELSE
+# ---- Default: DISTRIBUTION ----
+ap=masm/MX/V
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2s -Zp -Ocglt  
+lp=link/NOD/NOE/NOI/M$(L_Defs)
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Version Control and Copyright Defs
+# -----------------------------------------------------------------------
+V_Note = "Copyright AJM, 800-234-VISI"
+
+# -----------------------------------------------------------------------
+# Library specific build arguments
+# -----------------------------------------------------------------------
+!IFDEF mwe
+# ---- MS Windows Emulator ----
+W_Defs = -DW31
+M_Type = -AMw -FPi -Gw
+M_Name = mwe
+L_Libs = libw+mlibcew
+DLLLib = libw+mdllcew
+rd = rc $(W_Defs) -D$(C_Defs)
+rc = rc $(W_Defs) -D$(C_Defs)
+DstPth = ..\..\reldev^\
+!ELSE
+!IFDEF mme
+# ---- MS Medium Emulator ----
+W_Defs = -DDOS
+M_Type = -AM -FPi
+M_Name = mme
+L_Libs = mlibce
+DstPth = ..\..\reldev^\
+!ELSE
+# ---- DEFAULT MS Large Emulator ----
+W_Defs = -DDOS
+M_Type = -AL -FPi
+M_Name = mle
+L_Libs = llibce
+DstPth = ..\..\reldev^\
+!ENDIF
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Hardware specific build paths
+# -----------------------------------------------------------------------
+!IFDEF g21
+# ---- CCITT G.721 ----
+C_Defs = G21
+P_Defs = -D_P_DLG -D_P_G11 -D_P_MSW
+!ELSE
+!IFDEF har
+# ---- HARRIS ----
+C_Defs = HAR
+P_Defs = -D_P_DLG -D_P_G11 -D_P_MSW
+!ELSE
+!IFDEF nwv
+# ---- NEW VOICE ----
+C_Defs = NWV
+P_Defs = -D_P_DLG -D_P_G11 -D_P_MSW
+!ELSE
+!IFDEF mpc
+# ---- MPC ----
+C_Defs = MPC
+P_Defs = -D_P_MSW
+!ELSE
+!IFDEF ptc
+# ---- PTC ----
+C_Defs = PTC
+P_Defs = -D_P_DLG -D_P_G11 -D_P_MSW
+!ELSE
+!IFDEF rtx
+# ---- RHETOREX ----
+C_Defs = RTX
+P_Defs = -D_P_DLG -D_P_G11 -D_P_MSW
+!ELSE
+!IFDEF tti
+# ---- TTI ----
+C_Defs = TTI
+P_Defs = -D_P_MSW
+!ELSE
+# ---- DEFAULT DIALOGIC ----
+C_Defs = DLG
+P_Defs = -D_P_G11 -D_P_MSW
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Standard inference rules
+# -----------------------------------------------------------------------
+.c{object\}.obj:
+    $(cp) $(@B).c
+.cpp{object\}.obj:
+    $(cp) $(@B).cpp
+
+# -----------------------------------------------------------------------
+# The Target File List
+# -----------------------------------------------------------------------
+!IF (DEFINED (mwe))
+$(DstPth)$(C_Defs)chp.dll: $(C_Defs)chp.def                             \
+            object\chpini.obj                                           \
+            object\fillod.obj                                           \
+            object\wavfil.obj object\visfil.obj                         \
+            object\winmem.obj object\winmsg.obj                         \
+            object\filsup.obj object\fillow.obj                         \
+            object\cfgsup.obj
+    $(lp)   $(LibEnt) @alllnk.rsp @$(C_Defs)lnk.rsp $(DLLLib), $(C_Defs)chp.def;
+    $(rd)   genchp.rc  genchp.dll
+    implib  genchp.lib $(C_Defs)chp.def
+    copy    genchp.h   $(DstPth)dev\chplib
+    copy    visdef.h   $(DstPth)dev\chplib
+    copy    genchp.lib $(DstPth)dev\chplib\$(C_Defs)mwe.lib
+    copy    genchp.lib $(C_Defs)mwe.lib
+    copy    genchp.dll $(DstPth)w31\$(C_Defs)chp.dll
+    copy    genchp.dll $(C_Defs)chp.dll
+!ELSE
+$(C_Defs)$(M_Name).lib:                                                 \
+            object\chpini.obj                                           \
+            object\fillod.obj                                           \
+            object\efffse.obj                                           \
+            object\effebs.obj object\ebssup.obj                         \
+            object\wavfil.obj object\visfil.obj                         \
+            object\pcmfio.obj object\pcmini.obj object\pcmqry.obj       \
+            object\blkcvt.obj object\mpcsup.obj                         \
+            object\filsup.obj object\fillow.obj                         \
+            object\dosmem.obj object\dosmsg.obj                         \
+            object\usrstb.obj object\cfgsup.obj
+    del     $(C_Defs)$(M_Name).lib
+    lib     $(C_Defs)$(M_Name).lib @all$(M_Name).rsp @$(C_Defs)$(M_Name).rsp;
+    copy    genchp.h               $(DstPth)dev\chplib
+    copy    visdef.h               $(DstPth)dev\chplib
+    copy    $(C_Defs)$(M_Name).lib $(DstPth)dev\chplib 
+!ENDIF
+
+# -----------------------------------------------------------------------
+# The C and assembly File List
+# -----------------------------------------------------------------------
+object\chpini.obj: chpini.c genchp.h libsup.h ..\..\fiodev\filutl.h     \
+    ..\..\os_dev\dosmem.h ..\..\os_dev\dosmsg.h ..\..\pcmdev\genpcm.h   \
+    ..\..\pcmdev\pcmsup.h ..\..\regdev\tbxreg.h ..\..\os_dev\cfgsup.h
+object\fillod.obj: fillod.c genchp.h ..\..\os_dev\dosmem.h              \
+    ..\..\os_dev\dosmsg.h ..\..\pcmdev\genpcm.h ..\..\effdev\geneff.h   \
+    ..\..\fiodev\wavfil.h ..\..\regdev\tbxreg.h
+object\efffse.obj: ..\..\effdev\efffse.c ..\..\os_dev\dosmem.h ..\..\pcmdev\genpcm.h ..\..\effdev\geneff.h ..\..\effdev\effsup.h
+    $(cp)   ..\..\effdev\efffse.c   
+object\effebs.obj: ..\..\effdev\effebs.c ..\..\os_dev\dosmem.h ..\..\pcmdev\genpcm.h ..\..\effdev\geneff.h ..\..\effdev\effsup.h
+    $(cp)   ..\..\effdev\effebs.c   
+object\ebssup.obj: ..\..\effdev\ebssup.c ..\..\os_dev\dosmem.h ..\..\pcmdev\genpcm.h ..\..\effdev\geneff.h ..\..\effdev\effsup.h
+    $(cp)   ..\..\effdev\ebssup.c   
+object\wavfil.obj: ..\..\fiodev\wavfil.c ..\..\fiodev\filutl.h ..\..\fiodev\wavfil.h
+#   Force mmio functions to use standard file handles
+    $(cp:-DW31=-DDOS)   ..\..\fiodev\wavfil.c
+object\visfil.obj: ..\..\fiodev\visfil.c ..\..\fiodev\filutl.h ..\..\fiodev\visfil.h
+    $(cp)   ..\..\fiodev\visfil.c
+object\pcmfio.obj: ..\..\pcmdev\pcmfio.c ..\..\pcmdev\genpcm.h ..\..\pcmdev\pcmsup.h
+    $(cp)   ..\..\pcmdev\pcmfio.c
+object\pcmini.obj: ..\..\pcmdev\pcmini.c ..\..\pcmdev\genpcm.h ..\..\pcmdev\pcmsup.h
+    $(cp) $(P_Defs) ..\..\pcmdev\pcmini.c
+object\pcmqry.obj: ..\..\pcmdev\pcmqry.c ..\..\pcmdev\genpcm.h ..\..\pcmdev\pcmsup.h
+    $(cp)   ..\..\pcmdev\pcmqry.c
+object\blkcvt.obj: ..\..\pcmdev\blkcvt.c ..\..\pcmdev\genpcm.h ..\..\pcmdev\pcmsup.h
+    $(cp)   ..\..\pcmdev\blkcvt.c
+object\mpcsup.obj: ..\..\pcmdev\mpcsup.c ..\..\pcmdev\genpcm.h ..\..\pcmdev\pcmsup.h
+    $(cp)   ..\..\pcmdev\mpcsup.c
+object\filsup.obj: ..\..\fiodev\filsup.c ..\..\fiodev\filutl.h
+    $(cp)   ..\..\fiodev\filsup.c
+object\fillow.obj: ..\..\fiodev\fillow.c
+    $(cp)   ..\..\fiodev\fillow.c
+object\winmem.obj: ..\..\os_dev\winmem.c ..\..\os_dev\winmem.h
+    $(cp)   ..\..\os_dev\winmem.c
+object\winmsg.obj: ..\..\os_dev\winmsg.c ..\..\os_dev\winmsg.h
+    $(cp)   ..\..\os_dev\winmsg.c
+object\dosmem.obj: ..\..\os_dev\dosmem.c ..\..\os_dev\dosmem.h ..\..\os_dev\dosmem.h
+    $(cp)   ..\..\os_dev\dosmem.c
+object\dosmsg.obj: ..\..\os_dev\dosmsg.c ..\..\usrdev\usrstb.h ..\..\os_dev\dosmsg.h
+    $(cp)   ..\..\os_dev\dosmsg.c
+object\usrstb.obj: ..\..\usrdev\usrstb.c ..\..\os_dev\dosmem.h
+    $(cp)   ..\..\usrdev\usrstb.c
+object\cfgsup.obj: ..\..\os_dev\cfgsup.c ..\..\os_dev\cfgsup.h
+    $(cp)   ..\..\os_dev\cfgsup.c
+

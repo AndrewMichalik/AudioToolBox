@@ -1,0 +1,207 @@
+@DefineProject
+    @Name       = "Audio ToolBox"
+    @Version    = "3.0"
+    @Subdir     = "\\VTools"
+    @OutDrive   = C
+    @Group      = "A"
+@EndProject
+  
+@Display
+    @Cls
+  
+    This program will install @Name Version @Version on your computer
+    system and verify the integrity of the distribution disk(s).
+    You may press the [Esc] key at any time to abort the installation.
+    INSTALL will ask you several questions about your computer
+    and then give you the option of installing @Name for your 
+    system.
+  
+    Each question has a default answer.  If the default answer is
+    correct, press the ENTER key in response to the question.
+    Otherwise, type the answer and then press the ENTER key.
+  
+    If you make a mistake while typing, just press the BACKSPACE key
+    and then retype the answer.
+  
+  
+    @Pause
+@EndDisplay
+  
+@GetOutDrive
+    @Cls
+    On which disk drive do you wish to install @Name?
+@EndOutDrive
+  
+@GetSubdir
+    @CLS
+    Please specify the hard disk destination subdirectory. The
+    subdirectory is the location on your disk where the @Name system
+    will be installed.  If you don't know what a "subdirectory" is,
+    don't worry - just press the ENTER key at the next prompt.
+  
+    If you install @Name in the @Subdir subdirectory, we'll help you
+    change the PATH variable in your AUTOEXEC.BAT file to include
+    this subdirectory.
+  
+    @Prompt = "Which subdirectory ([Enter] = @Subdir) ?"
+@EndSubdir
+  
+/************************************************************************/
+/************************************************************************/
+@GetGroups
+    @Cls
+    Please select the type of audio hardware you use:
+  
+
+
+
+  
+  
+  
+  
+  
+    Use the [Up Arrow], [Down Arrow], [PgUp], & [PgDn] keys to move the
+    highlight bar to select the audio hardware you use.  Press [Enter]
+    when you have completed your selection.
+  
+    @Set D = "Dialogic D/4x"
+    @Set G = "G.721 C-ITU (CCITT)"
+    @Set N = "NewVoice CVSD"
+    @Set P = "Perception Technology CVSD"
+    @Set R = "Rhetorex RDSP"
+  
+@EndGroups
+  
+/************************************************************************/
+/*                      Sample Usage Batch Files                        */
+/************************************************************************/
+@GetOption
+    @Checkbox
+    @Cls
+    Would you like to copy the @Name sample batch files?
+  
+  
+  
+  
+  
+  
+    Use the [Up Arrow], [Down Arrow], [PgUp], & [PgDn] keys to move the
+    highlight bar to select the default @Name start-up options you
+    wish to use.  Press the [Space] key to toggle the option from "No"
+    to "Yes".  Press [Enter] when you have completed your selection.
+  
+    @Option 600 = "Copy sample batch files to the @SubDir\\Sample directory"
+  
+@EndOption
+  
+/************************************************************************/
+/************************************************************************/
+@DefineDisk
+    @Label = "Program Disk 1/1"
+  
+    /********************************************************************/
+    /* Install non-compressed license file if it exists                 */
+    /********************************************************************/
+    @If (@Exists ("TBXLIC.TXT"))
+        @File     TBXLIC.TXT    @Out TBXLIC.TXT
+    @EndIf
+  
+    /********************************************************************/
+    /* Install compressed files                                         */
+    /********************************************************************/
+    @BeginLib VTOOLS.RED
+        /****************************************************************/
+        /* Install the following files if the DLG option was selected   */
+        /****************************************************************/
+        @If ('D' [= @Group)
+            @File     DLGCVT.EXE    @Out PCMCVT.EXE
+            @File     DLGCHP.EXE    @Out SNDCHP.EXE
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the G21 option was selected   */
+        /****************************************************************/
+        @If ('G' [= @Group)
+            @File     G21CVT.EXE    @Out PCMCVT.EXE
+            @File     G21CHP.EXE    @Out SNDCHP.EXE
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the NWV option was selected   */
+        /****************************************************************/
+        @If ('N' [= @Group)
+            @File     NWVCVT.EXE    @Out PCMCVT.EXE
+            @File     NWVCHP.EXE    @Out SNDCHP.EXE
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the PTC option was selected   */
+        /****************************************************************/
+        @If ('P' [= @Group)
+            @File     PTCCVT.EXE    @Out PCMCVT.EXE
+            @File     PTCCHP.EXE    @Out SNDCHP.EXE
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files if the RTX option was selected   */
+        /****************************************************************/
+        @If ('R' [= @Group)
+            @File     DLGCVT.EXE    @Out PCMCVT.EXE
+            @File     DLGCHP.EXE    @Out SNDCHP.EXE
+        @EndIf
+  
+        /****************************************************************/
+        /* Install the following files for all selections               */
+        /****************************************************************/
+/*        @File         FRQEFF.EXE    @Out FRQEFF.EXE                   */
+        @File         IDXCHP.EXE    @Out IDXCHP.EXE
+        @File         IDXLST.EXE    @Out IDXLST.EXE
+        @File         IDXPAK.EXE    @Out IDXPAK.EXE
+        @File         IDXREB.EXE    @Out IDXREB.EXE
+
+        @File         TBXREL.TXT    @Out TBXREL.TXT
+        @File         README.TXT    @Out README.TXT
+
+        /****************************************************************/
+        /* Install the sample programs if selected                      */
+        /****************************************************************/
+        @If (600 [= @Option)
+            @File     IDXCHP.BAT    @Out Sample\\IDXCHP.BAT
+            @File     IDXLST.BAT    @Out Sample\\IDXLST.BAT
+            @File     IDXPAK.BAT    @Out Sample\\IDXPAK.BAT
+            @File     IDXREB.BAT    @Out Sample\\IDXREB.BAT
+            @File     PCMCVT.BAT    @Out Sample\\PCMCVT.BAT
+            @File     SNDCHP.BAT    @Out Sample\\SNDCHP.BAT
+            @File     PCMCVT.CFG    @Out Sample\\PCMCVT.CFG
+            @File     PAK001.TXT    @Out Sample\\PAK001.TXT
+            @File     IDXTST.VAP    @Out Sample\\IDXTST.VAP
+            @File     PAK001.VOX    @Out Sample\\PAK001.VOX
+            @File     PAK002.VOX    @Out Sample\\PAK002.VOX
+            @File     PCMCVT.WAV    @Out Sample\\PCMCVT.WAV
+        @EndIf
+
+    @EndLib
+
+@EndDisk
+
+/************************************************************************/
+/*                  Modify AutoExec.Bat (if requested)                  */
+/************************************************************************/
+@SetAutoexec
+    @AskOverwrite
+    @Path = "@OutDrive:@Subdir"
+    @EndIf
+@EndAutoexec
+  
+/************************************************************************/
+/************************************************************************/
+@Finish
+    @Cls
+    Installation Successful!
+    @Pause
+
+@EndFinish
+  
+/* end-of-file */
+  
+

@@ -1,0 +1,6 @@
+object\genspd.obj + object\spdcfg.obj +
+object\filfnd.obj + object\filrep.obj +
+object\filsup.obj
+genspd.exe
+NUL
+

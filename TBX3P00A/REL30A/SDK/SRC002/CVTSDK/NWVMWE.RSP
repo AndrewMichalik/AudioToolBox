@@ -1,0 +1,5 @@
+object\cvttst.obj
+cvttst.exe
+NUL
+..\cvtlib\nwvpcm.lib +
+

@@ -1,0 +1,38 @@
+LIBRARY         ALLIDX
+DESCRIPTION     'Indexed File Utility (C) Andrew J. Michalik, 1987-1995'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            MOVEABLE  
+DATA            MOVEABLE SINGLE
+SEGMENTS        IDXINI_TEXT PRELOAD FIXED        
+
+HEAPSIZE        2048
+
+EXPORTS
+    WEP              @2 RESIDENTNAME
+    IDXFILVER        @4
+
+    IDXFILINI       @10
+    IDXFILTRM       @12
+
+    IDXSETDEB       @20
+    IDXSETDSP       @22
+
+    IDXCFGINI       @30
+    IDXCFGLOD       @32
+    IDXCFGREL       @34
+    IDXCAPQRY       @36
+
+    CHPIDXINI       @120
+    CHPIDXFIL       @122
+    
+    LSTIDXINI       @140
+    LSTIDXFIL       @142
+    
+    PAKIDXINI       @160
+    PAKIDXFIL       @162
+
+    REBIDXINI       @180
+    REBIDXFIL       @182
+

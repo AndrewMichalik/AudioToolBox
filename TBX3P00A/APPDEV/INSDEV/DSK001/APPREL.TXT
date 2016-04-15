@@ -1,0 +1,22 @@
+                         Audio ToolBox Release Notes
+                               Version  3.00
+                                  09/15/96
+
+
+03.00a.0
+    Added frequency equalizer to audio conversion.
+    Added 6th order filters to audio conversion.
+    Source and destination frequencies now PCM conetxt sensitive.
+    SndChp supports all native PCM types.
+    Added units to all frequency labels.
+    Reduced overall size for VGA screen types.
+    PCMCvt: Volume normalize default changed to .2% over range.
+    PCMCvt: Source and destination data type saved in .INI file.
+    SndChp: Default destination file extension set to input file extension.
+    SndChp: Fixed -f switch moving ahead of destination extension.
+    Setup: Query before deleting old program group 
+    
+02.10a.1
+    1)  Initial release.
+
+

@@ -1,0 +1,3 @@
+-+ ..\..\pcmdev\rtxxlt.lib -+ ..\..\pcmdev\dlgxlt.lib -+ ..\..\pcmdev\g11xlt.lib -+ ..\..\pcmdev\mswxlt.lib &
+-+ ..\..\regdev\object\kechk.obj;
+

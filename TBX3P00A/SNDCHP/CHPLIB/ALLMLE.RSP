@@ -1,0 +1,11 @@
+-+ object\chpini.obj &
+-+ object\fillod.obj &
+-+ object\efffse.obj &
+-+ object\effebs.obj -+ object\ebssup.obj &
+-+ object\wavfil.obj -+ object\visfil.obj &
+-+ object\pcmfio.obj -+ object\pcmini.obj -+ object\pcmqry.obj &
+-+ object\blkcvt.obj -+ object\mpcsup.obj &
+-+ object\filsup.obj -+ object\fillow.obj &
+-+ object\dosmem.obj -+ object\dosmsg.obj &
+-+ object\usrstb.obj -+ object\cfgsup.obj &
+

@@ -1,0 +1,48 @@
+                Audio ToolBox Development Kit & Programming Samples
+                               Version  3.00
+                                  10/01/96
+
+
+3.00a.1:
+    Added SDK support for all ToolBox functions.
+    Added additional .h and .txt definitions
+    Implemented PCMCvt ulDstLen parameter.
+    Check for NULL callbacks in all tools.
+    Increased size of function block, added initialization functions.
+    Added sample "C" programs for all SDK functions.
+    Source and destination frequencies now PCM context sensitive.
+    SndChp supports all native PCM types.
+    Improved all filter characteristics.
+    Improved CVSD fidelity.
+    Improved clipping on all volume adjust operations.
+    Improved speed on 386-class machines when DCE is inhibited.
+    Improved Equalizer for all memory conditions.
+    Improved DTMF filter. 
+    Improved IIR filter.
+    Volume normalize default changed to .2% over range.
+    Added -q6 anti-aliasing filter.
+    SndChp: Accepts destination directory argument like "\temp\.vox"    
+    Fixed header size error on certain wave files.
+    Improved support for extended wave file formats.
+
+
+
+                            Other VISI Products
+
+Call 1-800-234-VISI or visit our website at www.vinfo.com to download 
+    working demos and learn about our other exciting products:
+
+VFEdit ("vee-ef-edit"), The Professional Prompt Editor, is a Microsoft
+    Windows graphical editor that lets you edit sound the way a word
+    processor lets you edit text.
+
+TI/F DLL ("tif-dee-el-el"), The Microsoft Windows Voice Mail Driver, lets
+    you add Voice Mail power to your Microsoft Windows applications.
+
+VoxFonts, the "Software Only" Text-to-Speech adds an unlimited vocabulary
+    to your Interactive Voice Response applications.
+
+Scribe, The DOS Speech to Text Transcription Utility, lets you hear 
+    digital audio files without the need for additional hardware. It's 
+    like turning your PC into a transcription machine.
+

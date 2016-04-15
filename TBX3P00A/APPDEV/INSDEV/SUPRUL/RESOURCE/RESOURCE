@@ -1,0 +1,28 @@
+##
+##=======================================================================
+##
+##        Resource DLL makefile for Example Installation
+##
+##        Copyright (c) 1993, Stirling Technologies, Inc.
+##                      All rights reserved.
+##=======================================================================
+##
+##=======================================================================
+##      File:   RESRES
+##
+##      This is a make file to create resres.dll
+##      For Microsoft C/C++ 7.0 Compiler
+##=======================================================================
+##
+all : resource.dll
+resource.obj : resource.c
+               cl -c -ASw -Gsw -Ow -W3 -Zp  resource.c
+
+resource.res : resource.rc
+               rc -r resource.rc
+
+resource.dll : resource.obj resource.res resource.def
+        link resource libentry, resource.dll /ALIGN:16, NUL, /NOD sdllcew libw, resource
+        rc -30 resource.res resource.dll
+
+

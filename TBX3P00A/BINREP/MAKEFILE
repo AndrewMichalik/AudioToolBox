@@ -1,0 +1,103 @@
+#
+# Standard compiler command line switches
+#	d       Redefined macros
+#	c       No link
+#	AM      Medium memory model
+#	Gsw     Stack probes & Windows
+#	G2      80286 Instruction Set
+#	G3      80386 Instruction Set
+#	Gh      C5.1 compatible object
+#	Ox      Max optimization (Note: C6.00a float op error for "ei")
+#	Od      No optimization
+#	W2      Intermediate warning level
+#	Zd      Symbolic Debug
+#	Zi      CodeView Debug
+#	NT      Named text (code area) follows
+#	Alnw	Check for DS==SS
+#	V       Imbed version string
+#
+# Standard linker command line switches
+#   NOD     No default library
+#   A:x     Segment alignment (default = 512 bytes)
+#   ST:x    Stack size larger than default 0x800 (2048)
+
+# -----------------------------------------------------------------------
+# Compile and Link options (distribution & debug)
+# -----------------------------------------------------------------------
+!IFDEF deb
+# ---- DEBUG ----
+ap=masm/MX/V/ZI
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2  -Zp -Od -Zi
+lp=link/NOD/NOE/NOI/M/CO$(L_Defs)
+!ELSE
+# ---- Default: DISTRIBUTION ----
+ap=masm/MX/V
+cp=cl -c -FoObject\ $(W_Defs) -D$(C_Defs) -V$(V_Note) $(M_Type) -W3 -G2s -Zp -Ocglt  
+lp=link/NOD/NOE/NOI/M$(L_Defs)
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Version Control and Copyright Defs
+# -----------------------------------------------------------------------
+V_Note = "Copyright AJM, 800-234-VISI"
+
+# -----------------------------------------------------------------------
+# Library specific build arguments
+# -----------------------------------------------------------------------
+!IFDEF mwe
+# ---- MS Windows Emulator ----
+W_Defs = -DW31
+M_Type = -AMw -FPi -Gsw
+M_Name = mwe
+L_Libs = libw+mlibcew
+DLLLib = libw+mdllcew
+rd = rc $(W_Defs) -D$(C_Defs)
+rc = rc $(W_Defs) -D$(C_Defs)
+DstPth = \w31ret^\
+!ELSE
+# ---- DEFAULT MS Large Emulator ----
+W_Defs = -DDOS
+M_Type = -AL -FPi
+M_Name = mle
+L_Libs = llibce
+LnkDef = 
+L_Defs = /ST:4096
+rc = REM -No Rc-
+!ENDIF
+
+# -----------------------------------------------------------------------
+# Standard inference rules
+# -----------------------------------------------------------------------
+.c{object\}.obj:
+    $(cp) $(@B).c
+
+# -----------------------------------------------------------------------
+# The Target File List
+# -----------------------------------------------------------------------
+binrep.exe: object\binrep.obj object\fillod.obj                         \
+            object\filfnd.obj object\filrep.obj                         \
+            object\filsup.obj object\fillow.obj                         \
+            object\usrstb.obj object\dosmem.obj object\dosmsg.obj
+    $(lp)   @binrep.rsp, $(L_Libs), ;
+            copy binrep.exe bfr.exe
+
+# -----------------------------------------------------------------------
+# The C and assembly File List
+# -----------------------------------------------------------------------
+object\binrep.obj: binrep.c binrep.h  ..\fiodev\filutl.h
+object\fillod.obj: fillod.c binrep.h  ..\fiodev\filutl.h ..\os_dev\dosmsg.h
+object\filfnd.obj: ..\fiodev\filfnd.c ..\fiodev\filutl.h ..\os_dev\dosmsg.h
+    $(cp)   ..\fiodev\filfnd.c
+object\filrep.obj: ..\fiodev\filrep.c ..\fiodev\filutl.h
+    $(cp)   ..\fiodev\filrep.c
+object\filsup.obj: ..\fiodev\filsup.c ..\fiodev\filutl.h
+    $(cp)   ..\fiodev\filsup.c
+object\fillow.obj: ..\fiodev\fillow.c ..\fiodev\filutl.h
+    $(cp)   ..\fiodev\fillow.c
+object\dosmem.obj: ..\os_dev\dosmem.c ..\usrdev\usrstb.h ..\os_dev\dosmem.h
+    $(cp)   ..\os_dev\dosmem.c
+object\dosmsg.obj: ..\os_dev\dosmsg.c ..\usrdev\usrstb.h ..\os_dev\dosmsg.h
+    $(cp)   ..\os_dev\dosmsg.c
+object\usrstb.obj: ..\usrdev\usrstb.c ..\usrdev\usrstb.h
+    $(cp)   ..\usrdev\usrstb.c
+

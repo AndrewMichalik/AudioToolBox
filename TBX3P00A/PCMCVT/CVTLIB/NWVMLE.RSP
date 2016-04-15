@@ -1,0 +1,17 @@
+-+ object\cvtini.obj &
+-+ object\fillod.obj -+ object\fileff.obj -+ object\effftr.obj &
+-+ object\efffse.obj &
+-+ object\effvol.obj -+ object\effchn.obj &
+-+ object\effres.obj -+ object\efffir.obj -+ object\effiir.obj &
+-+ object\firdes.obj -+ object\iirdes.obj &
+-+ object\efffft.obj -+ object\fftequ.obj &
+-+ object\fftovr.obj -+ object\fftlow.obj &
+-+ object\effebs.obj -+ object\ebssup.obj &
+-+ object\wavfil.obj -+ object\visfil.obj &
+-+ object\pcmfio.obj -+ object\pcmini.obj -+ object\pcmqry.obj &
+-+ object\blkcvt.obj -+ object\mpcsup.obj &
+-+ object\fillow.obj -+ object\cfgsup.obj &
+-+ object\dosmem.obj -+ object\dosmsg.obj -+ object\usrstb.obj &
+-+ ..\..\pcmdev\nwvxlt.lib -+ ..\..\pcmdev\dlgxlt.lib -+ ..\..\pcmdev\g11xlt.lib -+ ..\..\pcmdev\mswxlt.lib &
+-+ ..\..\regdev\object\kechk.obj;
+
