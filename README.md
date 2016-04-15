@@ -77,3 +77,5 @@ Features
     
   
 System Requirements: An IBM PC or compatible with a hard drive, DOS 3.3 or higher, and at least 512K of memory. A 486 processor (or coprocessor) and 640K is recommended. ToolBox Apprentice requires Windows 3.1x or higher.
+
+This repository contains code and materials that Andrew Michalik had previously produced for his wholly owned corporation (Vector Information Systems, Inc) and for which he has retained copyrights.
